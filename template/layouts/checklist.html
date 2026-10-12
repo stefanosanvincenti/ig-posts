@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- LAYOUT: checklist — foglio di blocco note inclinato, righe a quaderno, spunte disegnate a mano.
+     Adatto a: controlli pratici, "prima di...", liste da salvare. Massimo 6 voci brevi.
+     Modifica: titolo del foglio, voci (.it). Le voci con classe "no" hanno la casella vuota. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#1F3D2B; --ink:#1C1A16; --dim:#5D574B; --a1:#2F7D4F; --a2:#E4572E; --line:#C9D8E8; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:66px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:#fff;opacity:.85}
+.paper{position:absolute;left:90px;top:140px;width:900px;height:1080px;background:#FFFDF6;transform:rotate(-1.6deg);box-shadow:0 30px 60px rgba(0,0,0,.35);border-radius:6px;
+  background-image:linear-gradient(90deg,transparent 104px,var(--a2) 104px,var(--a2) 107px,transparent 107px),repeating-linear-gradient(#FFFDF6 0 79px,var(--line) 79px 81px);background-position:0 0,0 230px;color:var(--ink)}
+.holes{position:absolute;left:36px;top:60px;bottom:60px;display:flex;flex-direction:column;justify-content:space-between}
+.holes i{width:30px;height:30px;border-radius:50%;background:var(--bg);display:block}
+.paper h2{position:absolute;left:140px;right:50px;top:70px;font-family:'Caladea','DejaVu Serif',serif;font-style:italic;font-weight:bold;font-size:66px;line-height:1.05;letter-spacing:-1px}
+.paper h2 u{text-decoration-color:var(--a2);text-decoration-thickness:6px;text-underline-offset:8px}
+.list{position:absolute;left:140px;right:50px;top:300px}
+.it{height:122px;display:flex;align-items:center;gap:28px;font-size:34px;font-weight:600}
+.it svg{flex:none}
+.it.no{color:var(--dim)}
+.tape{position:absolute;width:220px;height:56px;background:rgba(255,230,150,.75);top:110px;left:420px;transform:rotate(3deg)}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:#fff;opacity:.85}
+</style></head><body>
+<div class="kicker">SEO · CHECKLIST</div>
+<div class="paper">
+  <div class="holes"><i></i><i></i><i></i><i></i><i></i></div>
+  <h2>Prima di pubblicare<br>un <u>articolo</u></h2>
+  <div class="list">
+    <div class="it"><svg width="56" height="56"><rect x="4" y="6" width="44" height="44" rx="6" fill="none" stroke="#1C1A16" stroke-width="3"/><path d="M12,28 L24,40 L52,6" fill="none" stroke="var(--a1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>La risposta è nelle prime righe</div>
+    <div class="it"><svg width="56" height="56"><rect x="4" y="6" width="44" height="44" rx="6" fill="none" stroke="#1C1A16" stroke-width="3"/><path d="M12,28 L24,40 L52,6" fill="none" stroke="var(--a1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ogni dato ha la sua fonte</div>
+    <div class="it"><svg width="56" height="56"><rect x="4" y="6" width="44" height="44" rx="6" fill="none" stroke="#1C1A16" stroke-width="3"/><path d="M12,28 L24,40 L52,6" fill="none" stroke="var(--a1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>Titoli che sono domande vere</div>
+    <div class="it"><svg width="56" height="56"><rect x="4" y="6" width="44" height="44" rx="6" fill="none" stroke="#1C1A16" stroke-width="3"/><path d="M12,28 L24,40 L52,6" fill="none" stroke="var(--a1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>Autore con nome e ruolo</div>
+    <div class="it"><svg width="56" height="56"><rect x="4" y="6" width="44" height="44" rx="6" fill="none" stroke="#1C1A16" stroke-width="3"/><path d="M12,28 L24,40 L52,6" fill="none" stroke="var(--a1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>Link interni alle pagine chiave</div>
+    <div class="it no"><svg width="56" height="56"><rect x="4" y="6" width="44" height="44" rx="6" fill="none" stroke="#1C1A16" stroke-width="3"/></svg>Data di aggiornamento visibile</div>
+  </div>
+</div>
+<div class="tape"></div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- STORY: quiz — "Vero o falso?" con un'affermazione e due grandi pulsanti disegnati. La risposta è nel post.
+     Modifica: affermazione (un mito o un luogo comune legato al post del giorno). -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+:root{ --bg:#F4EFE6; --ink:#16130F; --dim:#5E574C; --a1:#1E6BFF; --a2:#E4572E; --line:#DCD3C3; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.top{position:absolute;top:290px;left:0;right:0;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:130px;letter-spacing:-5px;line-height:.95}
+.top span{color:var(--a2)}
+.card{position:absolute;left:80px;right:80px;top:640px;background:#fff;border:4px solid var(--ink);border-radius:40px;padding:70px 60px;box-shadow:18px 18px 0 var(--ink);transform:rotate(-1.5deg)}
+.card p{font-size:66px;font-weight:800;line-height:1.12;letter-spacing:-1.5px}
+.card b{position:absolute;top:-34px;left:50px;background:var(--a1);color:#fff;font:bold 28px 'DejaVu Sans Mono',monospace;letter-spacing:4px;padding:14px 24px;border-radius:14px}
+.btns{position:absolute;left:80px;right:80px;top:1270px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.btns div{height:170px;border-radius:40px;display:flex;align-items:center;justify-content:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:64px;letter-spacing:-1px;color:#fff}
+.v{background:var(--a1)}.f{background:var(--a2)}
+.hint{position:absolute;left:80px;right:80px;bottom:320px;text-align:center;font-size:38px;font-weight:700;color:var(--dim)}
+</style></head><body>
+<div class="top">Vero<br>o <span>falso?</span></div>
+<div class="card"><b>LUOGO COMUNE</b><p>"Per farsi citare da Google AI serve un file llms.txt."</p></div>
+<div class="btns"><div class="v">VERO</div><div class="f">FALSO</div></div>
+<div class="hint">La risposta è nel post di oggi ↓</div>
+</body></html>

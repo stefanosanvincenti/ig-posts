@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- LAYOUT: matrix — matrice 2x2 (es. Impatto / Sforzo) con punti posizionati.
+     Adatto a: priorità, cosa fare prima, rischio vs probabilità.
+     Modifica: assi, nomi dei quadranti, punti (left/top in % dentro il riquadro: left 0=sinistra, top 0=alto). -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#0B1220; --ink:#FFFFFF; --dim:#A9B6CC; --a1:#C6F432; --a2:#FF5A4F; --line:#22314F; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a1)}
+h1{position:absolute;top:118px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:74px;line-height:1.04;letter-spacing:-2px}
+h1 span{color:var(--a1)}
+.box{position:absolute;left:150px;top:350px;width:858px;height:780px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px}
+.q{border-radius:20px;background:rgba(255,255,255,.04);padding:20px 22px;font:bold 20px 'DejaVu Sans Mono',monospace;letter-spacing:3px;color:var(--dim)}
+.q.best{background:rgba(198,244,50,.12);color:var(--a1)}
+.q.br{text-align:right}
+.q.bottom{display:flex;align-items:flex-end}
+.q.bottom.br{justify-content:flex-end}
+.dot{position:absolute;transform:translate(-14px,-14px);display:flex;align-items:center;gap:12px;white-space:nowrap;font-size:25px;font-weight:700}
+.dot:before{content:'';flex:none;width:28px;height:28px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 7px rgba(198,244,50,.2)}
+.dot.bad:before{background:var(--a2);box-shadow:0 0 0 7px rgba(255,90,79,.2)}
+.dot.flip{flex-direction:row-reverse;transform:translate(calc(-100% + 14px),-14px)}
+.ax{position:absolute;font:bold 22px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:var(--dim)}
+.ax.y{left:92px;top:740px;transform:rotate(-90deg);transform-origin:left top;}
+.ax.x{left:150px;top:1150px;width:858px;text-align:center}
+svg{position:absolute;left:0;top:0}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--a1)}
+</style></head><body>
+<div class="kicker">SEO FOR AI · PRIORITÀ</div>
+<h1>Da dove partire<br><span>senza sprecare budget</span></h1>
+<svg width="1080" height="1350"><g stroke="var(--dim)" stroke-width="3" fill="none">
+  <path d="M130,1140 L130,345"/><path d="M122,358 L130,342 L138,358"/>
+  <path d="M140,1140 L1012,1140"/><path d="M998,1132 L1014,1140 L998,1148"/></g></svg>
+<div class="ax y">IMPATTO →</div>
+<div class="ax x">SFORZO →</div>
+<div class="box">
+  <div class="q best">FALLO SUBITO</div><div class="q br">PIANIFICA</div>
+  <div class="q bottom">SE AVANZA TEMPO</div><div class="q bottom br">LASCIA STARE</div>
+</div>
+<!-- punti: coordinate assolute = box (150,350, 858x780). Calcola left = 150 + 858*x%, top = 350 + 780*y% -->
+<div class="dot" style="left:236px;top:440px">Risposta in apertura</div>
+<div class="dot" style="left:300px;top:560px">Dati con fonte</div>
+<div class="dot" style="left:330px;top:680px">FAQ e Schema</div>
+<div class="dot flip" style="left:900px;top:470px">Studi e dati originali</div>
+<div class="dot flip" style="left:860px;top:620px">Profili autore</div>
+<div class="dot bad" style="left:250px;top:1000px">File llms.txt</div>
+<div class="dot bad flip" style="left:930px;top:1030px">Rifare tutto il sito</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

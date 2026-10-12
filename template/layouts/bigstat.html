@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- LAYOUT: bigstat — un numero gigante + grafico a barre orizzontali + fonte.
+     Adatto a: dati, sanzioni, percentuali, scadenze. Usa SOLO numeri verificati e indica sempre la fonte.
+     Modifica: numero (.big), etichetta, barre (larghezza in % nello style width), valori, fonte. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#FFD23F; --ink:#121212; --dim:#3D3A2E; --a1:#121212; --a2:#6B2BFF; --line:rgba(0,0,0,.15); }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px}
+.big{position:absolute;top:110px;left:60px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:300px;line-height:1;letter-spacing:-14px}
+.big small{font-size:120px;letter-spacing:-4px;margin-left:12px}
+.lead{position:absolute;top:430px;left:72px;right:72px;font-size:44px;font-weight:800;line-height:1.15;letter-spacing:-1px}
+.lead span{background:var(--a2);color:#fff;padding:0 10px;border-radius:8px}
+.chart{position:absolute;top:640px;left:72px;right:72px}
+.chart h3{font:bold 22px 'DejaVu Sans Mono',monospace;letter-spacing:4px;margin-bottom:26px;color:var(--dim)}
+.bar{margin-bottom:46px}
+.bar .lab{display:flex;justify-content:space-between;font-size:28px;font-weight:700;margin-bottom:10px}
+.bar .track{height:84px;border-radius:14px;background:var(--line);overflow:hidden}
+.bar .fill{height:100%;border-radius:14px;background:var(--a1)}
+.bar.alt .fill{background:var(--a2)}
+.src{position:absolute;left:72px;right:72px;bottom:130px;font-size:22px;color:var(--dim);border-top:2px solid var(--line);padding-top:18px}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="kicker">NIS2 · SANZIONI</div>
+<div class="big">10<small>mln €</small></div>
+<div class="lead">La sanzione massima per i soggetti <span>essenziali</span>, oppure il 2% del fatturato mondiale se più alto.</div>
+<div class="chart"><h3>TETTO MASSIMO, MILIONI DI EURO</h3>
+  <div class="bar"><div class="lab"><span>Soggetti essenziali</span><span>10 mln o 2%</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+  <div class="bar alt"><div class="lab"><span>Soggetti importanti</span><span>7 mln o 1,4%</span></div><div class="track"><div class="fill" style="width:70%"></div></div></div>
+</div>
+<div class="src">Fonte: Direttiva (UE) 2022/2555, art. 34 · D.Lgs. 138/2024</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- LAYOUT: hub — mappa mentale: concetto al centro, 6 nodi intorno collegati da linee.
+     Adatto a: "6 fattori che...", ecosistemi, cosa include un servizio, aree di un audit.
+     Modifica: testo del centro, titoli e sottotitoli dei 6 nodi. Le posizioni sono già calcolate. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#08170F; --ink:#FFFFFF; --dim:#AFC7B8; --a1:#FFB020; --a2:#4ADE9C; --line:#1F3B2D; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a2)}
+h1{position:absolute;top:118px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:68px;line-height:1.04;letter-spacing:-2px}
+h1 span{color:var(--a1)}
+svg{position:absolute;left:0;top:0}
+.core{position:absolute;left:400px;top:650px;width:280px;height:280px;border-radius:50%;background:var(--a1);color:var(--bg);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:40px;line-height:1.05;letter-spacing:-1px;padding:30px;box-shadow:0 0 0 18px rgba(255,176,32,.15),0 0 0 40px rgba(255,176,32,.06)}
+.n{position:absolute;width:290px;height:118px;margin:-59px 0 0 -145px;border-radius:22px;background:var(--bg);border:3px solid var(--a2);padding:16px 18px;text-align:center}
+.n b{display:block;font-size:27px;font-weight:800;line-height:1.1}
+.n i{display:block;font-style:normal;font-size:20px;color:var(--dim);margin-top:6px;line-height:1.2}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--a1)}
+</style></head><body>
+<div class="kicker">SEO FOR AI · FIDUCIA</div>
+<h1>6 segnali che fanno<br><span>fidare le AI di te</span></h1>
+<!-- centro (540,790), raggio 330 -->
+<svg width="1080" height="1350"><g stroke="var(--a2)" stroke-width="3" stroke-dasharray="4 10" stroke-linecap="round">
+  <path d="M540,790 L540,460"/><path d="M540,790 L826,625"/><path d="M540,790 L826,955"/>
+  <path d="M540,790 L540,1120"/><path d="M540,790 L254,955"/><path d="M540,790 L254,625"/></g>
+  <circle cx="540" cy="790" r="330" fill="none" stroke="var(--line)" stroke-width="2"/></svg>
+<div class="core">La tua autorevolezza</div>
+<div class="n" style="left:540px;top:460px"><b>Autore chiaro</b><i>Nome, ruolo, competenze</i></div>
+<div class="n" style="left:826px;top:625px"><b>Dati con fonte</b><i>Numeri verificabili</i></div>
+<div class="n" style="left:826px;top:955px"><b>Menzioni esterne</b><i>Altri parlano di te</i></div>
+<div class="n" style="left:540px;top:1120px"><b>Contenuti aggiornati</b><i>Date visibili e reali</i></div>
+<div class="n" style="left:254px;top:955px"><b>Dati strutturati</b><i>Schema.org coerente</i></div>
+<div class="n" style="left:254px;top:625px"><b>Profili coerenti</b><i>Stesse info ovunque</i></div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

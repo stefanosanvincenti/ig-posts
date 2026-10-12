@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- LAYOUT: chat — finta conversazione con un assistente AI, con fonti citate e uno slot vuoto "il tuo sito?".
+     Adatto a: SEO for AI/GEO, come le AI rispondono, cosa vede il cliente. Non usare nomi di prodotti reali nell'interfaccia.
+     Modifica: domanda dell'utente, righe della risposta, fonti (domini di esempio generici), messaggio finale. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#F2F0FF; --ink:#141026; --dim:#5D587A; --a1:#5B2EFF; --a2:#FF7A1A; --line:#DEDAF5; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a1)}
+h1{position:absolute;top:118px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:72px;line-height:1.04;letter-spacing:-2px}
+h1 span{color:var(--a1)}
+.win{position:absolute;left:72px;right:72px;top:340px;height:640px;border-radius:32px;background:#fff;border:2px solid var(--line);box-shadow:0 30px 60px rgba(20,16,38,.10);overflow:hidden}
+.bar{height:64px;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:12px;padding:0 28px;font:bold 20px 'DejaVu Sans Mono',monospace;color:var(--dim);letter-spacing:2px}
+.bar i{width:16px;height:16px;border-radius:50%;background:var(--line);display:block}
+.me{position:absolute;right:34px;top:96px;max-width:620px;background:var(--a1);color:#fff;font-size:30px;font-weight:600;line-height:1.25;padding:22px 28px;border-radius:28px 28px 6px 28px}
+.ai{position:absolute;left:34px;right:34px;top:250px}
+.ai .who{display:flex;align-items:center;gap:14px;font:bold 22px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.ai .who:before{content:'';width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--a1),var(--a2))}
+.ai p{font-size:27px;line-height:1.4;margin-top:18px}
+.ai p sup{font:bold 18px 'DejaVu Sans Mono',monospace;color:var(--a1);background:var(--bg);padding:2px 7px;border-radius:6px;margin-left:4px}
+.src{position:absolute;left:34px;right:34px;bottom:30px;display:flex;flex-wrap:wrap;gap:14px}
+.src span{font:bold 21px 'DejaVu Sans Mono',monospace;padding:12px 18px;border-radius:14px;background:var(--bg);color:var(--dim)}
+.src span.you{background:transparent;border:3px dashed var(--a2);color:var(--a2)}
+.take{position:absolute;left:72px;right:72px;top:1030px;font-size:40px;font-weight:800;line-height:1.2}
+.take span{color:var(--a2)}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--a1)}
+</style></head><body>
+<div class="kicker">SEO FOR AI · LA PROVA</div>
+<h1>Il tuo cliente chiede.<br><span>L'AI chi nomina?</span></h1>
+<div class="win">
+  <div class="bar"><i></i><i></i><i></i>&nbsp;ASSISTENTE AI</div>
+  <div class="me">Chi può aiutarmi a mettere in regola la mia azienda con la NIS2?</div>
+  <div class="ai"><div class="who">RISPOSTA</div>
+    <p>Per un'azienda nel perimetro NIS2 conviene partire da un'analisi del rischio e dalla registrazione sul portale ACN<sup>1</sup>. Alcuni consulenti offrono pacchetti dedicati alle PMI<sup>2</sup><sup>3</sup>.</p></div>
+  <div class="src"><span>[1] acn.gov.it</span><span>[2] concorrente-a.it</span><span>[3] concorrente-b.it</span><span class="you">[4] il tuo sito?</span></div>
+</div>
+<div class="take">Se non ci sei tu, <span>ci sono i tuoi concorrenti.</span></div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- LAYOUT: versus — due colonne a confronto (Mito/Realtà, Prima/Dopo, Sbagliato/Giusto) con "VS" al centro.
+     Adatto a: sfatare miti, confronti, errori comuni vs pratica corretta. Funziona bene con palette chiare.
+     Modifica: intestazioni colonne, 3 righe (sinistra = da evitare, destra = da fare). -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#F4EFE6; --ink:#16130F; --dim:#5E574C; --a1:#1E6BFF; --a2:#E4572E; --line:#DCD3C3; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a2)}
+h1{position:absolute;top:118px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:80px;line-height:1.02;letter-spacing:-2.5px}
+h1 span{color:var(--a1)}
+.cols{position:absolute;top:360px;left:72px;right:72px;bottom:150px;display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.col h2{font:bold 26px 'DejaVu Sans Mono',monospace;letter-spacing:6px;padding:16px 22px;border-radius:14px;display:inline-block}
+.l h2{background:var(--a2);color:#fff}
+.r h2{background:var(--a1);color:#fff}
+.card{margin-top:26px;height:200px;border-radius:24px;padding:26px 26px 0 26px;position:relative}
+.l .card{border:3px dashed var(--a2);opacity:.92}
+.r .card{background:#fff;border:3px solid var(--a1);box-shadow:10px 10px 0 var(--a1)}
+.card b{display:block;font-size:30px;line-height:1.15;font-weight:800}
+.card i{display:block;font-style:normal;font-size:22px;line-height:1.3;color:var(--dim);margin-top:10px}
+.l .card b{text-decoration:line-through;text-decoration-color:var(--a2);text-decoration-thickness:3px}
+.vs{position:absolute;left:50%;top:700px;transform:translateX(-50%);width:96px;height:96px;border-radius:50%;background:var(--ink);color:var(--bg);font:900 34px/96px 'Inter',sans-serif;text-align:center;letter-spacing:-1px}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--a1)}
+</style></head><body>
+<div class="kicker">SEO · MITI DA SFATARE</div>
+<h1>Quello che si dice<br>vs <span>quello che conta</span></h1>
+<div class="cols">
+  <div class="col l"><h2>MITO</h2>
+    <div class="card"><b>Serve un file llms.txt</b><i>Google dice che non è necessario per le sue funzioni AI</i></div>
+    <div class="card"><b>Più parole = più posizioni</b><i>La lunghezza non è un fattore</i></div>
+    <div class="card"><b>Basta pubblicare tanto</b><i>Il volume senza valore non regge</i></div>
+  </div>
+  <div class="col r"><h2>REALTÀ</h2>
+    <div class="card"><b>Pagine leggibili e indicizzabili</b><i>Le basi tecniche vengono prima di tutto</i></div>
+    <div class="card"><b>Risposte chiare e complete</b><i>Quanto serve, non un paragrafo di più</i></div>
+    <div class="card"><b>Contenuti originali</b><i>Esperienza e dati che gli altri non hanno</i></div>
+  </div>
+</div>
+<div class="vs">VS</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

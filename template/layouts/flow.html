@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- LAYOUT: flow — schema a processo, 4 passaggi collegati da frecce a serpentina.
+     Adatto a: "come funziona", procedure, percorsi (es. come un contenuto arriva in una risposta AI, gestione incidente).
+     Modifica: kicker, h1 (parola chiave in <span>), sottotitolo, testi dei 4 nodi. Il nodo 4 è evidenziato. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#062C30; --ink:#FFFFFF; --dim:#A3C9C7; --a1:#FF8A5B; --a2:#7CF2E2; --line:#0F4549; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a2)}
+h1{position:absolute;top:120px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:78px;line-height:1.03;letter-spacing:-2px}
+h1 span{color:var(--a1)}
+.sub{position:absolute;top:310px;left:72px;right:72px;font-size:32px;color:var(--dim)}
+.node{position:absolute;width:430px;height:140px;border:3px solid var(--line);border-radius:26px;padding:22px 26px 0 104px;background:rgba(255,255,255,.03)}
+.node .n{position:absolute;left:24px;top:30px;width:60px;height:60px;border-radius:50%;border:3px solid var(--a2);color:var(--a2);font:bold 30px/54px 'DejaVu Sans Mono',monospace;text-align:center}
+.node b{display:block;font-size:31px;font-weight:800;line-height:1.1}
+.node i{display:block;font-style:normal;font-size:23px;color:var(--dim);margin-top:8px;line-height:1.25}
+.node.hot{background:var(--a1);border-color:var(--a1);color:var(--bg)}
+.node.hot .n{border-color:var(--bg);color:var(--bg)}
+.node.hot i{color:var(--bg);opacity:.8}
+svg.links{position:absolute;left:0;top:0}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--a2)}
+</style></head><body>
+<div class="kicker">SEO FOR AI · IL PERCORSO</div>
+<h1>Come una pagina<br>finisce <span>in una risposta AI</span></h1>
+<div class="sub">Quattro passaggi. Se ne salti uno, non vieni citato.</div>
+
+<svg class="links" width="1080" height="1350">
+  <defs><marker id="ar" markerUnits="userSpaceOnUse" markerWidth="26" markerHeight="26" viewBox="0 0 14 14" refX="7" refY="7" orient="auto"><path d="M1,1 L13,7 L1,13 z" fill="var(--a2)"/></marker></defs>
+  <g fill="none" stroke="var(--a2)" stroke-width="4" stroke-dasharray="10 9">
+    <path d="M287,570 C287,620 793,580 793,622" marker-end="url(#ar)"/>
+    <path d="M793,770 C793,820 287,780 287,822" marker-end="url(#ar)"/>
+    <path d="M287,970 C287,1020 793,980 793,1022" marker-end="url(#ar)"/>
+  </g>
+</svg>
+<div class="node" style="left:72px;top:430px"><div class="n">1</div><b>Scansione</b><i>Il crawler deve poter leggere la pagina</i></div>
+<div class="node" style="left:578px;top:630px"><div class="n">2</div><b>Indicizzazione</b><i>Contenuto in HTML, non nascosto</i></div>
+<div class="node" style="left:72px;top:830px"><div class="n">3</div><b>Selezione</b><i>Risposta chiara, dati con fonte</i></div>
+<div class="node hot" style="left:578px;top:1030px"><div class="n">4</div><b>Citazione</b><i>Il tuo brand dentro la risposta</i></div>
+
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

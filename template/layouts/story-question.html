@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- STORY: question — domanda gigante che incuriosisce + freccia disegnata + anteprima del post inclinata.
+     Modifica: kicker, domanda (una parola in <span>), testo della pillola. {{POST_IMG}} viene riempito da render.py --img. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+:root{ --bg:#0C0818; --ink:#FFFFFF; --dim:#B9B3CC; --a1:#A855F7; --a2:#39E5FF; --line:#241C3A; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+/* zona sicura: niente testo nei primi 250px e negli ultimi 300px */
+.kicker{position:absolute;top:270px;left:80px;font:bold 28px 'DejaVu Sans Mono',monospace;letter-spacing:6px;color:var(--a2)}
+.q{position:absolute;top:340px;left:74px;right:70px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:112px;line-height:1;letter-spacing:-4px}
+.q span{color:var(--a1)}
+svg.arrow{position:absolute;left:640px;top:820px}
+.thumb{position:absolute;left:170px;top:900px;width:440px;transform:rotate(-6deg);border-radius:22px;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 6px var(--ink)}
+.pill{position:absolute;left:80px;right:80px;bottom:330px;text-align:center}
+.pill span{display:inline-block;background:var(--a2);color:var(--bg);font-weight:800;font-size:40px;padding:22px 40px;border-radius:60px}
+</style></head><body>
+<div class="kicker">DOMANDA DEL GIORNO</div>
+<div class="q">Le AI parlano<br>dei tuoi<br><span>concorrenti</span><br>e non di te?</div>
+<svg class="arrow" width="300" height="300" viewBox="0 0 300 300"><path d="M40,20 C200,40 250,140 150,250" fill="none" stroke="var(--a2)" stroke-width="10" stroke-linecap="round"/><path d="M110,215 L150,255 L195,222" fill="none" stroke="var(--a2)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<img class="thumb" src="{{POST_IMG}}">
+<div class="pill"><span>La risposta nel post di oggi</span></div>
+</body></html>
