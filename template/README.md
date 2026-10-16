@@ -30,6 +30,13 @@ chiaro e una riga di commento in testa che spiega a cosa serve.
 | hub.html | mappa mentale: centro + 6 nodi | "6 fattori", ecosistemi, aree di un audit |
 | poster.html | manifesto tipografico + illustrazione | un solo concetto forte, opinioni |
 | checklist.html | foglio di quaderno con spunte disegnate | controlli pratici, "prima di..." |
+| **network.html** ★ | schema di rete con firewall, VLAN, attacco bloccato, backup air gap | segmentazione, ransomware, zero trust, backup |
+| **killchain.html** ★ | catena d'attacco a 6 scalini + scudi dove si spezza | come avviene un attacco, quali controlli NIS2 servono |
+| **terminal.html** ★ | console/log di sicurezza con righe evidenziate e callout | SOC, monitoraggio, brute force, MFA, log (NIS2) |
+| **anatomy.html** ★ | oggetto "anatomizzato" (es. mail di phishing) con 5 segnali numerati | phishing, frodi IBAN, smishing, red flag |
+| **riskmap.html** ★ | heat map del rischio 5x5 con pin | analisi del rischio NIS2, priorità |
+
+★ = layout "WOW" tecnici. Fino a fine ottobre 2026 hanno la precedenza: almeno 3 post su 5 devono usarne uno.
 
 I file in `template/variants/` sono post già usati: si possono riprendere come base, ma contano
 come layout "lista" ai fini della rotazione.
@@ -41,6 +48,8 @@ come layout "lista" ai fini della rotazione.
 | story-stat.html | un numero enorme preso dal post + contesto |
 | story-quiz.html | "Vero o falso?" con due pulsanti disegnati |
 | story-peek.html | frase gancio + post "attaccato" con lo scotch + bollino NUOVO (usa --img) |
+| **story-alert.html** ★ | schermata d'allarme con triangolo luminoso e testo glitch (cyber/NIS2) |
+| **story-terminal.html** ★ | console a tutto schermo che "digita" la domanda (temi tecnici) |
 Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 
 ## Palette (sostituisci il blocco :root del layout)
@@ -54,6 +63,8 @@ Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 | ghiaccio | chiaro | --bg:#EEF4FA; --ink:#0B1B2E; --dim:#4A5B70; --a1:#0057FF; --a2:#00B3A4; --line:#D3DEEA; |
 | lavanda | chiaro | --bg:#F2F0FF; --ink:#141026; --dim:#5D587A; --a1:#5B2EFF; --a2:#FF7A1A; --line:#DEDAF5; |
 | giallo | colore | --bg:#FFD23F; --ink:#121212; --dim:#3D3A2E; --a1:#121212; --a2:#6B2BFF; --line:rgba(0,0,0,.15); |
+| soc | scuro neon | --bg:#05070A; --ink:#FFFFFF; --dim:#8FA3B8; --a1:#39FF88; --a2:#2FD3FF; --line:#111A24; --bad:#FF3B5C; |
+| allarme | scuro rosso | --bg:#0A0A0F; --ink:#FFFFFF; --dim:#9A9AB0; --a1:#FF2E4D; --a2:#3DFFA2; --line:#1C1C28; |
 | corallo | colore | --bg:#FF5A4F; --ink:#1A0B0A; --dim:#4A1D1A; --a1:#FFFFFF; --a2:#1A0B0A; --line:rgba(0,0,0,.18); |
 Nei layout chiari alcuni elementi usano #fff per le schede: va bene su carta/ghiaccio/lavanda.
 
@@ -63,6 +74,11 @@ Nei layout chiari alcuni elementi usano #fff per le schede: va bene su carta/ghi
 Lavora su una copia del layout (es. /tmp/oggi.html), non modificare l'originale salvo migliorie.
 render.py stampa AVVISO se un testo esce dalla pagina: correggi e rirenderizza. Poi controlla
 SEMPRE l'immagine con Read: niente sovrapposizioni, frecce che puntano giuste, testi leggibili.
+
+## Linea editoriale (da metà ottobre 2026)
+- Taglio TECNICO e molto grafico: schemi veri (reti, catene d'attacco, log, flussi), dati e riferimenti normativi precisi, non frasi motivazionali.
+- Mix: circa 4 post su 5 su NIS2 e cybersecurity (misure di base, incidenti, supply chain, governance, MFA, backup, segmentazione, phishing, log, vulnerabilità, ruoli e responsabilità), 1 su 5 SEO/SEO for AI tecnica.
+- Effetto WOW: glow, griglie, icone SVG disegnate a mano nel layout, contrasti forti. Ogni grafica deve sembrare un'infografica fatta da un designer, non un template.
 
 ## Contenuti
 - Solo fatti verificati; per numeri e date cita la fonte nella grafica o nella caption.

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: anatomy — oggetto "anatomizzato": una finta email di phishing con 5 segnali numerati
+     e callout laterali collegati da linee. Adatto a: phishing, frodi del CEO, fatture false, smishing.
+     Nomi, domini e importi sono INVENTATI (dominio .example o storpiature evidenti), mai aziende reali.
+     Modifica: kicker, h1, campi della mail, callout .cl (numero, titolo, testo). -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#FFE14D; --ink:#111111; --dim:#4A4430; --a1:#E8132F; --a2:#111111; --line:rgba(0,0,0,.14); }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative;
+  background-image:repeating-linear-gradient(-45deg,transparent 0 22px,rgba(0,0,0,.035) 22px 44px)}
+.kicker{position:absolute;top:66px;left:72px;font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:5px}
+h1{position:absolute;top:106px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:76px;line-height:1;letter-spacing:-3px}
+h1 span{background:var(--ink);color:var(--bg);padding:0 12px;border-radius:10px}
+.mail{position:absolute;left:180px;top:340px;width:600px;height:600px;background:#fff;border-radius:22px;border:3px solid var(--ink);box-shadow:16px 16px 0 var(--ink);transform:rotate(-1.2deg);overflow:hidden}
+.mh{padding:22px 26px;border-bottom:2px solid #eee;font-size:20px;line-height:1.6;color:#555}
+.mh b{color:#111}
+.mh .from em{font-style:normal;background:rgba(232,19,47,.12);color:var(--a1);font-weight:700;padding:0 4px;border-radius:4px}
+.subj{font-size:27px;font-weight:900;color:#111;margin-top:6px;line-height:1.2}
+.mb{padding:22px 26px;font-size:21px;line-height:1.5;color:#333}
+.btn{display:inline-block;margin-top:18px;background:#1f5eff;color:#fff;font-weight:800;padding:14px 22px;border-radius:12px;font-size:22px}
+.url{display:block;margin-top:10px;font:17px 'DejaVu Sans Mono',monospace;color:var(--a1)}
+.att{margin-top:22px;display:flex;align-items:center;gap:12px;border:2px dashed #ccc;border-radius:12px;padding:12px 14px;font:bold 19px 'DejaVu Sans Mono',monospace}
+.att i{width:36px;height:44px;background:#ffd2d8;border-radius:5px;display:block}
+.dot{position:absolute;width:52px;height:52px;border-radius:50%;background:var(--a1);color:#fff;font:900 28px/52px 'Inter',sans-serif;text-align:center;box-shadow:0 0 0 6px #fff,0 6px 16px rgba(0,0,0,.25)}
+.cl{position:absolute;width:250px;font-size:20px;line-height:1.25;color:var(--dim)}
+.cl b{display:block;font-size:24px;color:var(--ink);font-weight:900;margin-bottom:4px}
+svg.ln{position:absolute;left:0;top:0}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font:22px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="kicker">CYBERSECURITY · PHISHING</div>
+<h1>5 dettagli che<br>tradiscono <span>una truffa</span></h1>
+<div class="mail">
+  <div class="mh">
+    <div class="from">Da: <b>Ufficio Amministrazione</b> &lt;<em>amministrazione@fornitore-pagamenti.example</em>&gt;</div>
+    <div>A: te</div>
+    <div class="subj">URGENTE: IBAN aggiornato, pagare entro oggi</div>
+  </div>
+  <div class="mb">Gentile cliente,<br>a causa di un controllo bancario il nostro IBAN è cambiato. Il pagamento della fattura va eseguito <b>entro le 17:00</b> per evitare il blocco della fornitura.
+    <br><span class="btn">Scarica fattura</span><span class="url">http://fattura-pagamenti.example/login</span>
+    <div class="att"><i></i>Fattura_10-2026.pdf.zip</div>
+  </div>
+</div>
+<!-- pallini sul bordo della mail, callout allineati -->
+<div class="dot" style="left:754px;top:378px">1</div>
+<div class="dot" style="left:754px;top:470px">2</div>
+<div class="dot" style="left:154px;top:628px">3</div>
+<div class="dot" style="left:754px;top:770px">4</div>
+<div class="dot" style="left:754px;top:850px">5</div>
+<div class="cl" style="left:825px;top:362px;width:225px"><b>Mittente</b>Nome giusto, dominio sbagliato</div>
+<div class="cl" style="left:825px;top:480px;width:225px"><b>Urgenza</b>Ti mette fretta per non farti pensare</div>
+<div class="cl" style="left:24px;top:700px;width:150px"><b>IBAN</b>Cambiato via mail? Telefona.</div>
+<div class="cl" style="left:825px;top:690px;width:225px"><b>Link</b>Il testo dice fattura, l'indirizzo no</div>
+<div class="cl" style="left:825px;top:860px;width:225px"><b>Allegato</b>.pdf.zip è un archivio, non un PDF</div>
+<div class="tip" style="position:absolute;left:72px;right:72px;top:1010px;font-size:30px;font-weight:800;line-height:1.25">Nel dubbio non cliccare: verifica con una telefonata, al numero che hai già in rubrica.</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

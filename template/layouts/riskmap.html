@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: riskmap — mappa di calore del rischio 5x5 (probabilità x impatto) con gradiente
+     verde-rosso e rischi posizionati come pin. Adatto a: analisi del rischio NIS2, priorità di sicurezza.
+     Modifica: kicker, h1, pin (.pin: left/top in px dentro la griglia; colonna = probabilità 1-5, riga = impatto 5-1),
+     legenda. Griglia: origine (190,400), celle 160x150. Centro cella (c,r) = left 190+160*(c-1)+80, top 400+150*(5-r)+75. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#0B0D17; --ink:#FFFFFF; --dim:#9CA3BF; --a1:#FF4D6D; --a2:#7C5CFF; --line:#1C2033; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:66px;left:72px;font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--a2)}
+h1{position:absolute;top:108px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:68px;line-height:1.03;letter-spacing:-2.5px}
+h1 span{background:linear-gradient(90deg,#FFC94D,var(--a1));-webkit-background-clip:text;color:transparent}
+.grid{position:absolute;left:190px;top:400px;width:800px;height:750px;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);gap:5px}
+.grid div{border-radius:12px}
+.pin{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:6px}
+.pin i{display:block;width:30px;height:30px;border-radius:50%;background:#fff;border:7px solid var(--bg);box-shadow:0 0 0 3px #fff,0 0 20px rgba(255,255,255,.6)}
+.pin span{font-size:19px;font-weight:800;background:rgba(11,13,23,.86);padding:4px 10px;border-radius:8px;white-space:nowrap}
+.ax{position:absolute;font:bold 20px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:var(--dim)}
+.ax.y{left:100px;top:1010px;transform:rotate(-90deg);transform-origin:left top}
+.ax.x{left:190px;top:1166px;width:800px;text-align:center}
+.tick{position:absolute;font:bold 18px 'DejaVu Sans Mono',monospace;color:#4D5370}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font:22px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--a2)}
+</style></head><body>
+<div class="kicker">NIS2 · ANALISI DEL RISCHIO</div>
+<h1>Non puoi proteggere tutto.<br><span>Parti da qui.</span></h1>
+<div class="grid" id="g"></div>
+<script>
+// colore cella = probabilità (colonna) + impatto (riga): verde -> giallo -> rosso
+const g=document.getElementById('g');
+const pal=['#12352A','#1F5A3A','#5C6B1F','#8A5A12','#8E2A1E','#A0142E','#C2103A','#D90D45','#E5094F','#F0085A'];
+for(let r=5;r>=1;r--)for(let c=1;c<=5;c++){const d=document.createElement('div');d.style.background=pal[Math.min(9,c+r-2)];g.appendChild(d)}
+</script>
+<div class="ax y">IMPATTO →</div><div class="ax x">PROBABILITÀ →</div>
+<!-- pin: centro cella (c,r) = left 190+160*(c-1)+80, top 400+150*(5-r)+75 -->
+<div class="pin" style="left:830px;top:475px"><i></i><span>Ransomware</span></div>
+<div class="pin" style="left:830px;top:625px"><i></i><span>Phishing al personale</span></div>
+<div class="pin" style="left:510px;top:475px"><i></i><span>Fornitore compromesso</span></div>
+<div class="pin" style="left:670px;top:775px"><i></i><span>Password deboli</span></div>
+<div class="pin" style="left:350px;top:625px"><i></i><span>Guasto data center</span></div>
+<div class="pin" style="left:350px;top:1075px"><i></i><span>Furto di un portatile</span></div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- STORY WOW: terminal — prompt di console a tutto schermo che "digita" una domanda, cursore verde,
+     scanline. Per temi tecnici (cyber, NIS2, SEO tecnica). Modifica: le righe .l e la domanda .q. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+:root{ --bg:#020604; --ink:#E9FFF3; --dim:#4F7A63; --a1:#39FF88; --a2:#2FD3FF; --line:#0E1F17; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'DejaVu Sans Mono',monospace;position:relative}
+.scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(57,255,136,.04) 0 3px,transparent 3px 7px)}
+.glow{position:absolute;left:-200px;top:500px;width:1400px;height:900px;background:radial-gradient(ellipse,rgba(57,255,136,.13),transparent 65%)}
+.box{position:absolute;left:70px;right:70px;top:280px}
+.l{font-size:32px;line-height:1.7;color:var(--dim)}
+.l b{color:var(--a1)}
+.q{margin-top:50px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:100px;line-height:1.02;letter-spacing:-3.5px;color:var(--ink);text-shadow:0 0 34px rgba(57,255,136,.35)}
+.q span{color:var(--a1)}
+.cur{display:inline-block;width:52px;height:92px;background:var(--a1);vertical-align:-10px;margin-left:10px;box-shadow:0 0 22px var(--a1)}
+.bot{position:absolute;left:70px;right:70px;bottom:340px;font-size:34px;color:var(--a2)}
+.bot b{color:var(--ink)}
+</style></head><body>
+<div class="glow"></div>
+<div class="box">
+  <div class="l">$ <b>ssh</b> azienda-srv01</div>
+  <div class="l">&gt; last login: 03:12 da 203.0.113.47</div>
+  <div class="l">&gt; utente: admin · MFA: <b style="color:#FF3B5C">disattivata</b></div>
+  <div class="q">Chi altro<br>ha le chiavi<br>della tua <span>rete</span>?<span class="cur"></span></div>
+</div>
+<div class="bot">$ cat <b>post_di_oggi</b> ↓</div>
+<div class="scan"></div>
+</body></html>

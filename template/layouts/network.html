@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: network — schema di rete tecnico: internet, firewall, 4 zone segmentate con icone,
+     flussi luminosi, percorso d'attacco rosso bloccato tra due zone, backup isolato (air gap).
+     Adatto a: segmentazione, zero trust, ransomware, backup, architetture NIS2.
+     Modifica: kicker, h1, testi delle 4 zone (.tag / b / i), nota in basso.
+     Palette consigliate: soc, notte, lime (scure: il glow rende al meglio). -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#05070A; --ink:#FFFFFF; --dim:#8FA3B8; --a1:#39FF88; --a2:#2FD3FF; --line:#111A24; --bad:#FF3B5C; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:54px 54px}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,transparent 35%,var(--bg) 88%)}
+.kicker{position:absolute;top:66px;left:72px;font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--a1)}
+.kicker em{font-style:normal;color:var(--bad)}
+h1{position:absolute;top:108px;left:72px;right:60px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:64px;line-height:1.03;letter-spacing:-2.2px}
+h1 span{color:var(--a1);text-shadow:0 0 30px rgba(57,255,136,.45)}
+svg.net{position:absolute;left:0;top:0}
+.lab{position:absolute;width:200px;text-align:center;font:bold 18px 'DejaVu Sans Mono',monospace;letter-spacing:3px;color:var(--dim)}
+.zone{position:absolute;width:420px;height:196px;border-radius:22px;border:2px solid var(--a2);background:rgba(10,30,40,.85);padding:22px 22px 0 108px;box-shadow:0 0 0 6px rgba(47,211,255,.05),0 0 40px rgba(47,211,255,.12)}
+.zone svg{position:absolute;left:22px;top:26px}
+.zone .tag{font:bold 17px 'DejaVu Sans Mono',monospace;letter-spacing:3px;color:var(--a2)}
+.zone b{display:block;font-size:30px;font-weight:800;margin-top:6px;line-height:1.1}
+.zone i{display:block;font-style:normal;font-size:21px;color:var(--dim);margin-top:8px;line-height:1.25}
+.zone.vault{border-color:var(--a1);background:rgba(8,36,22,.88);box-shadow:0 0 0 6px rgba(57,255,136,.06),0 0 44px rgba(57,255,136,.22)}
+.zone.vault .tag{color:var(--a1)}
+.zone.hot{border-color:var(--bad);box-shadow:0 0 0 6px rgba(255,59,92,.08),0 0 44px rgba(255,59,92,.25)}
+.zone.hot .tag{color:var(--bad)}
+.note{position:absolute;left:72px;right:72px;bottom:120px;font-size:25px;color:var(--dim);line-height:1.35;border-left:5px solid var(--a1);padding-left:20px}
+.note b{color:var(--ink)}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font:22px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--a1)}
+</style></head><body>
+<div class="vig"></div>
+<div class="kicker"><em>●</em> CYBERSECURITY · ARCHITETTURA</div>
+<h1>Il ransomware entra da un PC.<br><span>La rete decide fin dove arriva.</span></h1>
+
+<svg class="net" width="1080" height="1350">
+  <defs>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- collegamenti legittimi -->
+  <g filter="url(#g)" stroke="var(--a2)" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M540,372 L540,410"/>
+    <path d="M540,496 L540,526 L282,526 L282,560"/><path d="M540,526 L798,526 L798,560"/>
+    <path d="M282,756 L282,830"/>
+  </g>
+  <g fill="var(--a2)" filter="url(#g)"><circle cx="540" cy="392" r="6"/><circle cx="400" cy="526" r="6"/><circle cx="680" cy="526" r="6"/><circle cx="282" cy="795" r="6"/></g>
+  <!-- internet -->
+  <g transform="translate(540,330)"><path d="M-62,28 a30,30 0 0 1 6,-58 a42,42 0 0 1 78,-8 a32,32 0 0 1 42,36 a26,26 0 0 1 -6,30 z" fill="none" stroke="var(--dim)" stroke-width="4"/></g>
+  <!-- firewall -->
+  <g transform="translate(476,410)">
+    <rect width="128" height="86" rx="10" fill="#071a10" stroke="var(--a1)" stroke-width="4" filter="url(#g)"/>
+    <g stroke="var(--a1)" stroke-width="3"><path d="M10,30 H118 M10,57 H118 M46,8 V30 M82,8 V30 M28,30 V57 M64,30 V57 M100,30 V57 M46,57 V78 M82,57 V78"/></g>
+  </g>
+  <!-- attacco laterale bloccato: Uffici -> Server -->
+  <path d="M492,690 L528,690" stroke="var(--bad)" stroke-width="6" stroke-dasharray="10 7" filter="url(#g)"/>
+  <g transform="translate(540,690)" filter="url(#g)"><circle r="27" fill="#1a0509" stroke="var(--bad)" stroke-width="5"/><path d="M-11,-11 L11,11 M11,-11 L-11,11" stroke="var(--bad)" stroke-width="7" stroke-linecap="round"/></g>
+  <!-- air gap verso backup -->
+  <g stroke="var(--a1)" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round"><path d="M798,760 L798,826"/></g>
+</svg>
+<div class="lab" style="left:250px;top:318px;text-align:right;width:200px">INTERNET</div>
+<div class="lab" style="left:640px;top:440px;text-align:left;color:var(--a1)">FIREWALL</div>
+<div class="lab" style="left:812px;top:780px;text-align:left;color:var(--a1);width:160px">AIR GAP</div>
+
+<div class="zone hot" style="left:72px;top:560px">
+  <svg width="66" height="66" viewBox="0 0 70 70"><rect x="6" y="10" width="58" height="38" rx="5" fill="none" stroke="var(--bad)" stroke-width="4"/><path d="M24,60 H46 M35,48 V60" stroke="var(--bad)" stroke-width="4"/></svg>
+  <span class="tag">VLAN 10 · COMPROMESSO</span><b>Uffici</b><i>Un clic su un allegato e il PC è dell'attaccante</i></div>
+<div class="zone" style="left:588px;top:560px">
+  <svg width="66" height="66" viewBox="0 0 70 70"><rect x="10" y="6" width="50" height="16" rx="4" fill="none" stroke="var(--a2)" stroke-width="4"/><rect x="10" y="27" width="50" height="16" rx="4" fill="none" stroke="var(--a2)" stroke-width="4"/><rect x="10" y="48" width="50" height="16" rx="4" fill="none" stroke="var(--a2)" stroke-width="4"/><circle cx="50" cy="14" r="3" fill="var(--a2)"/><circle cx="50" cy="35" r="3" fill="var(--a2)"/><circle cx="50" cy="56" r="3" fill="var(--a2)"/></svg>
+  <span class="tag">VLAN 20</span><b>Server e ERP</b><i>Raggiungibili solo sulle porte necessarie</i></div>
+<div class="zone" style="left:72px;top:830px">
+  <svg width="66" height="66" viewBox="0 0 70 70"><circle cx="35" cy="35" r="12" fill="none" stroke="var(--a2)" stroke-width="4"/><path d="M35,6 V18 M35,52 V64 M6,35 H18 M52,35 H64 M14,14 L22,22 M48,48 L56,56 M56,14 L48,22 M14,56 L22,48" stroke="var(--a2)" stroke-width="4"/></svg>
+  <span class="tag">VLAN 30</span><b>Produzione / OT</b><i>Macchine e PLC, separati dalla rete uffici</i></div>
+<div class="zone vault" style="left:588px;top:830px">
+  <svg width="66" height="66" viewBox="0 0 70 70"><rect x="12" y="30" width="46" height="32" rx="6" fill="none" stroke="var(--a1)" stroke-width="4"/><path d="M22,30 V20 a13,13 0 0 1 26,0 V30" fill="none" stroke="var(--a1)" stroke-width="4"/><circle cx="35" cy="46" r="4" fill="var(--a1)"/></svg>
+  <span class="tag">OFFLINE · IMMUTABILE</span><b>Backup</b><i>Una copia che il ransomware non può toccare</i></div>
+
+<div class="note"><b>Segmentazione + backup offline</b>: l'attacco resta un incidente su un PC invece di fermare tutta l'azienda.</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

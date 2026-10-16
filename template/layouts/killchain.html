@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: killchain — catena d'attacco a scalini (6 fasi) con linea rossa luminosa e
+     3 "scudi" verdi che indicano dove si spezza la catena con un controllo.
+     Adatto a: come avviene un attacco, quali controlli NIS2 servono e dove, ransomware, phishing.
+     Modifica: kicker, h1, testi delle 6 fasi (.st b / i), etichette dei 3 scudi (.sh). -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#0A0A0F; --ink:#FFFFFF; --dim:#9A9AB0; --a1:#FF2E4D; --a2:#3DFFA2; --line:#1C1C28; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.bgglow{position:absolute;right:-300px;top:200px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(255,46,77,.18),transparent 65%)}
+.kicker{position:absolute;top:66px;left:72px;font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--a1)}
+h1{position:absolute;top:108px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:70px;line-height:1.02;letter-spacing:-2.5px}
+h1 span{color:var(--a2);text-shadow:0 0 30px rgba(61,255,162,.4)}
+svg.chain{position:absolute;left:0;top:0}
+.st{position:absolute;width:330px;height:118px;border-radius:18px;background:#14141c;border:2px solid #2a2a38;padding:16px 18px 0 82px}
+.st .n{position:absolute;left:16px;top:22px;width:50px;height:50px;border-radius:14px;background:var(--a1);color:#fff;font:900 26px/50px 'Inter',sans-serif;text-align:center;box-shadow:0 0 22px rgba(255,46,77,.55)}
+.st b{display:block;font-size:27px;font-weight:800;line-height:1.08}
+.st i{display:block;font-style:normal;font-size:19px;color:var(--dim);margin-top:6px;line-height:1.22}
+.st.end{border-color:var(--a1);background:linear-gradient(135deg,#3a0711,#14141c)}
+.sh{position:absolute;display:flex;align-items:center;gap:10px;font:bold 19px 'DejaVu Sans Mono',monospace;letter-spacing:2px;color:var(--a2);background:rgba(10,10,15,.9);padding:6px 12px 6px 6px;border-radius:30px;border:2px solid var(--a2);box-shadow:0 0 24px rgba(61,255,162,.35)}
+.sh svg{flex:none}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font:22px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--a2)}
+</style></head><body>
+<div class="bgglow"></div>
+<div class="kicker">NIS2 · ANATOMIA DI UN ATTACCO</div>
+<h1>Sei passi per fermarti l'azienda.<br><span>Ne basta uno per salvarla.</span></h1>
+<!-- scalini: x = 72 + i*126, y = 360 + i*134 -->
+<svg class="chain" width="1080" height="1350">
+  <defs><filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <path d="M237,478 L237,494 L363,494 L363,612 M363,612 L363,628 L489,628 L489,746 M489,762 L615,762 L615,880 M615,896 L741,896 L741,1014 M741,1030 L867,1030 L867,1080"
+        fill="none" stroke="var(--a1)" stroke-width="5" stroke-dasharray="14 8" filter="url(#g)"/>
+</svg>
+<div class="st" style="left:72px;top:360px"><div class="n">1</div><b>Ricognizione</b><i>Email e nomi dal sito e da LinkedIn</i></div>
+<div class="st" style="left:198px;top:494px"><div class="n">2</div><b>Accesso iniziale</b><i>Phishing o password rubata</i></div>
+<div class="st" style="left:324px;top:628px"><div class="n">3</div><b>Movimento laterale</b><i>Dal PC verso i server</i></div>
+<div class="st" style="left:450px;top:762px"><div class="n">4</div><b>Privilegi admin</b><i>Prende le chiavi di dominio</i></div>
+<div class="st" style="left:576px;top:896px"><div class="n">5</div><b>Esfiltrazione</b><i>Copia i dati per ricattarti</i></div>
+<div class="st end" style="left:678px;top:1030px"><div class="n">6</div><b>Cifratura</b><i>Tutto fermo, arriva il riscatto</i></div>
+<!-- scudi: dove si spezza la catena -->
+<div class="sh" style="left:40px;top:528px"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M20,3 L35,9 V20 C35,29 28,35 20,38 C12,35 5,29 5,20 V9 Z" fill="var(--a2)"/><path d="M13,20 L18,25 L27,15" stroke="#0A0A0F" stroke-width="4" fill="none" stroke-linecap="round"/></svg>MFA</div>
+<div class="sh" style="left:40px;top:662px"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M20,3 L35,9 V20 C35,29 28,35 20,38 C12,35 5,29 5,20 V9 Z" fill="var(--a2)"/><path d="M13,20 L18,25 L27,15" stroke="#0A0A0F" stroke-width="4" fill="none" stroke-linecap="round"/></svg>SEGMENTAZIONE</div>
+<div class="sh" style="left:40px;top:796px"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M20,3 L35,9 V20 C35,29 28,35 20,38 C12,35 5,29 5,20 V9 Z" fill="var(--a2)"/><path d="M13,20 L18,25 L27,15" stroke="#0A0A0F" stroke-width="4" fill="none" stroke-linecap="round"/></svg>ACCOUNT ADMIN SEPARATI</div>
+<div class="sh" style="left:250px;top:930px"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M20,3 L35,9 V20 C35,29 28,35 20,38 C12,35 5,29 5,20 V9 Z" fill="var(--a2)"/><path d="M13,20 L18,25 L27,15" stroke="#0A0A0F" stroke-width="4" fill="none" stroke-linecap="round"/></svg>BACKUP OFFLINE</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
