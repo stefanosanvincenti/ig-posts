@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: promo-geo — locandina "servizio" stile campagna: titolo gigante, schede chat AI in vetro
+     che fluttuano, laptop disegnato in CSS con ricerca e grafico in crescita, colonna servizi con icone,
+     barra KPI, pulsante CTA verso sanvincenti.com. Adatto a: promuovere un servizio (GEO, NIS2, SEO tecnica).
+     Regole: nelle schede chat NIENTE nomi o loghi di prodotti AI reali e NIENTE finte raccomandazioni di
+     sanvincenti.com: le AI citano "la tua azienda" (il risultato per il cliente). Nella barra KPI niente
+     numeri inventati: si indicano le metriche che si misurano. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#040A09; --ink:#FFFFFF; --dim:#9DB3AC; --a1:#3DFFB8; --a2:#22C99A; --line:#0F2620; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.bg1{position:absolute;right:-260px;top:120px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(61,255,184,.16),transparent 62%)}
+.bg2{position:absolute;left:-300px;bottom:-200px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(34,201,154,.10),transparent 65%)}
+.grid{position:absolute;left:0;right:0;bottom:0;height:520px;background-image:linear-gradient(rgba(61,255,184,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(61,255,184,.07) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:linear-gradient(transparent,#000 60%)}
+.brand{position:absolute;left:60px;top:52px}
+.brand b{display:block;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:40px;letter-spacing:-1.2px;line-height:1}
+.brand b span{color:var(--a1)}
+.brand i{display:block;font-style:normal;font:bold 15px 'DejaVu Sans Mono',monospace;letter-spacing:6px;color:var(--dim);margin-top:8px}
+.tags{position:absolute;right:60px;top:52px;text-align:right;font:bold 15px/1.7 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--dim)}
+.tags:after{content:'';display:block;margin:10px 0 0 auto;width:70px;height:3px;background:var(--a1)}
+.geo{position:absolute;left:52px;top:150px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:188px;line-height:.86;letter-spacing:-9px;text-shadow:0 0 50px rgba(61,255,184,.18)}
+.geodef{position:absolute;left:432px;top:166px;border-left:4px solid var(--a1);padding-left:18px;font-family:'Inter Display','Inter',sans-serif;font-weight:700;font-size:27px;line-height:1.1;letter-spacing:.5px;text-transform:uppercase;width:250px}
+.geodef span{color:var(--a1)}
+.h2{position:absolute;left:60px;top:338px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:48px;line-height:1.04;letter-spacing:-1.2px;text-transform:uppercase;width:600px}
+.h2 span{color:var(--a1);text-shadow:0 0 30px rgba(61,255,184,.45)}
+.rule{position:absolute;left:60px;top:506px;width:230px;height:3px;background:linear-gradient(90deg,var(--a1),transparent)}
+.sub{position:absolute;left:60px;top:526px;width:600px;font-size:27px;line-height:1.3;color:#DDE8E4}
+.sub b{color:var(--a1);font-weight:700}
+/* chat in vetro */
+.chat{position:absolute;width:330px;border-radius:22px;background:rgba(20,40,34,.55);border:1.5px solid rgba(61,255,184,.45);box-shadow:0 0 30px rgba(61,255,184,.18),inset 0 0 30px rgba(61,255,184,.05);padding:16px 18px;backdrop-filter:blur(6px)}
+.chat .hd{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px}
+.chat .hd i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--a1),#1B6F57);display:block}
+.chat .hd em{margin-left:auto;font-style:normal;color:var(--dim);letter-spacing:3px}
+.chat .q{margin:12px 0 0 auto;width:86%;background:rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;font-size:16px;line-height:1.3;color:#E6F0EC}
+.chat .a{margin-top:10px;background:rgba(255,255,255,.93);color:#0A1A15;border-radius:14px;padding:10px 12px;font-size:15.5px;line-height:1.32}
+.chat .a b{color:#0A7A57}
+.chat .bar{height:7px;border-radius:4px;background:rgba(255,255,255,.12);margin-top:8px}
+/* servizi */
+.svc{position:absolute;left:60px;top:672px;width:400px}
+.it{display:flex;align-items:center;gap:20px;height:88px}
+.it .ic{flex:none;width:68px;height:68px;border-radius:50%;border:2.5px solid var(--a1);display:flex;align-items:center;justify-content:center;box-shadow:0 0 18px rgba(61,255,184,.25)}
+.it p{font-size:22px;line-height:1.25;color:#DDE8E4}
+.it p b{color:var(--ink)}
+/* laptop */
+.lap{position:absolute;left:478px;top:650px;width:560px;height:360px}
+.scr{position:absolute;left:40px;top:0;width:480px;height:300px;border-radius:18px 18px 4px 4px;background:#0b1512;border:10px solid #1b2522;box-shadow:0 0 50px rgba(61,255,184,.25);overflow:hidden;transform:perspective(900px) rotateY(-10deg)}
+.base{position:absolute;left:0;top:300px;width:560px;height:26px;border-radius:0 0 30px 30px;background:linear-gradient(#3a4642,#161d1b)}
+.srch{margin:16px 16px 10px;height:40px;border-radius:20px;background:#fff;color:#22302B;font-size:15px;font-weight:700;display:flex;align-items:center;padding:0 16px;gap:10px}
+.srch:after{content:'';margin-left:auto;width:26px;height:26px;border-radius:50%;background:#0b1512}
+.row{margin:8px 16px;height:30px;width:52%;border-radius:15px;background:rgba(61,255,184,.12);border:1px solid rgba(61,255,184,.35);font-size:13px;font-weight:700;color:#DDF;display:flex;align-items:center;padding-left:12px;color:#CFEDE3}
+.lap svg{position:absolute;left:300px;top:70px}
+.lap .claim{position:absolute;left:300px;top:218px;font-size:17px;font-weight:800;line-height:1.2;color:var(--a1);transform:perspective(900px) rotateY(-10deg)}
+/* cubo */
+.cube{position:absolute;right:28px;top:560px;width:150px;height:150px;border-radius:16px;border:2px solid var(--a1);background:rgba(61,255,184,.06);box-shadow:0 0 36px rgba(61,255,184,.3);padding:14px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:19px;line-height:1.05;text-transform:uppercase}
+.cube b{display:block;font-size:44px;color:var(--a1);line-height:1}
+/* KPI */
+.kpi{position:absolute;left:46px;right:46px;top:1036px;height:120px;border-radius:22px;border:1.5px solid rgba(61,255,184,.45);background:rgba(10,24,20,.85);display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 0 30px rgba(61,255,184,.12)}
+.k{display:flex;align-items:center;gap:14px;padding:0 18px;border-right:1px solid rgba(61,255,184,.25)}
+.k:last-child{border-right:0}
+.k svg{flex:none}
+.k p{font-size:17px;line-height:1.22;color:var(--dim);text-transform:uppercase;letter-spacing:.5px}
+.k p b{display:block;font-size:22px;color:var(--ink);text-transform:none;letter-spacing:0;margin-bottom:3px}
+.cta{position:absolute;left:50%;top:1182px;transform:translateX(-50%);height:72px;padding:0 44px;border-radius:40px;background:linear-gradient(90deg,#5DFFC8,#22C99A);color:#03140E;font-weight:900;font-size:26px;letter-spacing:.5px;display:flex;align-items:center;gap:16px;box-shadow:0 0 40px rgba(61,255,184,.45);white-space:nowrap}
+.fl{position:absolute;left:60px;top:1280px;font:bold 15px/1.5 'DejaVu Sans Mono',monospace;letter-spacing:3px;color:var(--dim)}
+.fl b{color:var(--a1)}
+.fl:before{content:'';display:block;width:200px;height:1px;background:var(--dim);margin-bottom:10px;opacity:.5}
+.fr{position:absolute;right:60px;top:1290px;font-size:26px;font-weight:700}
+.fr:before{content:'';display:block;width:200px;height:1px;background:var(--dim);margin:0 0 10px auto;opacity:.5}
+</style></head><body>
+<div class="bg1"></div><div class="bg2"></div><div class="grid"></div>
+
+<div class="brand"><b>Stefano <span>Sanvincenti</span></b><i>SEO SPECIALIST</i></div>
+<div class="tags">STRATEGIA<br>CONTENUTI<br>CITAZIONI</div>
+
+<div class="geo">GEO</div>
+<div class="geodef">Generative<br>Engine<br><span>O</span>ptimization</div>
+<div class="h2">La SEO per l'era<br>dell'<span>intelligenza artificiale</span></div>
+<div class="rule"></div>
+<div class="sub">Fai trovare il tuo business non solo su <b>Google</b>, ma anche nelle <b>risposte generate dalle AI</b>.</div>
+
+<!-- schede chat: le AI citano il CLIENTE, non sanvincenti.com -->
+<div class="chat" style="left:722px;top:150px;width:312px;transform:rotate(2deg)"><div class="hd"><i></i>Assistente AI<em>· · ·</em></div>
+  <div class="q">Chi produce arredi su misura per hotel in Italia?</div>
+  <div class="a"><b>La tua azienda</b> è tra i produttori più citati per progetti contract su misura…</div><div class="bar" style="width:70%"></div></div>
+<div class="chat" style="left:745px;top:392px;width:290px;transform:rotate(-2deg)"><div class="hd"><i style="background:linear-gradient(135deg,#7CF2E2,#2368FF)"></i>Risposta AI<em>· · ·</em></div>
+  <div class="q">Un fornitore affidabile per la mia PMI?</div>
+  <div class="a">Fonti: <b>[1] il tuo sito</b>, guida tecnica aggiornata al 2026</div></div>
+
+<!-- servizi (dalle aree di lavoro GEO del sito) -->
+<div class="svc">
+  <div class="it"><div class="ic"><svg width="34" height="34" viewBox="0 0 34 34"><circle cx="14" cy="14" r="10" fill="none" stroke="#3DFFB8" stroke-width="3"/><path d="M22,22 L31,31" stroke="#3DFFB8" stroke-width="3.5" stroke-linecap="round"/></svg></div><p><b>Analisi</b> di come le AI<br>rispondono nel tuo settore</p></div>
+  <div class="it"><div class="ic"><svg width="30" height="34" viewBox="0 0 30 34"><path d="M4,2 H19 L27,10 V32 H4 Z" fill="none" stroke="#3DFFB8" stroke-width="3" stroke-linejoin="round"/><path d="M9,16 H22 M9,22 H22 M9,28 H17" stroke="#3DFFB8" stroke-width="2.6"/></svg></div><p><b>Contenuti citabili</b>, chiari<br>e strutturati per le AI</p></div>
+  <div class="it"><div class="ic"><svg width="34" height="34" viewBox="0 0 34 34"><path d="M17,3 L29,8 V17 C29,25 23,30 17,32 C11,30 5,25 5,17 V8 Z" fill="none" stroke="#3DFFB8" stroke-width="3"/><path d="M11,17 L15,21 L23,13" stroke="#3DFFB8" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><p><b>Autorevolezza</b>: autore,<br>brand e fonti coerenti</p></div>
+  <div class="it"><div class="ic"><svg width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="13" fill="none" stroke="#3DFFB8" stroke-width="3"/><circle cx="17" cy="17" r="6" fill="none" stroke="#3DFFB8" stroke-width="3"/><circle cx="17" cy="17" r="1.8" fill="#3DFFB8"/></svg></div><p><b>Dati strutturati</b> e pagine<br>collegate per argomento</p></div>
+</div>
+
+<!-- laptop -->
+<div class="lap">
+  <div class="scr">
+    <div class="srch">Il tuo business nelle risposte AI</div>
+    <div class="row">Risultati di ricerca</div>
+    <div class="row">Risposte AI</div>
+    <div class="row">AI Overview</div>
+    <div class="row">Citazioni del brand</div>
+  </div>
+  <svg width="210" height="160" viewBox="0 0 210 160"><defs><filter id="gl"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <g fill="rgba(61,255,184,.35)"><rect x="10" y="118" width="22" height="30" rx="3"/><rect x="44" y="100" width="22" height="48" rx="3"/><rect x="78" y="86" width="22" height="62" rx="3"/><rect x="112" y="64" width="22" height="84" rx="3"/><rect x="146" y="44" width="22" height="104" rx="3"/></g>
+    <path d="M8,120 L48,98 L84,104 L124,66 L170,40 L196,14" fill="none" stroke="#3DFFB8" stroke-width="5" stroke-linecap="round" filter="url(#gl)"/>
+    <path d="M178,12 L198,10 L194,30" fill="none" stroke="#3DFFB8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div class="claim">Più visibilità.<br>Più citazioni.<br>Più clienti.</div>
+  <div class="base"></div>
+</div>
+
+<!-- KPI: cosa misuriamo (niente numeri inventati) -->
+<div class="kpi">
+  <div class="k"><svg width="44" height="44" viewBox="0 0 44 44"><rect x="5" y="26" width="7" height="13" rx="2" fill="#3DFFB8"/><rect x="18" y="17" width="7" height="22" rx="2" fill="#3DFFB8"/><rect x="31" y="7" width="7" height="32" rx="2" fill="#3DFFB8"/></svg><p><b>Citazioni</b>nelle risposte AI</p></div>
+  <div class="k"><svg width="44" height="44" viewBox="0 0 44 44"><path d="M3,22 C10,10 34,10 41,22 C34,34 10,34 3,22 Z" fill="none" stroke="#3DFFB8" stroke-width="3"/><circle cx="22" cy="22" r="6" fill="none" stroke="#3DFFB8" stroke-width="3"/></svg><p><b>Visibilità</b>su Google e AI</p></div>
+  <div class="k"><svg width="44" height="44" viewBox="0 0 44 44"><circle cx="15" cy="15" r="6" fill="none" stroke="#3DFFB8" stroke-width="3"/><circle cx="30" cy="17" r="5" fill="none" stroke="#3DFFB8" stroke-width="3"/><path d="M4,36 C5,27 25,27 26,36 M24,30 C27,25 40,25 41,34" fill="none" stroke="#3DFFB8" stroke-width="3"/></svg><p><b>Traffico</b>dalle AI</p></div>
+  <div class="k"><svg width="44" height="44" viewBox="0 0 44 44"><circle cx="22" cy="22" r="17" fill="none" stroke="#3DFFB8" stroke-width="3"/><circle cx="22" cy="22" r="9" fill="none" stroke="#3DFFB8" stroke-width="3"/><circle cx="22" cy="22" r="2.5" fill="#3DFFB8"/></svg><p><b>Contatti</b>qualificati</p></div>
+</div>
+
+<div class="cta">SCOPRI IL SERVIZIO GEO <svg width="30" height="22" viewBox="0 0 30 22"><path d="M2,11 H26 M17,2 L27,11 L17,20" fill="none" stroke="#03140E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="fl">IL FUTURO DELLA VISIBILITÀ<br><b>È GIÀ QUI.</b></div>
+<div class="fr">sanvincenti.com</div>
+</body></html>

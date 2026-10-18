@@ -34,6 +34,7 @@ chiaro e una riga di commento in testa che spiega a cosa serve.
 | **killchain.html** ★ | catena d'attacco a 6 scalini + scudi dove si spezza | come avviene un attacco, quali controlli NIS2 servono |
 | **terminal.html** ★ | console/log di sicurezza con righe evidenziate e callout | SOC, monitoraggio, brute force, MFA, log (NIS2) |
 | **anatomy.html** ★ | oggetto "anatomizzato" (es. mail di phishing) con 5 segnali numerati | phishing, frodi IBAN, smishing, red flag |
+| **promo-geo.html** ★ | locandina servizio stile campagna: GEO gigante, chat AI in vetro, laptop con grafico, servizi, KPI, CTA sanvincenti.com | promozione di un servizio (GEO, NIS2, SEO tecnica): max 1 ogni 5 post |
 | **riskmap.html** ★ | heat map del rischio 5x5 con pin | analisi del rischio NIS2, priorità |
 
 ★ = layout "WOW" tecnici. Fino a fine ottobre 2026 hanno la precedenza: almeno 3 post su 5 devono usarne uno.
@@ -49,6 +50,7 @@ come layout "lista" ai fini della rotazione.
 | story-quiz.html | "Vero o falso?" con due pulsanti disegnati |
 | story-peek.html | frase gancio + post "attaccato" con lo scotch + bollino NUOVO (usa --img) |
 | **story-alert.html** ★ | schermata d'allarme con triangolo luminoso e testo glitch (cyber/NIS2) |
+| **story-promo.html** ★ | coppia di promo-geo: brand, sigla gigante, chat AI con "la tua azienda?", CTA |
 | **story-terminal.html** ★ | console a tutto schermo che "digita" la domanda (temi tecnici) |
 Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 
@@ -65,6 +67,7 @@ Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 | giallo | colore | --bg:#FFD23F; --ink:#121212; --dim:#3D3A2E; --a1:#121212; --a2:#6B2BFF; --line:rgba(0,0,0,.15); |
 | soc | scuro neon | --bg:#05070A; --ink:#FFFFFF; --dim:#8FA3B8; --a1:#39FF88; --a2:#2FD3FF; --line:#111A24; --bad:#FF3B5C; |
 | allarme | scuro rosso | --bg:#0A0A0F; --ink:#FFFFFF; --dim:#9A9AB0; --a1:#FF2E4D; --a2:#3DFFA2; --line:#1C1C28; |
+| menta | scuro neon | --bg:#040A09; --ink:#FFFFFF; --dim:#9DB3AC; --a1:#3DFFB8; --a2:#22C99A; --line:#0F2620; |
 | corallo | colore | --bg:#FF5A4F; --ink:#1A0B0A; --dim:#4A1D1A; --a1:#FFFFFF; --a2:#1A0B0A; --line:rgba(0,0,0,.18); |
 Nei layout chiari alcuni elementi usano #fff per le schede: va bene su carta/ghiaccio/lavanda.
 

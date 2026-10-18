@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- STORY WOW: promo — stile locandina servizio (coppia di promo-geo.html): brand, sigla gigante, domanda,
+     chat AI in vetro con fonti in cui manca "la tua azienda", CTA verso il post e sanvincenti.com.
+     Regole: niente nomi/loghi di prodotti AI reali, niente finte raccomandazioni; domini di esempio generici. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+:root{ --bg:#040A09; --ink:#FFFFFF; --dim:#9DB3AC; --a1:#3DFFB8; --a2:#22C99A; --line:#0F2620; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.g1{position:absolute;right:-300px;top:900px;width:1100px;height:1100px;border-radius:50%;background:radial-gradient(circle,rgba(61,255,184,.17),transparent 62%)}
+.g2{position:absolute;left:-300px;top:200px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(34,201,154,.10),transparent 65%)}
+.grid{position:absolute;left:0;right:0;bottom:0;height:900px;background-image:linear-gradient(rgba(61,255,184,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(61,255,184,.07) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:linear-gradient(transparent,#000 50%)}
+.brand{position:absolute;left:80px;top:262px}
+.brand b{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:44px;letter-spacing:-1.3px}
+.brand b span{color:var(--a1)}
+.brand i{display:block;font-style:normal;font:bold 17px 'DejaVu Sans Mono',monospace;letter-spacing:7px;color:var(--dim);margin-top:8px}
+.geo{position:absolute;left:66px;top:350px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:300px;line-height:.86;letter-spacing:-14px;text-shadow:0 0 70px rgba(61,255,184,.2)}
+.def{position:absolute;left:80px;top:632px;font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:6px;color:var(--a1)}
+.q{position:absolute;left:80px;right:70px;top:716px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:78px;line-height:1.02;letter-spacing:-2.8px}
+.q span{color:var(--a1);text-shadow:0 0 34px rgba(61,255,184,.45)}
+.chat{position:absolute;left:90px;right:90px;top:1060px;border-radius:30px;background:rgba(20,40,34,.6);border:2px solid rgba(61,255,184,.5);box-shadow:0 0 50px rgba(61,255,184,.2);padding:26px 28px;transform:rotate(-1.5deg)}
+.hd{display:flex;align-items:center;gap:14px;font-weight:800;font-size:26px}
+.hd i{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--a1),#1B6F57);display:block}
+.hd em{margin-left:auto;font-style:normal;color:var(--dim);letter-spacing:4px}
+.me{margin:20px 0 0 auto;width:80%;background:rgba(255,255,255,.09);border-radius:20px;padding:16px 20px;font-size:27px;line-height:1.3}
+.ans{margin-top:16px;background:rgba(255,255,255,.94);color:#0A1A15;border-radius:20px;padding:18px 20px;font-size:25px;line-height:1.35}
+.src{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.src span{font:bold 21px 'DejaVu Sans Mono',monospace;padding:10px 16px;border-radius:12px;background:rgba(255,255,255,.08);color:var(--dim)}
+.src span.you{background:transparent;border:3px dashed var(--a1);color:var(--a1);box-shadow:0 0 18px rgba(61,255,184,.35)}
+.cta{position:absolute;left:50%;top:1520px;transform:translateX(-50%);height:88px;padding:0 50px;border-radius:50px;background:linear-gradient(90deg,#5DFFC8,#22C99A);color:#03140E;font-weight:900;font-size:34px;display:flex;align-items:center;gap:18px;white-space:nowrap;box-shadow:0 0 50px rgba(61,255,184,.5)}
+.site{position:absolute;left:0;right:0;top:1636px;text-align:center;font-size:30px;font-weight:700;color:var(--dim)}
+.site b{color:var(--ink)}
+</style></head><body>
+<div class="g2"></div><div class="g1"></div><div class="grid"></div>
+<div class="brand"><b>Stefano <span>Sanvincenti</span></b><i>SEO SPECIALIST</i></div>
+<div class="geo">GEO</div>
+<div class="def">GENERATIVE ENGINE OPTIMIZATION</div>
+<div class="q">Un cliente chiede<br>a un'AI chi scegliere.<br><span>Esce il tuo nome?</span></div>
+<div class="chat"><div class="hd"><i></i>Assistente AI<em>· · ·</em></div>
+  <div class="me">Mi consigli un'azienda affidabile nel mio settore?</div>
+  <div class="ans">Ecco alcune realtà che vengono citate spesso per qualità e competenza:</div>
+  <div class="src"><span>[1] concorrente-a.it</span><span>[2] concorrente-b.it</span><span class="you">[3] la tua azienda?</span></div>
+</div>
+<div class="cta">Scopri come nel post <svg width="34" height="34" viewBox="0 0 34 34"><path d="M17,3 V29 M6,19 L17,30 L28,19" fill="none" stroke="#03140E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="site"><b>sanvincenti.com</b> · GEO · SEO for AI</div>
+</body></html>
