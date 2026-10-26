@@ -73,6 +73,9 @@ Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 | corallo | colore | --bg:#FF5A4F; --ink:#1A0B0A; --dim:#4A1D1A; --a1:#FFFFFF; --a2:#1A0B0A; --line:rgba(0,0,0,.18); |
 Nei layout chiari alcuni elementi usano #fff per le schede: va bene su carta/ghiaccio/lavanda.
 
+## Margini (obbligatorio)
+Nessun testo, timbro, badge o elemento importante a meno di 40px dai bordi laterali e 40px da sopra/sotto: la griglia del profilo Instagram mostra i post in 3:4 e taglia circa 34px per lato. render.py segnala 'troppo vicino al bordo': va sempre corretto. Gli sfondi (glow, griglie, puntini) possono arrivare al bordo.
+
 ## Render
     python3 template/render.py template/layouts/flow.html posts/AAAA-MM-GG.jpg
     python3 template/render.py template/layouts/story-question.html posts/AAAA-MM-GG-story.jpg --img posts/AAAA-MM-GG.jpg

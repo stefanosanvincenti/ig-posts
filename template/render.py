@@ -46,6 +46,8 @@ def main() -> None:
                 if (r.width===0) continue;
                 if (r.left<-1||r.top<-1||r.right>W+1||r.bottom>H+1)
                   out.push('fuori pagina: '+el.textContent.trim().slice(0,50));
+                else if (r.left<40||r.right>W-40)
+                  out.push('troppo vicino al bordo (min 40px, la griglia 3:4 taglia i lati): '+el.textContent.trim().slice(0,50));
                 if (el.scrollWidth>el.clientWidth+2 && getComputedStyle(el).overflow!=='visible')
                   out.push('testo tagliato: '+el.textContent.trim().slice(0,50));
               }
