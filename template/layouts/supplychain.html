@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: supplychain — data gigante + schema della catena di fornitura: cliente NIS2 in alto,
+     tre fornitori sotto (due "pronti", uno "escluso" con timbro), griglia "cosa ti chiederanno".
+     Adatto a: NIS2 e fornitori, scadenze, requisiti di terze parti. Modifica: data, titolo, nomi e stati dei nodi, richieste, fonte. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#07090F; --ink:#FFFFFF; --dim:#B4BED0; --a1:#FF3D57; --a2:#36F1A0; --line:#1A2030; --amber:#FFC23D; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.glowR{position:absolute;right:-240px;top:-200px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle,rgba(255,61,87,.28),transparent 62%)}
+.glowG{position:absolute;left:-260px;bottom:-260px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(54,241,160,.10),transparent 65%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.6px,transparent 2px);background-size:36px 36px}
+.kicker{position:absolute;top:62px;left:66px;font:bold 22px 'DejaVu Sans Mono',monospace;letter-spacing:6px;color:var(--dim)}
+.kicker b{color:var(--ink)}
+.pill{position:absolute;top:52px;right:66px;padding:12px 22px;border-radius:30px;background:var(--a1);font:900 22px 'Inter',sans-serif;letter-spacing:3px;box-shadow:0 0 30px rgba(255,61,87,.55)}
+.date{position:absolute;top:96px;left:52px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:250px;line-height:1;letter-spacing:-12px;color:var(--ink)}
+.date span{color:var(--a1);text-shadow:0 0 50px rgba(255,61,87,.55)}
+.date small{font-size:56px;letter-spacing:-1px;color:var(--dim);margin-left:14px;vertical-align:top;position:relative;top:40px}
+.h1{position:absolute;top:372px;left:66px;right:60px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:56px;line-height:1.08;letter-spacing:-1.8px}
+.h1 mark{background:var(--a1);color:#fff;padding:0 12px;border-radius:10px;box-shadow:0 0 30px rgba(255,61,87,.5)}
+svg.lk{position:absolute;left:0;top:0}
+.client{position:absolute;left:340px;top:556px;width:400px;height:104px;border-radius:22px;background:linear-gradient(135deg,#1B2340,#11162A);border:2px solid #3A4778;display:flex;align-items:center;gap:18px;padding:0 24px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.client b{display:block;font-size:30px;font-weight:900}
+.client i{display:block;font-style:normal;font-size:19px;color:var(--dim);margin-top:2px}
+.sup{position:absolute;top:796px;width:288px;height:150px;border-radius:22px;background:#0E1320;border:2px solid var(--a2);padding:22px 22px 0;box-shadow:0 0 30px rgba(54,241,160,.15)}
+.sup .st{display:inline-flex;align-items:center;gap:8px;font:bold 17px 'DejaVu Sans Mono',monospace;letter-spacing:2px;color:var(--a2)}
+.sup b{display:block;font-size:30px;font-weight:900;margin-top:10px}
+.sup i{display:block;font-style:normal;font-size:19px;color:var(--dim);margin-top:4px}
+.sup.out{border-color:var(--a1);background:#1A0B10;box-shadow:0 0 40px rgba(255,61,87,.35)}
+.sup.out .st{color:var(--a1)}
+.stamp{position:absolute;left:822px;top:694px;transform:rotate(-10deg);border:5px solid var(--a1);color:var(--a1);font:900 34px 'Inter',sans-serif;letter-spacing:4px;padding:4px 16px;border-radius:10px;background:rgba(7,9,15,.85)}
+.ask{position:absolute;left:66px;right:66px;top:996px}
+.ask h3{font:bold 20px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--amber);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid div{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;background:#121827;border:1px solid #232B40;font-size:23px;font-weight:700}
+.grid div:before{content:'';flex:none;width:12px;height:12px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
+.src{position:absolute;left:66px;right:66px;top:1222px;font-size:18px;color:#7F8AA3}
+.foot{position:absolute;left:66px;right:66px;bottom:46px;display:flex;justify-content:space-between;font:21px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="dots"></div><div class="glowR"></div><div class="glowG"></div>
+<div class="kicker"><b>NIS2</b> · SUPPLY CHAIN</div>
+<div class="pill">SCADENZA</div>
+<div class="date"><span>31</span>.10<small>2026</small></div>
+<div class="h1">Se non sei pronto alla NIS2, i tuoi clienti <mark>possono scartarti</mark> come fornitore.</div>
+
+<svg class="lk" width="1080" height="1350">
+  <defs><filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <g fill="none" stroke-width="5" stroke-linecap="round" filter="url(#g)">
+    <path d="M500,660 C500,730 210,720 210,796" stroke="var(--a2)"/>
+    <path d="M540,660 L540,796" stroke="var(--a2)"/>
+    <path d="M580,660 C580,700 690,700 740,730" stroke="var(--a1)" stroke-dasharray="12 10"/>
+  </g>
+  <!-- collegamento spezzato verso il fornitore escluso -->
+  <g stroke="var(--a1)" stroke-width="6" stroke-linecap="round" filter="url(#g)"><path d="M768,734 L800,770 M800,734 L768,770"/></g>
+</svg>
+<div class="client">
+  <svg width="56" height="62" viewBox="0 0 40 44"><path d="M20,2 L37,8 V21 C37,32 29,39 20,42 C11,39 3,32 3,21 V8 Z" fill="#2B3AE0"/><path d="M12,22 L18,28 L29,16" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div><b>Cliente NIS2</b><i>deve controllare i fornitori</i></div></div>
+<div class="sup" style="left:66px"><span class="st">✓ PRONTO</span><b>Fornitore A</b><i>dimostra la sua sicurezza</i></div>
+<div class="sup" style="left:396px"><span class="st">✓ PRONTO</span><b>Fornitore B</b><i>risponde al questionario</i></div>
+<div class="sup out" style="left:726px"><span class="st">✕ NON PRONTO</span><b>La tua azienda?</b><i>nessuna garanzia</i></div>
+<div class="stamp">ESCLUSO</div>
+
+<div class="ask"><h3>COSA POTREBBERO CHIEDERTI</h3>
+  <div class="grid"><div>Policy di sicurezza scritta</div><div>MFA e accessi controllati</div><div>Avviso rapido degli incidenti</div><div>Backup e continuità</div></div></div>
+<div class="src">Fonte: D.Lgs. 138/2024 · Det. ACN 164179/2025 · misure di base entro 18 mesi dalla comunicazione ACN</div>
+<div class="foot"><span>Salva e condividi con chi vende alle aziende</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

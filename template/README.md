@@ -35,6 +35,7 @@ chiaro e una riga di commento in testa che spiega a cosa serve.
 | **terminal.html** ★ | console/log di sicurezza con righe evidenziate e callout | SOC, monitoraggio, brute force, MFA, log (NIS2) |
 | **anatomy.html** ★ | oggetto "anatomizzato" (es. mail di phishing) con 5 segnali numerati | phishing, frodi IBAN, smishing, red flag |
 | **promo-geo.html** ★ | locandina servizio stile campagna: GEO gigante, chat AI in vetro, laptop con grafico, servizi, KPI, CTA sanvincenti.com | promozione di un servizio (GEO, NIS2, SEO tecnica): max 1 ogni 5 post |
+| **supplychain.html** ★ | data gigante + schema cliente NIS2 → fornitori (uno ESCLUSO) + "cosa potrebbero chiederti" | NIS2 e fornitori, scadenze |
 | **riskmap.html** ★ | heat map del rischio 5x5 con pin | analisi del rischio NIS2, priorità |
 
 ★ = layout "WOW" tecnici. Fino a fine ottobre 2026 hanno la precedenza: almeno 3 post su 5 devono usarne uno.
@@ -51,6 +52,7 @@ come layout "lista" ai fini della rotazione.
 | story-peek.html | frase gancio + post "attaccato" con lo scotch + bollino NUOVO (usa --img) |
 | **story-alert.html** ★ | schermata d'allarme con triangolo luminoso e testo glitch (cyber/NIS2) |
 | **story-promo.html** ★ | coppia di promo-geo: brand, sigla gigante, chat AI con "la tua azienda?", CTA |
+| **story-deadline.html** ★ | conto alla rovescia: data gigante, MANCANO X GIORNI, mini catena fornitori |
 | **story-terminal.html** ★ | console a tutto schermo che "digita" la domanda (temi tecnici) |
 Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 

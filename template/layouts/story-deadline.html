@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- STORY WOW: deadline — conto alla rovescia: data gigante, pillola "MANCANO X GIORNI", messaggio chiaro
+     in due righe, mini schema della catena (cliente -> fornitori, uno escluso), CTA verso il post.
+     Modifica: data, giorni mancanti (calcolati sulla data di pubblicazione!), testi, etichette dei nodi. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+:root{ --bg:#07090F; --ink:#FFFFFF; --dim:#B4BED0; --a1:#FF3D57; --a2:#36F1A0; --line:#1A2030; --amber:#FFC23D; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.6px,transparent 2px);background-size:36px 36px}
+.gr{position:absolute;left:50%;top:150px;width:1300px;height:1300px;margin-left:-650px;border-radius:50%;background:radial-gradient(circle,rgba(255,61,87,.26),transparent 60%)}
+.top{position:absolute;top:268px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:center}
+.top .k{font:bold 26px 'DejaVu Sans Mono',monospace;letter-spacing:6px;color:var(--dim)}
+.top .k b{color:var(--ink)}
+.top .p{padding:14px 24px;border-radius:34px;background:var(--a1);font:900 26px 'Inter',sans-serif;letter-spacing:2px;box-shadow:0 0 34px rgba(255,61,87,.6)}
+.date{position:absolute;top:360px;left:0;right:0;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:300px;line-height:1;letter-spacing:-14px}
+.date span{color:var(--a1);text-shadow:0 0 60px rgba(255,61,87,.6)}
+.q{position:absolute;top:720px;left:70px;right:70px;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:92px;line-height:1.02;letter-spacing:-3px}
+.m{position:absolute;top:940px;left:70px;right:70px;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:62px;line-height:1.18;letter-spacing:-1.5px}
+.m mark{background:var(--a1);color:#fff;padding:0 14px;border-radius:12px;box-shadow:0 0 34px rgba(255,61,87,.5)}
+svg.ch{position:absolute;left:0;top:0}
+.lab{position:absolute;width:220px;margin-left:-110px;text-align:center;font:bold 22px 'DejaVu Sans Mono',monospace;letter-spacing:3px}
+.cta{position:absolute;left:50%;top:1540px;transform:translateX(-50%);padding:24px 46px;border-radius:50px;background:#fff;color:#07090F;font-weight:900;font-size:40px;white-space:nowrap;box-shadow:0 0 40px rgba(255,255,255,.25)}
+</style></head><body>
+<div class="dots"></div><div class="gr"></div>
+<div class="top"><span class="k"><b>NIS2</b> · FORNITORI</span><span class="p">MANCANO 5 GIORNI</span></div>
+<div class="date"><span>31</span>.10</div>
+<div class="q">Non sei pronto<br>alla NIS2?</div>
+<div class="m">I tuoi clienti possono<br><mark>scartarti</mark> come fornitore.</div>
+<!-- mini catena: cliente (540,1250) -> fornitori (250/540/830, 1420) -->
+<svg class="ch" width="1080" height="1920">
+  <defs><filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <g fill="none" stroke-width="6" stroke-linecap="round" filter="url(#g)">
+    <path d="M520,1290 C520,1350 250,1340 250,1392" stroke="var(--a2)"/>
+    <path d="M540,1290 L540,1392" stroke="var(--a2)"/>
+    <path d="M560,1290 C560,1330 700,1330 760,1352" stroke="var(--a1)" stroke-dasharray="14 12"/>
+  </g>
+  <g transform="translate(540,1240)" filter="url(#g)"><path d="M0,-46 L40,-32 V0 C40,26 22,42 0,50 C-22,42 -40,26 -40,0 V-32 Z" fill="#2B3AE0"/><path d="M-16,0 L-4,12 L18,-12" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g filter="url(#g)"><circle cx="250" cy="1420" r="28" fill="var(--a2)"/><circle cx="540" cy="1420" r="28" fill="var(--a2)"/><circle cx="830" cy="1420" r="28" fill="none" stroke="var(--a1)" stroke-width="6"/>
+    <path d="M816,1406 L844,1434 M844,1406 L816,1434" stroke="var(--a1)" stroke-width="7" stroke-linecap="round"/></g>
+</svg>
+<div class="lab" style="left:250px;top:1462px;color:var(--a2)">PRONTO</div>
+<div class="lab" style="left:540px;top:1462px;color:var(--a2)">PRONTO</div>
+<div class="lab" style="left:830px;top:1462px;color:var(--a1)">TU?</div>
+<div class="cta">Cosa fare: nel post ↓</div>
+</body></html>
