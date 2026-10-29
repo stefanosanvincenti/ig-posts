@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: fakecaptcha — finto browser con verifica "Non sono un robot" + modale con tasti da premere
+     (Win+R, Ctrl+V, Invio), finestra Esegui con comando incollato, regola in banner rosso, due colonne
+     "come riconoscerla" / "se l'hai fatto". Adatto a: ClickFix e truffe che fanno eseguire comandi all'utente.
+     Niente loghi reali (reCAPTCHA, Cloudflare): verifica generica. Il comando mostrato NON è funzionante. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#EDF1F7; --ink:#0E1626; --dim:#4D5A70; --a1:#E5193B; --a2:#1F5BFF; --line:#D6DDE8; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative;
+  background-image:radial-gradient(rgba(14,22,38,.07) 1.6px,transparent 2px);background-size:34px 34px}
+.kicker{position:absolute;top:60px;left:66px;font:bold 22px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--a1)}
+.kicker b{color:var(--ink)}
+h1{position:absolute;top:100px;left:66px;right:66px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:62px;line-height:1.04;letter-spacing:-2.2px}
+h1 mark{background:var(--ink);color:#fff;padding:0 12px;border-radius:10px}
+h1 span{color:var(--a1)}
+/* browser */
+.br{position:absolute;left:66px;right:66px;top:300px;height:420px;border-radius:24px;background:#fff;border:2px solid var(--line);box-shadow:0 30px 60px rgba(14,22,38,.14);overflow:hidden}
+.bt{height:54px;background:#F4F6FA;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 20px}
+.bt i{width:13px;height:13px;border-radius:50%;background:#CBD3E0;display:block}
+.url{margin-left:14px;flex:1;height:32px;border-radius:16px;background:#fff;border:1px solid var(--line);font:17px 'DejaVu Sans Mono',monospace;color:var(--dim);display:flex;align-items:center;padding:0 14px}
+.url b{color:var(--a1);margin-right:8px}
+.cap{position:absolute;left:30px;top:90px;width:350px;white-space:nowrap;height:92px;border-radius:10px;border:2px solid #D0D6E0;background:#FAFBFD;display:flex;align-items:center;gap:16px;padding:0 18px;font-size:22px;font-weight:600}
+.cap .cb{width:38px;height:38px;border-radius:6px;border:3px solid #9AA6B8;display:flex;align-items:center;justify-content:center;background:#fff}
+.cap svg.sp{margin-left:auto}
+.modal{position:absolute;left:410px;top:80px;width:520px;border-radius:20px;background:#fff;border:3px solid var(--a1);box-shadow:0 24px 50px rgba(229,25,59,.22);padding:22px 26px}
+.modal h3{font-size:24px;font-weight:900;margin-bottom:14px}
+.modal h3 small{display:block;font-size:17px;font-weight:600;color:var(--dim);margin-top:4px}
+.step{display:flex;align-items:center;gap:12px;margin-top:10px;font-size:20px;font-weight:700;color:var(--dim)}
+.n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--a1);color:#fff;font:900 18px/34px 'Inter',sans-serif;text-align:center}
+.k{display:inline-flex;align-items:center;justify-content:center;min-width:64px;height:48px;padding:0 14px;border-radius:10px;background:linear-gradient(#fff,#E9EDF3);border:2px solid #B8C2D2;border-bottom-width:6px;font:800 21px 'Inter',sans-serif;color:var(--ink)}
+.plus{font-weight:900;color:var(--ink)}
+.run{position:absolute;left:30px;top:230px;width:350px;border-radius:12px;background:#fff;border:2px solid #B8C2D2;box-shadow:0 14px 30px rgba(14,22,38,.18);padding:12px 16px;transform:rotate(-2deg)}
+.run b{font-size:16px}
+.run .in{margin-top:8px;height:38px;border:2px solid var(--a2);border-radius:6px;font:15px 'DejaVu Sans Mono',monospace;display:flex;align-items:center;padding:0 10px;color:var(--a1);white-space:nowrap;overflow:hidden}
+/* regola */
+.rule{position:absolute;left:66px;right:66px;top:772px;border-radius:20px;background:var(--a1);color:#fff;padding:22px 28px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:36px;line-height:1.12;letter-spacing:-.8px;box-shadow:0 18px 40px rgba(229,25,59,.3)}
+.cols{position:absolute;left:66px;right:66px;top:930px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.col{border-radius:20px;background:#fff;border:2px solid var(--line);padding:20px 22px}
+.col h4{font:bold 18px 'DejaVu Sans Mono',monospace;letter-spacing:3px;color:var(--a2);margin-bottom:10px}
+.col.r h4{color:var(--a1)}
+.col p{font-size:21px;line-height:1.3;font-weight:600;margin-top:8px;padding-left:24px;position:relative}
+.col p:before{content:'';position:absolute;left:0;top:9px;width:10px;height:10px;border-radius:50%;background:var(--a2)}
+.col.r p:before{background:var(--a1)}
+.src{position:absolute;left:66px;right:66px;top:1218px;font-size:18px;color:var(--dim)}
+.foot{position:absolute;left:66px;right:66px;bottom:46px;display:flex;justify-content:space-between;font:21px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="kicker"><b>CYBERSECURITY</b> · TRUFFA CLICKFIX</div>
+<h1>Il falso <mark>«Non sono un robot»</mark><br>che ti fa installare <span>un malware.</span></h1>
+
+<div class="br">
+  <div class="bt"><i></i><i></i><i></i><div class="url"><b>⚠</b>https://sito-compromesso.example/verifica</div></div>
+  <div class="cap"><div class="cb"><svg width="26" height="22" viewBox="0 0 26 22"><path d="M3,11 L10,18 L23,3" fill="none" stroke="#1F9D55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Non sono un robot
+    <svg class="sp" width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="18" r="13" fill="none" stroke="#9AA6B8" stroke-width="4" stroke-dasharray="54 30" stroke-linecap="round"/></svg></div>
+  <div class="modal">
+    <h3>Verifica di sicurezza<small>Per dimostrare che sei umano completa questi passaggi:</small></h3>
+    <div class="step"><span class="n">1</span>Premi <span class="k">⊞ Win</span><span class="plus">+</span><span class="k">R</span></div>
+    <div class="step"><span class="n">2</span>Premi <span class="k">Ctrl</span><span class="plus">+</span><span class="k">V</span></div>
+    <div class="step"><span class="n">3</span>Premi <span class="k">Invio</span></div>
+  </div>
+  <div class="run"><b>Esegui</b> · incollato dal sito<div class="in">powershell -w hidden …</div><div style="margin-top:8px;font-size:15px;color:#E5193B;font-weight:800">↑ comando del truffatore: parte il malware</div></div>
+</div>
+
+<div class="rule">Nessun CAPTCHA vero ti chiede di premere tasti o incollare comandi. Se lo fa, chiudi la pagina.</div>
+
+<div class="cols">
+  <div class="col"><h4>COME RICONOSCERLA</h4>
+    <p>Ti chiede di aprire Esegui, PowerShell o il Terminale</p>
+    <p>Ti fa incollare qualcosa che non hai copiato tu</p>
+    <p>Compare dopo un redirect strano, anche su siti noti</p></div>
+  <div class="col r"><h4>SE L'HAI FATTO</h4>
+    <p>Stacca subito il PC da internet</p>
+    <p>Scansione completa o tecnico di fiducia</p>
+    <p>Da un altro dispositivo cambia password e attiva la 2FA</p></div>
+</div>
+<div class="src">Fonti: CERT-AGID (circa 70 campagne ClickFix in Italia nel 2025) · FTC · Geopop, 29/10/2026</div>
+<div class="foot"><span>Salva e giralo in ufficio</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

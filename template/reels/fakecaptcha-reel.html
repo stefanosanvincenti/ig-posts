@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- REEL 1080x1920, 16 s. Animazione deterministica: window.setT(t) disegna il fotogramma al tempo t (secondi).
+     Esportazione: python3 template/reels/make_reel.py template/reels/fakecaptcha-reel.html posts/AAAA-MM-GG-reel.mp4 16
+     Zona sicura Reel: niente testo sopra 220px, sotto 1500px, né oltre 920px a destra (pulsanti di Instagram). -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:#0B1020;color:#fff;font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+#bg{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,#1B2550 0%,#0B1020 60%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.6px,transparent 2px);background-size:36px 36px}
+.abs{position:absolute}
+#hook{left:70px;right:160px;top:300px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:96px;line-height:1.02;letter-spacing:-3.5px}
+#hook span{color:#FF3D57}
+#tag{left:70px;top:236px;font:bold 26px 'DejaVu Sans Mono',monospace;letter-spacing:6px;color:#8EA0C8}
+.cap{left:110px;top:640px;width:760px;height:180px;border-radius:18px;background:#fff;color:#111;display:flex;align-items:center;gap:30px;padding:0 40px;font-size:46px;font-weight:600;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.cb{width:72px;height:72px;border-radius:10px;border:5px solid #9AA6B8;display:flex;align-items:center;justify-content:center}
+#chk{opacity:0}
+#spin{margin-left:auto}
+.modal{left:110px;top:880px;width:760px;border-radius:26px;background:#fff;color:#111;border:5px solid #FF3D57;padding:34px 40px;box-shadow:0 30px 80px rgba(255,61,87,.35)}
+.modal h3{font-size:42px;font-weight:900}
+.modal small{display:block;font-size:28px;color:#4D5A70;font-weight:600;margin-top:6px}
+.st{display:flex;align-items:center;gap:18px;margin-top:22px;font-size:34px;font-weight:700;color:#4D5A70}
+.n{width:56px;height:56px;border-radius:50%;background:#FF3D57;color:#fff;font:900 30px/56px 'Inter',sans-serif;text-align:center}
+.k{display:inline-flex;align-items:center;justify-content:center;min-width:110px;height:86px;padding:0 24px;border-radius:16px;background:linear-gradient(#fff,#E6EBF2);border:3px solid #B8C2D2;border-bottom-width:10px;font:800 38px 'Inter',sans-serif;color:#111}
+.k.on{background:#FF3D57;color:#fff;border-color:#B5102A;transform:translateY(6px);border-bottom-width:4px;box-shadow:0 0 30px rgba(255,61,87,.7)}
+.run{left:170px;top:1160px;width:720px;border-radius:16px;background:#fff;color:#111;border:3px solid #B8C2D2;padding:22px 26px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.run b{font-size:32px}
+.in{margin-top:14px;height:70px;border:3px solid #1F5BFF;border-radius:8px;font:30px 'DejaVu Sans Mono',monospace;display:flex;align-items:center;padding:0 16px;color:#E5193B;white-space:nowrap;overflow:hidden}
+#cur{left:0;top:0;width:60px;height:80px}
+#flash{inset:0;background:#FF1E3C;opacity:0}
+#alarm{left:60px;right:140px;top:640px;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:140px;line-height:.98;letter-spacing:-5px;opacity:0;text-shadow:-6px 0 rgba(0,255,255,.6),6px 0 rgba(0,0,0,.5)}
+#rule{left:70px;right:160px;top:600px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:104px;line-height:1.02;letter-spacing:-4px;opacity:0}
+#rule span{color:#FF3D57}
+#end{left:70px;right:160px;top:560px;opacity:0}
+#end .a{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:100px;line-height:1.02;letter-spacing:-4px}
+#end .a span{background:#36F1A0;color:#0B1020;padding:0 14px;border-radius:14px}
+#end .b{margin-top:60px;font-size:44px;font-weight:700;color:#C9D3EA;line-height:1.3}
+#end .h{margin-top:70px;display:inline-block;padding:22px 34px;border-radius:50px;background:#fff;color:#0B1020;font-weight:900;font-size:40px}
+#end .s{margin-top:26px;font:bold 26px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:#8EA0C8}
+</style></head><body>
+<div id="bg"></div><div class="dots"></div>
+<div id="tag" class="abs">CYBERSECURITY · CLICKFIX</div>
+<div id="hook" class="abs">Ti appare<br>questo?</div>
+
+<div id="cap" class="abs cap"><div class="cb"><svg id="chk" width="50" height="42" viewBox="0 0 26 22"><path d="M3,11 L10,18 L23,3" fill="none" stroke="#1F9D55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Non sono un robot
+  <svg id="spin" width="70" height="70" viewBox="0 0 36 36"><circle cx="18" cy="18" r="13" fill="none" stroke="#9AA6B8" stroke-width="4" stroke-dasharray="54 30" stroke-linecap="round"/></svg></div>
+
+<div id="modal" class="abs modal"><h3>Verifica di sicurezza<small>Per dimostrare che sei umano:</small></h3>
+  <div class="st"><span class="n">1</span>Premi <span class="k" id="k1">⊞ Win</span>+<span class="k" id="k2">R</span></div>
+  <div class="st"><span class="n">2</span>Premi <span class="k" id="k3">Ctrl</span>+<span class="k" id="k4">V</span></div>
+  <div class="st"><span class="n">3</span>Premi <span class="k" id="k5">Invio</span></div></div>
+
+<div id="run" class="abs run"><b>Esegui</b><div class="in" id="cmd"></div></div>
+
+<svg id="cur" class="abs" viewBox="0 0 24 32"><path d="M2,2 L2,26 L8,20 L12,30 L16,28 L12,18 L20,18 Z" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/></svg>
+
+<div id="flash" class="abs"></div>
+<div id="alarm" class="abs">⚠<br>MALWARE<br>INSTALLATO</div>
+<div id="rule" class="abs">Nessun CAPTCHA vero ti chiede di <span>premere tasti</span> o <span>incollare comandi.</span></div>
+<div id="end" class="abs"><div class="a">Chiudi la pagina.<br><span>Non incollare nulla.</span></div>
+  <div class="b">Se l'hai già fatto: stacca il PC da internet e cambia le password da un altro dispositivo.</div>
+  <div class="h">@stefano_sanvincenti_seo</div><div class="s">SALVA E GIRALO IN UFFICIO</div></div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a,b)=>Math.max(a,Math.min(b,x));
+const ramp=(t,a,b)=>cl((t-a)/(b-a),0,1);
+const ease=x=>1-Math.pow(1-x,3);
+const CMD='powershell -w hidden -c …';
+window.setT=function(t){
+  // hook text
+  const hook=$('hook');
+  if(t<3.2){hook.innerHTML='Ti appare<br>questo?';}
+  else if(t<7.5){hook.innerHTML='Poi ti chiede<br><span>questo.</span>';}
+  else{hook.innerHTML='E tu<br><span>lo fai.</span>';}
+  let hookO = t<10.2 ? ease(ramp(t,0,0.5)) * (1-ramp(t,9.9,10.2)) : 0;
+  if(t>3.0&&t<3.4) hookO*=Math.abs(t-3.2)/0.2; if(t>7.3&&t<7.7) hookO*=Math.abs(t-7.5)/0.2;
+  hook.style.opacity=hookO; $('tag').style.opacity=t<10.2?1:0;
+  // captcha
+  const c=$('cap'); const ci=ease(ramp(t,0.3,0.9)); const out=ramp(t,9.0,9.25);
+  c.style.opacity=ci*(1-out); c.style.transform=`scale(${0.85+0.15*ci})`;
+  $('chk').style.opacity=t>=2.1?1:0;
+  $('spin').style.transform=`rotate(${t*360}deg)`;
+  // cursor
+  const cur=$('cur'); let cx,cy,co=1;
+  if(t<0.9){co=0}
+  if(t<2.1){const p=ease(ramp(t,0.9,2.0)); cx=820-(820-225)*p; cy=1500-(1500-700)*p;}
+  else if(t<2.4){cx=225;cy=700; }
+  else {co=1-ramp(t,2.4,2.8);cx=225;cy=700;}
+  cur.style.left=cx+'px';cur.style.top=cy+'px';cur.style.opacity=co*(1-out);
+  cur.style.transform= (t>2.0&&t<2.2)?'scale(.85)':'scale(1)';
+  // modal
+  const m=$('modal'); const mi=ease(ramp(t,3.2,3.7));
+  m.style.opacity=mi*(1-out); m.style.transform=`translateY(${(1-mi)*80}px)`;
+  const on=(id,a)=>$(id).classList.toggle('on',t>=a);
+  on('k1',4.2);on('k2',4.5);on('k3',5.4);on('k4',5.7);on('k5',6.6);
+  // run dialog
+  const r=$('run'); const ri=ease(ramp(t,7.5,7.9));
+  r.style.opacity=ri*(1-out); r.style.transform=`rotate(-2deg) scale(${0.9+0.1*ri})`;
+  const n=Math.floor(ramp(t,7.9,8.4)*CMD.length); // incolla di colpo (Ctrl+V)
+  $('cmd').textContent=CMD.slice(0,n);
+  // flash + alarm
+  const f=$('flash'); f.style.opacity = t>9.0&&t<10.6 ? (0.85*(1-ramp(t,9.0,10.6)))*(Math.floor(t*12)%2?1:.6) : 0;
+  const al=$('alarm'); const ai=ramp(t,9.0,9.15)*(1-ramp(t,10.4,10.7));
+  al.style.opacity=ai; const sh=(t>9&&t<10.5)?Math.sin(t*90)*10:0; al.style.transform=`translateX(${sh}px)`;
+  document.body.style.transform=(t>9&&t<9.6)?`translate(${Math.sin(t*120)*8}px,${Math.cos(t*100)*6}px)`:'none';
+  $('bg').style.background = t>9&&t<10.7 ? 'radial-gradient(circle at 50% 45%,#5A0A18 0%,#12040A 60%)':'radial-gradient(circle at 50% 45%,#1B2550 0%,#0B1020 60%)';
+  // rule
+  const ru=$('rule'); ru.style.opacity=ease(ramp(t,10.7,11.2))*(1-ramp(t,13.2,13.5));
+  ru.style.transform=`translateY(${(1-ease(ramp(t,10.7,11.2)))*40}px)`;
+  // end
+  const e=$('end'); const ei=ease(ramp(t,13.5,14.0)); e.style.opacity=ei; e.style.transform=`translateY(${(1-ei)*40}px)`;
+};
+window.setT(0);
+</script>
+</body></html>

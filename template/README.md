@@ -36,6 +36,7 @@ chiaro e una riga di commento in testa che spiega a cosa serve.
 | **anatomy.html** ★ | oggetto "anatomizzato" (es. mail di phishing) con 5 segnali numerati | phishing, frodi IBAN, smishing, red flag |
 | **promo-geo.html** ★ | locandina servizio stile campagna: GEO gigante, chat AI in vetro, laptop con grafico, servizi, KPI, CTA sanvincenti.com | promozione di un servizio (GEO, NIS2, SEO tecnica): max 1 ogni 5 post |
 | **supplychain.html** ★ | data gigante + schema cliente NIS2 → fornitori (uno ESCLUSO) + "cosa potrebbero chiederti" | NIS2 e fornitori, scadenze |
+| **fakecaptcha.html** ★ | finto browser con "Non sono un robot", tasti da premere, finestra Esegui | ClickFix, truffe che fanno eseguire comandi |
 | **riskmap.html** ★ | heat map del rischio 5x5 con pin | analisi del rischio NIS2, priorità |
 
 ★ = layout "WOW" tecnici. Fino a fine ottobre 2026 hanno la precedenza: almeno 3 post su 5 devono usarne uno.
@@ -72,6 +73,11 @@ Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 | menta | scuro neon | --bg:#040A09; --ink:#FFFFFF; --dim:#9DB3AC; --a1:#3DFFB8; --a2:#22C99A; --line:#0F2620; |
 | corallo | colore | --bg:#FF5A4F; --ink:#1A0B0A; --dim:#4A1D1A; --a1:#FFFFFF; --a2:#1A0B0A; --line:rgba(0,0,0,.18); |
 Nei layout chiari alcuni elementi usano #fff per le schede: va bene su carta/ghiaccio/lavanda.
+
+## Reel
+Pagine HTML animate in template/reels/ con window.setT(t). Esporta con
+`python3 template/reels/make_reel.py PAGINA.html posts/AAAA-MM-GG-reel.mp4 16` (MP4 H.264 1080x1920 30fps).
+Zona sicura Reel: niente testo sopra 220px, sotto 1500px, né oltre 920px a destra.
 
 ## Margini (obbligatorio)
 Nessun testo, timbro, badge o elemento importante a meno di 40px dai bordi laterali e 40px da sopra/sotto: la griglia del profilo Instagram mostra i post in 3:4 e taglia circa 34px per lato. render.py segnala 'troppo vicino al bordo': va sempre corretto. Gli sfondi (glow, griglie, puntini) possono arrivare al bordo.
