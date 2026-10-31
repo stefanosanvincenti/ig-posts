@@ -13,3 +13,4 @@ data,tema,layout_post,layout_story,palette
 2026-10-26,NIS2 supply chain - dal 31/10 i clienti NIS2 possono scartare i fornitori non pronti (extra 17:30),supplychain,story-deadline,rosso-notte
 2026-10-28,NIS2 notifica incidenti 24h/72h/1 mese (D.Lgs. 138/2024 art. 25),killchain,story-alert,allarme
 2026-10-30,Cybersecurity - falso CAPTCHA ClickFix (post + reel),fakecaptcha,reel-fakecaptcha,carta-rossa
+2026-10-31,NIS2 segmentazione di rete e backup testato (D.Lgs. 138/2024 art. 24),network,story-terminal,soc
