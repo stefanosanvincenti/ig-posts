@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: otattack — attacco a impianti OT/IoT (frigoriferi, HVAC, PLC): termometro gigante con salto di
+     temperatura, scheda "cosa è successo", catena d'attacco internet → pannello esposto → impianto, e griglia
+     "come sventarlo" (misure ufficiali). Adatto a: notizie di attacchi a sistemi industriali/edifici. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#06121F; --ink:#FFFFFF; --dim:#9FB4CC; --a1:#FF3B5C; --a2:#5CE1FF; --line:#123049; --ok:#3DF5A8; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.frost{position:absolute;inset:0;background:radial-gradient(circle at 15% 40%,rgba(92,225,255,.14),transparent 45%),radial-gradient(circle at 90% 10%,rgba(255,59,92,.18),transparent 45%)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(92,225,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(92,225,255,.05) 1px,transparent 1px);background-size:54px 54px}
+.kicker{position:absolute;top:60px;left:66px;font:bold 21px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--a2)}
+.kicker b{color:var(--a1)}
+h1{position:absolute;top:98px;left:66px;right:66px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:66px;line-height:1.03;letter-spacing:-2.4px}
+h1 span{color:var(--a1);text-shadow:0 0 34px rgba(255,59,92,.55)}
+svg.th{position:absolute;left:58px;top:290px}
+.tlab{position:absolute;font-family:'Inter Display','Inter',sans-serif;font-weight:900;letter-spacing:-2px}
+.card{position:absolute;left:330px;right:66px;top:300px;border-radius:22px;background:rgba(10,30,48,.85);border:2px solid var(--line);padding:22px 26px}
+.card h3{font:bold 18px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:var(--a2);margin-bottom:6px}
+.row{display:flex;gap:16px;margin-top:14px;font-size:22px;line-height:1.3;color:#DCE7F3}
+.row i{flex:none;font-style:normal;font:bold 16px 'DejaVu Sans Mono',monospace;color:var(--bg);background:var(--a2);border-radius:8px;padding:4px 8px;height:28px;margin-top:1px}
+.row b{color:#fff}
+.chain{position:absolute;left:330px;right:66px;top:680px;height:170px}
+.node{position:absolute;top:22px;width:190px;height:126px;border-radius:18px;border:2px solid var(--line);background:#0B1D30;text-align:center;padding-top:12px;font-size:19px;font-weight:800;line-height:1.15}
+.node small{display:block;font:bold 14px 'DejaVu Sans Mono',monospace;letter-spacing:2px;color:var(--dim);margin-top:4px}
+.node.bad{border-color:var(--a1);box-shadow:0 0 30px rgba(255,59,92,.35)}
+.node.bad small{color:var(--a1)}
+.fix{position:absolute;left:66px;right:66px;top:886px}
+.fix h3{font:bold 19px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:var(--ok);margin-bottom:14px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g div{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;background:rgba(61,245,168,.07);border:1.5px solid rgba(61,245,168,.35);font-size:21px;font-weight:700;line-height:1.2}
+.g div i{flex:none;width:36px;height:36px;border-radius:50%;background:var(--ok);color:var(--bg);font:900 19px/36px 'Inter',sans-serif;text-align:center;font-style:normal}
+.g div.w{grid-column:1 / span 2}
+.src{position:absolute;left:66px;right:66px;top:1226px;font-size:17px;color:#7F95AE}
+.foot{position:absolute;left:66px;right:66px;bottom:46px;display:flex;justify-content:space-between;font:21px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="frost"></div><div class="grid"></div>
+<div class="kicker"><b>●</b> CYBERSECURITY · ATTACCO AI SUPERMERCATI</div>
+<h1>Hacker nei frigoriferi:<br>da <span style="color:var(--a2);text-shadow:0 0 30px rgba(92,225,255,.5)">−18°C</span> a <span>+50°C.</span></h1>
+
+<!-- termometro -->
+<svg class="th" width="240" height="560" viewBox="0 0 240 560">
+  <defs>
+    <linearGradient id="hot" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#5CE1FF"/><stop offset=".45" stop-color="#FFB020"/><stop offset="1" stop-color="#FF3B5C"/></linearGradient>
+    <filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="88" y="20" width="64" height="430" rx="32" fill="#0B1D30" stroke="#2A4A68" stroke-width="4"/>
+  <circle cx="120" cy="480" r="62" fill="#0B1D30" stroke="#2A4A68" stroke-width="4"/>
+  <rect x="104" y="60" width="32" height="400" rx="16" fill="url(#hot)" filter="url(#gl)"/>
+  <circle cx="120" cy="480" r="46" fill="#5CE1FF" filter="url(#gl)"/>
+  <g stroke="#2A4A68" stroke-width="3"><path d="M156,80 H176 M156,150 H170 M156,220 H176 M156,290 H170 M156,360 H176 M156,410 H170"/></g>
+  <g stroke="#FF3B5C" stroke-width="4" stroke-dasharray="6 6"><path d="M40,70 H84"/></g>
+  <g stroke="#5CE1FF" stroke-width="4" stroke-dasharray="6 6"><path d="M40,400 H84"/></g>
+</svg>
+<div class="tlab" style="left:58px;top:316px;font-size:40px;color:var(--a1)">+50°</div>
+<div class="tlab" style="left:58px;top:648px;font-size:40px;color:var(--a2)">−18°</div>
+
+<div class="card"><h3>COSA È SUCCESSO</h3>
+  <div class="row"><i>EU</i><span>Banchi frigo e congelatori riscaldati da remoto in <b>Francia, Belgio, Svezia, Estonia</b>, Irlanda e Lussemburgo.</span></div>
+  <div class="row"><i>IT</i><span>Colpiti supermercati <b>a Catania e Palermo</b>. Merce da buttare, indaga la Polizia Postale.</span></div>
+  <div class="row"><i>⚠</i><span>Non un virus sofisticato: <b>pannelli di controllo raggiungibili da internet</b> e password deboli.</span></div>
+</div>
+
+<div class="chain">
+  <svg width="684" height="170" style="position:absolute;left:0;top:0">
+    <defs><filter id="g2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <g stroke="#FF3B5C" stroke-width="5" stroke-dasharray="12 9" fill="none" filter="url(#g2)"><path d="M192,85 L246,85"/><path d="M438,85 L492,85"/></g>
+    <path d="M238,75 L250,85 L238,95 M484,75 L496,85 L484,95" fill="none" stroke="#FF3B5C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="node" style="left:0"><svg width="54" height="36" viewBox="0 0 70 46"><path d="M14,40 a14,14 0 0 1 2,-27 a20,20 0 0 1 37,-3 a15,15 0 0 1 3,30 z" fill="none" stroke="#9FB4CC" stroke-width="4"/></svg><br>Internet<small>ATTACCANTE</small></div>
+  <div class="node bad" style="left:246px"><svg width="44" height="40" viewBox="0 0 44 40"><rect x="4" y="4" width="36" height="24" rx="4" fill="none" stroke="#FF3B5C" stroke-width="3.5"/><path d="M16,36 H28 M22,28 V36" stroke="#FF3B5C" stroke-width="3.5"/><circle cx="22" cy="16" r="4" fill="#FF3B5C"/></svg><br>Pannello frigo<small>ESPOSTO ONLINE</small></div>
+  <div class="node bad" style="left:492px"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="6" y="2" width="28" height="36" rx="5" fill="none" stroke="#FF3B5C" stroke-width="3.5"/><path d="M6,16 H34 M12,8 V12 M12,22 V30" stroke="#FF3B5C" stroke-width="3.5"/></svg><br>Banco frigo<small>+50°C · MERCE PERSA</small></div>
+</div>
+
+<div class="fix"><h3>COME SVENTARLO · LE MISURE URGENTI ACN</h3>
+  <div class="g">
+    <div><i>1</i>Togli i pannelli di controllo da internet</div>
+    <div><i>2</i>Separa la rete degli impianti da quella degli uffici</div>
+    <div><i>3</i>Accesso remoto solo via VPN e MFA</div>
+    <div><i>4</i>Verifica account e password di amministrazione</div>
+    <div class="w"><i>5</i>Aggiorna o sostituisci i dispositivi fuori supporto, compresi i router 4G dei manutentori</div>
+  </div></div>
+<div class="src">Fonti: ACN, misure urgenti per la filiera del freddo · CERT-FR/ANSSI · Tgcom24, 2/11/2026</div>
+<div class="foot"><span>Salva e giralo a chi gestisce impianti</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>

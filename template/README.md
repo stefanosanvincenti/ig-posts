@@ -37,6 +37,7 @@ chiaro e una riga di commento in testa che spiega a cosa serve.
 | **promo-geo.html** ★ | locandina servizio stile campagna: GEO gigante, chat AI in vetro, laptop con grafico, servizi, KPI, CTA sanvincenti.com | promozione di un servizio (GEO, NIS2, SEO tecnica): max 1 ogni 5 post |
 | **supplychain.html** ★ | data gigante + schema cliente NIS2 → fornitori (uno ESCLUSO) + "cosa potrebbero chiederti" | NIS2 e fornitori, scadenze |
 | **fakecaptcha.html** ★ | finto browser con "Non sono un robot", tasti da premere, finestra Esegui | ClickFix, truffe che fanno eseguire comandi |
+| **otattack.html** ★ | termometro gigante, "cosa è successo", catena internet → pannello esposto → impianto, misure | attacchi a impianti OT/IoT (frigoriferi, HVAC, PLC) |
 | **riskmap.html** ★ | heat map del rischio 5x5 con pin | analisi del rischio NIS2, priorità |
 
 ★ = layout "WOW" tecnici. Fino a fine ottobre 2026 hanno la precedenza: almeno 3 post su 5 devono usarne uno.
