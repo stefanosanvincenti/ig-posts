@@ -38,6 +38,7 @@ chiaro e una riga di commento in testa che spiega a cosa serve.
 | **supplychain.html** ★ | data gigante + schema cliente NIS2 → fornitori (uno ESCLUSO) + "cosa potrebbero chiederti" | NIS2 e fornitori, scadenze |
 | **fakecaptcha.html** ★ | finto browser con "Non sono un robot", tasti da premere, finestra Esegui | ClickFix, truffe che fanno eseguire comandi |
 | **otattack.html** ★ | termometro gigante, "cosa è successo", catena internet → pannello esposto → impianto, misure | attacchi a impianti OT/IoT (frigoriferi, HVAC, PLC) |
+| **valuecurve.html** ★ | metafora forte + grafico a curve (es. pubblicità vs SEO vs SEO+GEO) + 3 schede valore | valore di SEO/GEO, confronti nel tempo (grafico sempre dichiarato illustrativo) |
 | **riskmap.html** ★ | heat map del rischio 5x5 con pin | analisi del rischio NIS2, priorità |
 
 ★ = layout "WOW" tecnici. Fino a fine ottobre 2026 hanno la precedenza: almeno 3 post su 5 devono usarne uno.
@@ -90,10 +91,23 @@ Lavora su una copia del layout (es. /tmp/oggi.html), non modificare l'originale 
 render.py stampa AVVISO se un testo esce dalla pagina: correggi e rirenderizza. Poi controlla
 SEMPRE l'immagine con Read: niente sovrapposizioni, frecce che puntano giuste, testi leggibili.
 
-## Linea editoriale (da metà ottobre 2026)
-- Taglio TECNICO e molto grafico: schemi veri (reti, catene d'attacco, log, flussi), dati e riferimenti normativi precisi, non frasi motivazionali.
-- Mix: circa 4 post su 5 su NIS2 e cybersecurity (misure di base, incidenti, supply chain, governance, MFA, backup, segmentazione, phishing, log, vulnerabilità, ruoli e responsabilità), 1 su 5 SEO/SEO for AI tecnica.
-- Effetto WOW: glow, griglie, icone SVG disegnate a mano nel layout, contrasti forti. Ogni grafica deve sembrare un'infografica fatta da un designer, non un template.
+## Linea editoriale (novembre 2026)
+Un post + una story ogni giorno fino al 30 novembre. Mix dei temi (guarda posts/log.csv per bilanciare):
+- circa 50%: BASI DELLA SEO, fondamentali e GEO (SEO for AI). Obiettivo: far capire il valore enorme di SEO e GEO
+  per un'attività (clienti che ti cercano già, traffico che non paghi a clic, valore che si accumula nel tempo,
+  essere citati dalle AI). Temi esempio: cos'è la SEO in parole semplici, intento di ricerca, parole chiave,
+  title e meta description, SEO locale e Google Business Profile, velocità e Core Web Vitals, link interni,
+  contenuti utili, E-E-A-T, dati strutturati, GEO e AI Overviews, come le AI scelgono le fonti, misurare con Search Console.
+- circa 25%: SITI WEB ed E-COMMERCE, le basi: cosa deve avere un sito che vende, struttura delle pagine prodotto,
+  checkout senza attriti, mobile first, HTTPS e fiducia, recensioni, schede prodotto SEO, errori comuni.
+- circa 25%: CYBERSECURITY e NIS2: notizie verificate e difese pratiche.
+- Caption UTILI: ogni caption deve lasciare almeno 2-3 cose concrete da fare o controllare, in italiano naturale.
+- Grafiche belle e d'impatto: layout ★, metafore visive forti, schemi veri. Mai due giorni di fila con stesso layout o palette.
+
+## Story con audio
+Ogni story esce come VIDEO con musica a tema a volume basso: prima crea il JPG della story, poi
+`python3 template/make_story_video.py posts/AAAA-MM-GG-story.jpg posts/AAAA-MM-GG-story.mp4 MOOD`
+MOOD: `positivo` per SEO/GEO, `tech` per siti web ed e-commerce, `tensione` per cybersecurity. Mai sirene o suoni forti.
 
 ## Contenuti
 - Solo fatti verificati; per numeri e date cita la fonte nella grafica o nella caption.

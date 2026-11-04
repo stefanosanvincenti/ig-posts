@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: valuecurve — metafora forte + grafico a due curve (es. pubblicità vs SEO: quando smetti di pagare)
+     + tre schede di valore. Grafico ILLUSTRATIVO: dichiararlo sempre nella nota, mai numeri inventati spacciati per dati. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#F6F3EC; --ink:#14120F; --dim:#5F584D; --a1:#0FA968; --a2:#F0533F; --a3:#6B4CFF; --line:#E2DCCF; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:60px;left:66px;font:bold 22px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--a1)}
+h1{position:absolute;top:98px;left:66px;right:66px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:66px;line-height:1.04;letter-spacing:-2.4px}
+h1 .r{color:var(--a2)} h1 .g{color:var(--a1)}
+.chart{position:absolute;left:66px;right:66px;top:290px;height:560px;border-radius:26px;background:#fff;border:2px solid var(--line);box-shadow:0 20px 50px rgba(20,18,15,.08)}
+.chart svg{position:absolute;left:0;top:0}
+.lg{position:absolute;display:flex;align-items:center;gap:10px;font-size:22px;font-weight:800}
+.lg i{width:28px;height:8px;border-radius:4px;display:block}
+.tag{position:absolute;font:bold 17px 'DejaVu Sans Mono',monospace;letter-spacing:2px;padding:8px 12px;border-radius:10px;color:#fff;white-space:nowrap}
+.cards{position:absolute;left:66px;right:66px;top:880px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.c{border-radius:22px;background:#fff;border:2px solid var(--line);padding:22px 20px;height:260px}
+.c .ic{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.c b{display:block;font-size:24px;font-weight:900;line-height:1.12}
+.c p{font-size:19px;color:var(--dim);line-height:1.3;margin-top:8px}
+.note{position:absolute;left:66px;right:66px;top:1166px;font-size:18px;color:var(--dim)}
+.foot{position:absolute;left:66px;right:66px;bottom:46px;display:flex;justify-content:space-between;font:21px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="kicker">SEO · GEO · IL VALORE</div>
+<h1>La pubblicità è un <span class="r">affitto</span>.<br>La SEO è un <span class="g">immobile</span>.</h1>
+
+<div class="chart">
+  <svg width="948" height="560" viewBox="0 0 948 560">
+    <defs>
+      <linearGradient id="gs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0FA968" stop-opacity=".28"/><stop offset="1" stop-color="#0FA968" stop-opacity="0"/></linearGradient>
+      <linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6B4CFF" stop-opacity=".22"/><stop offset="1" stop-color="#6B4CFF" stop-opacity="0"/></linearGradient>
+    </defs>
+    <!-- assi: area grafico x 80..900, y 110..470 -->
+    <g stroke="#E2DCCF" stroke-width="2"><path d="M80,470 H900"/><path d="M80,380 H900" stroke-dasharray="4 8"/><path d="M80,290 H900" stroke-dasharray="4 8"/><path d="M80,200 H900" stroke-dasharray="4 8"/></g>
+    <!-- stop budget a metà -->
+    <path d="M490,120 V470" stroke="#14120F" stroke-width="2" stroke-dasharray="6 6" opacity=".5"/>
+    <!-- GEO (sopra la SEO, parte dopo) -->
+    <path d="M330,412 C440,355 560,245 900,128 L900,470 L330,470 Z" fill="url(#gg)"/>
+    <path d="M330,412 C440,355 560,245 900,128" fill="none" stroke="#6B4CFF" stroke-width="5"/>
+    <!-- SEO: lenta all'inizio, poi cresce e si accumula -->
+    <path d="M80,460 C260,450 380,400 520,320 C640,250 760,210 900,180 L900,470 L80,470 Z" fill="url(#gs)"/>
+    <path d="M80,460 C260,450 380,400 520,320 C640,250 760,210 900,180" fill="none" stroke="#0FA968" stroke-width="7" stroke-linecap="round"/>
+    <!-- ADS: subito alta, poi crolla quando smetti di pagare -->
+    <path d="M80,250 C120,235 150,232 200,236 L470,240 C490,242 500,300 515,440 C530,462 560,466 900,466" fill="none" stroke="#F0533F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="900" cy="180" r="10" fill="#0FA968"/><circle cx="900" cy="128" r="9" fill="#6B4CFF"/><circle cx="900" cy="466" r="9" fill="#F0533F"/>
+    <text x="80" y="505" font-family="DejaVu Sans Mono" font-size="17" fill="#5F584D">MESE 1</text>
+    <text x="842" y="505" font-family="DejaVu Sans Mono" font-size="17" fill="#5F584D">MESE 24</text>
+    <text x="40" y="300" font-family="DejaVu Sans Mono" font-size="17" fill="#5F584D" transform="rotate(-90 40 300)">CLIENTI DAL WEB</text>
+  </svg>
+  <div class="lg" style="left:84px;top:30px"><i style="background:#F0533F"></i>Solo pubblicità</div>
+  <div class="lg" style="left:340px;top:30px"><i style="background:#0FA968"></i>SEO</div>
+  <div class="lg" style="left:480px;top:30px"><i style="background:#6B4CFF"></i>SEO + GEO (risposte AI)</div>
+  <div class="tag" style="left:440px;top:78px;background:#14120F">STOP BUDGET</div>
+  <div class="tag" style="left:610px;top:405px;background:#F0533F">il traffico sparisce</div>
+  <div class="tag" style="left:150px;top:378px;background:#0FA968">si costruisce</div>
+  <div class="tag" style="left:640px;top:100px;background:#6B4CFF">e resta</div>
+</div>
+
+<div class="cards">
+  <div class="c"><div class="ic" style="background:rgba(15,169,104,.12)"><svg width="30" height="30" viewBox="0 0 30 30"><circle cx="13" cy="13" r="9" fill="none" stroke="#0FA968" stroke-width="3.5"/><path d="M20,20 L27,27" stroke="#0FA968" stroke-width="4" stroke-linecap="round"/></svg></div>
+    <b>Ti trova chi ti cerca già</b><p>Persone con un bisogno vero, nel momento in cui decidono.</p></div>
+  <div class="c"><div class="ic" style="background:rgba(240,83,63,.12)"><svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="15" r="11" fill="none" stroke="#F0533F" stroke-width="3.5"/><path d="M15,8 V22 M11,11 H17 a3,3 0 0 1 0,6 H12" stroke="#F0533F" stroke-width="3" fill="none"/></svg></div>
+    <b>Non paghi ogni clic</b><p>Il lavoro fatto oggi continua a portare visite domani.</p></div>
+  <div class="c"><div class="ic" style="background:rgba(107,76,255,.12)"><svg width="30" height="30" viewBox="0 0 30 30"><rect x="3" y="5" width="24" height="17" rx="5" fill="none" stroke="#6B4CFF" stroke-width="3.5"/><path d="M9,22 L7,28 L14,22" fill="#6B4CFF"/><circle cx="10" cy="13.5" r="2" fill="#6B4CFF"/><circle cx="15" cy="13.5" r="2" fill="#6B4CFF"/><circle cx="20" cy="13.5" r="2" fill="#6B4CFF"/></svg></div>
+    <b>Con la GEO ti citano le AI</b><p>Il tuo nome dentro le risposte che i clienti leggono.</p></div>
+</div>
+<div class="note">Andamento illustrativo: tempi e risultati dipendono da settore, concorrenza e punto di partenza.</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
