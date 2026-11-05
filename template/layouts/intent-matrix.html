@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- LAYOUT: intent-matrix — matrice 2x2 con quattro quadranti titolati e ricerche d'esempio dentro. Adatto a: intento di ricerca, segmentazione, 4 tipi di qualcosa su due assi. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#0C0818; --ink:#FFFFFF; --dim:#B9B3CC; --a1:#A855F7; --a2:#39E5FF; --line:#241C3A; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+body:before{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(168,85,247,.35),transparent 65%)}
+body:after{content:'';position:absolute;right:-250px;bottom:-250px;width:800px;height:800px;background:radial-gradient(circle,rgba(57,229,255,.18),transparent 65%)}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a2);z-index:2}
+h1{position:absolute;top:118px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:76px;line-height:1.03;letter-spacing:-2.5px;z-index:2}
+h1 span{color:var(--a2)}
+.box{position:absolute;left:150px;top:380px;width:858px;height:760px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;z-index:2}
+.q{border-radius:24px;background:rgba(255,255,255,.05);border:2px solid var(--line);padding:26px 26px}
+.q.hot{background:rgba(168,85,247,.22);border-color:var(--a1)}
+.q h2{font-family:'Inter Display','Inter',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1px;line-height:1}
+.q.hot h2{color:var(--a2)}
+.q small{display:block;margin-top:8px;font-size:20px;color:var(--dim);font-weight:600}
+.q{position:relative}.q .do{position:absolute;left:26px;right:26px;bottom:24px;font-size:25px;font-weight:700;line-height:1.25;color:var(--ink);border-top:2px dashed var(--line);padding-top:16px}.q .do i{display:block;font:bold 17px 'DejaVu Sans Mono',monospace;letter-spacing:3px;color:var(--a2);font-style:normal;margin-bottom:6px}.q p{margin-top:22px;font-family:'DejaVu Sans Mono',monospace;font-size:23px;line-height:1.45;color:var(--ink)}
+.q p:before{content:'🔍 ';font-size:18px}
+.ax{position:absolute;font:bold 21px 'DejaVu Sans Mono',monospace;letter-spacing:3px;color:var(--dim);z-index:2}
+.ax.y{left:96px;top:1140px;transform:rotate(-90deg);transform-origin:left top;width:760px;text-align:center}
+.ax.x{left:150px;top:1154px;width:858px;text-align:center}
+svg{position:absolute;left:0;top:0;z-index:1}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim);z-index:2}
+.foot b{color:var(--a2)}
+</style></head><body>
+<div class="kicker">SEO · LE BASI</div>
+<h1>Chi cerca, cosa<br><span>vuole davvero?</span></h1>
+<svg width="1080" height="1350"><g stroke="var(--dim)" stroke-width="3" fill="none">
+  <path d="M130,1140 L130,372"/><path d="M122,386 L130,370 L138,386"/>
+  <path d="M140,1140 L1012,1140"/><path d="M998,1132 L1014,1140 L998,1148"/></g></svg>
+<div class="box">
+  <div class="q"><h2>Navigazionale</h2><small>ti conosce già, ti cerca</small><p>"nome azienda orari"</p><div class="do"><i>COSA SERVE</i>Home e contatti chiari, scheda Google aggiornata</div></div>
+  <div class="q hot"><h2>Transazionale</h2><small>ti conosce e vuole agire</small><p>"prenota consulenza online"</p><div class="do"><i>COSA SERVE</i>Pagina servizio con prezzo, prove e un pulsante</div></div>
+  <div class="q"><h2>Informazionale</h2><small>vuole capire</small><p>"cos'è la SEO"</p><p>"come scegliere un sito"</p><div class="do"><i>COSA SERVE</i>Guida semplice che risponde e spiega</div></div>
+  <div class="q hot"><h2>Commerciale</h2><small>confronta prima di scegliere</small><p>"quanto costa un sito"</p><div class="do"><i>COSA SERVE</i>Confronti, FAQ, prezzi e recensioni</div></div>
+</div>
+<div class="ax y">TI CONOSCE GIÀ →</div>
+<div class="ax x">QUANTO È VICINO ALL'ACQUISTO →</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
