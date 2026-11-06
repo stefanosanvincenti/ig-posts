@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: anatomy-checkout — finto carrello/checkout "anatomizzato" con 5 punti di attrito numerati e callout.
+     Adatto a: e-commerce, checkout, scheda prodotto. Dati inventati nel mockup, nessun marchio reale.
+     Modifica: kicker, h1, righe del carrello, callout .cl. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#EEF4FA; --ink:#0B1B2E; --dim:#4A5B70; --a1:#0057FF; --a2:#00B3A4; --line:#D3DEEA; --bad:#E4372E; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative;
+  background-image:radial-gradient(circle,var(--line) 2.5px,transparent 3px);background-size:40px 40px}
+.kicker{position:absolute;top:60px;left:72px;font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--a1)}
+h1{position:absolute;top:100px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:74px;line-height:1;letter-spacing:-3px}
+h1 span{background:var(--bad);color:#fff;padding:0 12px;border-radius:10px}
+.big{position:absolute;left:72px;top:290px;font-weight:900;font-size:120px;letter-spacing:-5px;line-height:1;color:var(--a1)}
+.bigt{position:absolute;left:72px;top:418px;width:300px;font-size:24px;font-weight:700;line-height:1.25;color:var(--dim)}
+.shop{position:absolute;left:410px;top:290px;width:520px;height:600px;background:#fff;border-radius:22px;border:3px solid var(--ink);box-shadow:14px 14px 0 var(--ink);transform:rotate(-1deg);overflow:hidden}
+.sh{padding:18px 24px;border-bottom:2px solid #eee;font-weight:900;font-size:26px;display:flex;justify-content:space-between}
+.row{display:flex;gap:16px;align-items:center;padding:14px 24px;font-size:21px;border-bottom:1px solid #eee}
+.row i{width:56px;height:56px;border-radius:10px;background:#dbe7ff;display:block}
+.row b{flex:1}
+.tot{padding:12px 24px;font-size:21px;color:#555;display:flex;justify-content:space-between}
+.tot.x{background:rgba(228,55,46,.1);color:var(--bad);font-weight:800}
+.form{margin:10px 24px;padding:12px 14px;border:2px solid #ccd6e4;border-radius:10px;font-size:20px;color:#666}
+.btn{margin:14px 24px;background:#aab6c8;color:#fff;text-align:center;font-weight:900;font-size:24px;padding:16px;border-radius:12px}
+.dot{position:absolute;width:52px;height:52px;border-radius:50%;background:var(--bad);color:#fff;font:900 28px/52px 'Inter',sans-serif;text-align:center;box-shadow:0 0 0 6px #fff,0 6px 16px rgba(0,0,0,.25)}
+.cl{position:absolute;width:250px;font-size:20px;line-height:1.25;color:var(--dim)}
+.cl b{display:block;font-size:24px;color:var(--ink);font-weight:900;margin-bottom:4px}
+.tip{position:absolute;left:72px;right:72px;top:960px;font-size:36px;font-weight:800;line-height:1.25}
+.tip span{color:var(--a1)}
+.src{position:absolute;left:72px;right:72px;top:1180px;font-size:21px;color:var(--dim)}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font:22px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="kicker">E-COMMERCE · CHECKOUT</div>
+<h1>5 cose che <span>fanno scappare</span><br>chi stava per comprare</h1>
+<div class="shop">
+  <div class="sh"><span>Il tuo carrello</span><span>2 articoli</span></div>
+  <div class="row"><i></i><b>Prodotto esempio A</b>49,00 €</div>
+  <div class="row"><i></i><b>Prodotto esempio B</b>29,00 €</div>
+  <div class="tot"><span>Subtotale</span><span>78,00 €</span></div>
+  <div class="tot x"><span>Spedizione + commissioni</span><span>+ 14,90 €</span></div>
+  <div class="form">Crea un account per continuare…</div>
+  <div class="form">Password (12 car., maiuscole, simboli)</div>
+  <div class="form">Pagamento: solo carta di credito</div>
+  <div class="btn">Passo 1 di 6 →</div>
+</div>
+<div class="dot" style="left:372px;top:578px">1</div>
+<div class="dot" style="left:372px;top:654px">2</div>
+<div class="dot" style="left:372px;top:718px">3</div>
+<div class="dot" style="left:372px;top:782px">4</div>
+<div class="dot" style="left:372px;top:846px">5</div>
+<div class="tip">Mostra il <span>costo totale subito</span>, permetti l'acquisto <span>senza account</span> e riduci i passaggi.</div>
+<div class="cl" style="left:72px;top:300px;width:300px"><b>1 · Costi a sorpresa</b>Spedizione e commissioni solo alla fine</div>
+<div class="cl" style="left:72px;top:418px;width:300px"><b>2 · Account obbligato</b>Chi ha fretta chiude la pagina</div>
+<div class="cl" style="left:72px;top:536px;width:300px"><b>3 · Password assurde</b>Regole difficili da seguire da telefono</div>
+<div class="cl" style="left:72px;top:772px;width:300px"><b>5 · Troppi passaggi</b>Ogni passo in più è un'uscita</div>
+<div class="cl" style="left:72px;top:660px;width:300px"><b>4 · Solo la carta</b>Chi non ce l'ha rinuncia</div>
+<div class="src" style="top:1130px">Fonte: Baymard Institute, media di 50 studi 2006–2025: circa 7 carrelli su 10 abbandonati (70,22%). Tra i motivi dichiarati: costi extra 40%, account obbligatorio 18%, checkout lungo 17%, poca fiducia nei pagamenti 19%.</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
