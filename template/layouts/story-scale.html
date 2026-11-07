@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- STORY WOW: scale — bilancia disegnata: piatto pesante (il danno) giù, piatto leggero (la prevenzione) su.
+     Per far passare "investimento, non costo". Modifica: titolo, etichette dei piatti, frase finale, pillola. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+:root{ --bg:#0A0D18; --ink:#FFFFFF; --dim:#A7B0C8; --a1:#FF3D57; --a2:#3DF5A8; --line:#1D2440; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.gl{position:absolute;left:50%;top:700px;width:1200px;height:1200px;margin-left:-600px;border-radius:50%;background:radial-gradient(circle,rgba(61,245,168,.10),transparent 60%)}
+.k{position:absolute;top:270px;left:0;right:0;text-align:center;font:bold 28px 'DejaVu Sans Mono',monospace;letter-spacing:6px;color:var(--dim)}
+.q{position:absolute;top:340px;left:70px;right:70px;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:84px;line-height:1.04;letter-spacing:-3px}
+.q span{color:var(--a1)} .q em{font-style:normal;color:var(--a2)}
+svg.sc{position:absolute;left:0;top:640px}
+.pan{position:absolute;width:340px;text-align:center;font-weight:800;line-height:1.22}
+.pan b{display:block;font-family:'Inter Display','Inter',sans-serif;font-size:40px;font-weight:900;margin-bottom:8px}
+.pan i{display:block;font-style:normal;font-size:27px;color:var(--dim);font-weight:600}
+.m{position:absolute;top:1340px;left:80px;right:80px;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:54px;line-height:1.15;letter-spacing:-1.2px}
+.m mark{background:var(--a2);color:#06281A;padding:0 12px;border-radius:12px}
+.cta{position:absolute;left:50%;top:1540px;transform:translateX(-50%);white-space:nowrap;padding:22px 44px;border-radius:50px;background:#fff;color:#0A0D18;font-weight:900;font-size:38px}
+</style></head><body>
+<div class="gl"></div>
+<div class="k">CYBERSICUREZZA · NIS2</div>
+<div class="q">Cosa costa di più:<br>un'azienda <span>ferma</span><br>o <em>prevenire</em>?</div>
+<svg class="sc" width="1080" height="560" viewBox="0 0 1080 560">
+  <defs><filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <!-- colonna -->
+  <path d="M540,90 V470 M450,470 H630" stroke="#A7B0C8" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="540" cy="90" r="18" fill="#A7B0C8"/>
+  <!-- braccio inclinato: sinistra giù, destra su -->
+  <path d="M250,170 L830,20" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+  <!-- piatto sinistro (danno, pesante) -->
+  <path d="M250,170 L170,330 M250,170 L330,330" stroke="#FF3D57" stroke-width="5"/>
+  <path d="M140,330 H360 a110,40 0 0 1 -220,0 Z" fill="#FF3D57" filter="url(#g)"/>
+  <!-- piatto destro (prevenzione, leggero) -->
+  <path d="M830,20 L750,180 M830,20 L910,180" stroke="#3DF5A8" stroke-width="5"/>
+  <path d="M720,180 H940 a110,40 0 0 1 -220,0 Z" fill="#3DF5A8" filter="url(#g)"/>
+</svg>
+<div class="pan" style="left:80px;top:1035px"><b style="color:#FF3D57">Azienda ferma</b><i>merce persa, clienti persi, dati rubati, sanzioni</i></div>
+<div class="pan" style="left:660px;top:885px"><b style="color:#3DF5A8">Prevenzione</b><i>MFA, backup, reti separate, formazione</i></div>
+<div class="m">La cybersicurezza è come l'assicurazione: <mark>si fa prima.</mark></div>
+<div class="cta">Cosa è successo questa settimana ↓</div>
+</body></html>

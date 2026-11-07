@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: weekwall — "muro" di notizie: titolo forte + 4 schede incidente (icona, data, titolo, riga) + banner
+     di chiusura. Adatto a: riepiloghi di attacchi/notizie di una settimana. Solo fatti verificati, date esatte. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#0A0D18; --ink:#FFFFFF; --dim:#A7B0C8; --a1:#FF3D57; --a2:#FFC23D; --line:#1D2440; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.g1{position:absolute;right:-300px;top:-250px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(255,61,87,.22),transparent 62%)}
+.scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 2px,transparent 2px 6px)}
+.kicker{position:absolute;top:60px;left:66px;font:bold 21px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--dim)}
+.kicker b{color:var(--a1)}
+.live{position:absolute;top:50px;right:66px;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:30px;border:2px solid var(--a1);font:900 19px 'Inter',sans-serif;letter-spacing:3px;color:var(--a1)}
+.live i{width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 14px var(--a1)}
+h1{position:absolute;top:104px;left:66px;right:66px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:76px;line-height:1.0;letter-spacing:-3px}
+h1 span{color:var(--a1);text-shadow:0 0 36px rgba(255,61,87,.5)}
+.grid{position:absolute;left:66px;right:66px;top:300px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.c{position:relative;height:300px;border-radius:24px;background:linear-gradient(160deg,#141A30,#0E1222);border:2px solid var(--line);padding:24px 24px 0;overflow:hidden}
+.c:after{content:'';position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--a1)}
+.c .ic{width:70px;height:70px;border-radius:20px;background:rgba(255,61,87,.12);border:2px solid rgba(255,61,87,.4);display:flex;align-items:center;justify-content:center}
+.c .d{position:absolute;top:30px;right:22px;font:bold 16px 'DejaVu Sans Mono',monospace;letter-spacing:2px;color:var(--a2)}
+.c b{display:block;font-family:'Inter Display','Inter',sans-serif;font-size:34px;font-weight:900;line-height:1.05;margin-top:18px;letter-spacing:-.8px}
+.c p{font-size:20px;line-height:1.32;color:var(--dim);margin-top:10px}
+.ban{position:absolute;left:66px;right:66px;top:955px;border-radius:24px;background:var(--a1);padding:24px 30px;box-shadow:0 20px 50px rgba(255,61,87,.3)}
+.ban b{display:block;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:40px;line-height:1.08;letter-spacing:-1px}
+.ban p{font-size:22px;font-weight:600;margin-top:8px;opacity:.95}
+.src{position:absolute;left:66px;right:66px;top:1190px;font-size:17px;color:#7C86A3}
+.foot{position:absolute;left:66px;right:66px;bottom:46px;display:flex;justify-content:space-between;font:21px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="g1"></div><div class="scan"></div>
+<div class="kicker"><b>●</b> CYBERSECURITY · GUERRA IBRIDA</div>
+<div class="live"><i></i>NOVEMBRE 2026</div>
+<h1>Una sola settimana.<br><span>Supermercati, aerei, scuole.</span></h1>
+<div class="grid">
+  <div class="c"><div class="ic"><svg width="38" height="40" viewBox="0 0 38 40"><rect x="6" y="2" width="26" height="36" rx="5" fill="none" stroke="#FF3D57" stroke-width="3.5"/><path d="M6,15 H32 M12,7 V11 M12,20 V30" stroke="#FF3D57" stroke-width="3.5"/></svg></div><span class="d">2 NOV</span>
+    <b>Frigoriferi a +50°C</b><p>Pannelli di controllo raggiungibili da internet: banchi frigo manomessi in 9 Paesi, anche a Catania e Palermo.</p></div>
+  <div class="c"><div class="ic"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M20,3 L23,16 L37,22 L37,26 L23,23 L22,33 L27,37 L27,39 L20,37 L13,39 L13,37 L18,33 L17,23 L3,26 L3,22 L17,16 Z" fill="none" stroke="#FF3D57" stroke-width="3" stroke-linejoin="round"/></svg></div><span class="d">2–6 NOV</span>
+    <b>Allarmi bomba sui voli</b><p>Email minatorie su decine di voli europei, anche Fiumicino e Malpensa. Tutte false, ma aerei dirottati.</p></div>
+  <div class="c"><div class="ic"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M4,16 L20,6 L36,16 M8,16 V34 H32 V16" fill="none" stroke="#FF3D57" stroke-width="3.5" stroke-linejoin="round"/><rect x="16" y="22" width="8" height="12" fill="none" stroke="#FF3D57" stroke-width="3"/></svg></div><span class="d">2 NOV</span>
+    <b>271 scuole minacciate</b><p>False minacce bomba arrivate via email a istituti di tutta Italia.</p></div>
+  <div class="c"><div class="ic"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="8" y="3" width="24" height="28" rx="7" fill="none" stroke="#FF3D57" stroke-width="3.5"/><path d="M8,18 H32" stroke="#FF3D57" stroke-width="3"/><circle cx="14" cy="24" r="2" fill="#FF3D57"/><circle cx="26" cy="24" r="2" fill="#FF3D57"/><path d="M12,31 L8,38 M28,31 L32,38" stroke="#FF3D57" stroke-width="3.5" stroke-linecap="round"/></svg></div><span class="d">TRENITALIA</span>
+    <b>Dati dei passeggeri sottratti</b><p>Clienti avvisati mesi dopo l'intrusione. Ora il rischio è il phishing con viaggi veri.</p></div>
+</div>
+<div class="ban"><b>Non è più un problema dell'IT.<br>È la continuità della tua azienda.</b><p>Domani: perché la cybersicurezza è un investimento, non un costo.</p></div>
+<div class="src">Fonti: Il Post, Sky TG24, Il Fatto Quotidiano, Tgcom24, Cybersecurity360 · novembre 2026</div>
+<div class="foot"><span>Salva e condividi</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
