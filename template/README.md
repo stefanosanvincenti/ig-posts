@@ -39,6 +39,7 @@ chiaro e una riga di commento in testa che spiega a cosa serve.
 | **fakecaptcha.html** ★ | finto browser con "Non sono un robot", tasti da premere, finestra Esegui | ClickFix, truffe che fanno eseguire comandi |
 | **otattack.html** ★ | termometro gigante, "cosa è successo", catena internet → pannello esposto → impianto, misure | attacchi a impianti OT/IoT (frigoriferi, HVAC, PLC) |
 | **valuecurve.html** ★ | metafora forte + grafico a curve (es. pubblicità vs SEO vs SEO+GEO) + 3 schede valore | valore di SEO/GEO, confronti nel tempo (grafico sempre dichiarato illustrativo) |
+| **weekwall.html** ★ | muro di notizie: titolo forte + 4 schede incidente + banner | riepiloghi settimanali di attacchi/notizie |
 | **riskmap.html** ★ | heat map del rischio 5x5 con pin | analisi del rischio NIS2, priorità |
 
 ★ = layout "WOW" tecnici. Fino a fine ottobre 2026 hanno la precedenza: almeno 3 post su 5 devono usarne uno.
@@ -56,6 +57,8 @@ come layout "lista" ai fini della rotazione.
 | **story-alert.html** ★ | schermata d'allarme con triangolo luminoso e testo glitch (cyber/NIS2) |
 | **story-promo.html** ★ | coppia di promo-geo: brand, sigla gigante, chat AI con "la tua azienda?", CTA |
 | **story-deadline.html** ★ | conto alla rovescia: data gigante, MANCANO X GIORNI, mini catena fornitori |
+| **story-scale.html** ★ | bilancia: danno pesante vs prevenzione leggera | investimento vs costo |
+| **story-statement.html** ★ | frase manifesto con parola barrata e sostituita + 3 ritorni | messaggi di posizionamento |
 | **story-terminal.html** ★ | console a tutto schermo che "digita" la domanda (temi tecnici) |
 Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- LAYOUT: hub — mappa mentale: concetto al centro, 6 nodi intorno collegati da linee.
+     Adatto a: "6 fattori che...", ecosistemi, cosa include un servizio, aree di un audit.
+     Modifica: testo del centro, titoli e sottotitoli dei 6 nodi. Le posizioni sono già calcolate. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#F3F6FB; --ink:#0B1426; --dim:#4B5A75; --a1:#1F5BFF; --a2:#0FA968; --line:#D5DEEC; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a2)}
+h1{position:absolute;top:118px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:800;font-size:56px;line-height:1.08;letter-spacing:-2px}
+h1 span{color:var(--a1)}
+svg{position:absolute;left:0;top:0}
+.core{position:absolute;left:400px;top:650px;width:280px;height:280px;border-radius:50%;background:var(--a1);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:40px;line-height:1.05;letter-spacing:-1px;padding:30px;box-shadow:0 0 0 18px rgba(31,91,255,.14),0 0 0 40px rgba(31,91,255,.06)}
+.n{position:absolute;width:300px;height:124px;margin:-62px 0 0 -150px;border-radius:22px;background:#fff;border:3px solid var(--a2);box-shadow:0 12px 30px rgba(11,20,38,.08);padding:16px 18px;text-align:center}
+.n b{display:block;font-size:27px;font-weight:800;line-height:1.1}
+.n i{display:block;font-style:normal;font-size:20px;color:var(--dim);margin-top:6px;line-height:1.2}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--a1)}
+</style></head><body>
+<div class="kicker">NIS2 · CYBERSICUREZZA</div>
+<h1>La cybersicurezza non è una spesa.<br><span style="color:var(--a1)">È un investimento che rende.</span></h1>
+<svg width="1080" height="1350"><g stroke="var(--a2)" stroke-width="3" stroke-dasharray="4 10" stroke-linecap="round">
+  <path d="M540,790 L540,460"/><path d="M540,790 L826,625"/><path d="M540,790 L826,955"/>
+  <path d="M540,790 L540,1120"/><path d="M540,790 L254,955"/><path d="M540,790 L254,625"/></g>
+  <circle cx="540" cy="790" r="330" fill="none" stroke="var(--line)" stroke-width="2"/></svg>
+<div class="core"><svg width="64" height="70" viewBox="0 0 40 44" style="position:absolute;top:36px;left:108px"><path d="M20,2 L37,8 V21 C37,32 29,39 20,42 C11,39 3,32 3,21 V8 Z" fill="#fff" opacity=".95"/><path d="M12,22 L18,28 L29,16" stroke="#1F5BFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="margin-top:70px">Cosa ti ripaga</span></div>
+<div class="n" style="left:540px;top:460px"><b>Continuità</b><i>L'azienda resta aperta e operativa</i></div>
+<div class="n" style="left:826px;top:625px"><b>Clienti NIS2</b><i>Resti un fornitore scelto, non scartato</i></div>
+<div class="n" style="left:826px;top:955px"><b>Sanzioni evitate</b><i>NIS2: fino a 10 mln € o il 2% del fatturato</i></div>
+<div class="n" style="left:540px;top:1120px"><b>Fiducia</b><i>Dati dei clienti al sicuro, reputazione intatta</i></div>
+<div class="n" style="left:254px;top:955px"><b>Assicurabilità</b><i>MFA e backup, richiesti da molte polizze</i></div>
+<div class="n" style="left:254px;top:625px"><b>Ripartenza rapida</b><i>Backup e piano pronti: ore, non settimane</i></div>
+<div class="foot"><span>Salva e giralo al titolare</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
