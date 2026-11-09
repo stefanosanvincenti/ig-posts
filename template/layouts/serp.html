@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- LAYOUT: serp — due risultati di ricerca a confronto (brutto con titolo troncato vs curato), con callout numerati.
+     Adatto a: title e meta description, snippet, SEO locale, schede prodotto. Niente loghi/nomi reali. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#0B1220; --ink:#FFFFFF; --dim:#A9B6CC; --a1:#C6F432; --a2:#FF5A4F; --line:#22314F; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+body:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 8%,rgba(198,244,50,.18),transparent 40%),radial-gradient(circle at 5% 70%,rgba(255,90,79,.14),transparent 40%)}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a1)}
+h1{position:absolute;top:118px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:78px;line-height:1.02;letter-spacing:-2.5px}
+h1 span{color:var(--a1)}
+.res{position:absolute;left:72px;right:72px;background:#fff;color:#1f2330;border-radius:28px;padding:34px 40px 36px}
+.res .url{font:20px 'DejaVu Sans Mono',monospace;color:#5b6475}
+.res .t{font-size:38px;font-weight:700;color:#1a4fd6;line-height:1.18;margin-top:10px;letter-spacing:-.5px}
+.res .d{font-size:25px;line-height:1.35;color:#3b4252;margin-top:10px}
+.tag{position:absolute;top:-24px;left:34px;font:bold 22px 'DejaVu Sans Mono',monospace;letter-spacing:3px;padding:10px 20px;border-radius:12px;color:#fff}
+.bad{top:395px;border:5px solid var(--a2)}
+.bad .tag{background:var(--a2)}
+.good{top:780px;border:5px solid var(--a1)}
+.good .tag{background:var(--a1);color:#0B1220}
+.note{position:absolute;right:-8px;font:bold 21px 'DejaVu Sans Mono',monospace;padding:8px 16px;border-radius:10px;transform:translateX(0)}
+.bad .note{background:#FFE3E0;color:#B3261E;right:30px;top:-22px}
+.good .note{background:#EAFBB5;color:#3C5200;right:30px;top:-22px}
+.arrow{position:absolute;left:72px;right:72px;top:700px;text-align:center;font-size:52px;color:var(--a1);font-weight:900}
+.take{position:absolute;left:72px;right:72px;top:1135px;font-size:42px;font-weight:800;line-height:1.18;letter-spacing:-1px}
+.take span{color:var(--a1)}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--a1)}
+</style></head><body>
+<div class="kicker">SEO BASE · TITLE E DESCRIPTION</div>
+<h1>Il tuo biglietto da visita <span>su Google</span> lo hai scritto tu?</h1>
+<div class="res bad"><div class="tag">PRIMA</div><div class="note">titolo troncato</div>
+  <div class="url">www.rossiimpianti.it › home</div>
+  <div class="t">Home - Rossi Srl | Idraulico, Caldaie, Riscaldamento, Impianti, Condizionatori Mila...</div>
+  <div class="d">Benvenuti nel sito di Rossi Srl. Siamo un'azienda leader nel settore, con anni di esperienza e professionalità al servizio del cliente...</div></div>
+<div class="arrow">↓</div>
+<div class="res good"><div class="tag">DOPO</div><div class="note">una scelta chiara</div>
+  <div class="url">www.rossiimpianti.it › sostituzione-caldaia</div>
+  <div class="t">Caldaia nuova a Milano: preventivo in 48h</div>
+  <div class="d">Installiamo caldaie a condensazione con garanzia 5 anni. Sopralluogo gratuito, detrazioni spiegate. Chiama o scrivi oggi.</div></div>
+<div class="take">Stessa azienda. <span>Un clic in più</span> o in meno.</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
