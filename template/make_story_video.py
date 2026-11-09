@@ -51,7 +51,8 @@ def mood_tensione():
 def mood_positivo():
     chords = [(261.63, 329.63, 392.0), (220.0, 261.63, 329.63), (174.61, 220.0, 261.63), (196.0, 246.94, 293.66)]
     o = np.zeros_like(t)
-    for i, ch in enumerate(chords * 2):
+    for i in range(int(T / 1.5) + 1):
+        ch = chords[i % len(chords)]
         b = i * 1.5
         w = np.clip((t - b) / 0.3, 0, 1) * np.clip((b + 1.6 - t) / 0.3, 0, 1)
         o += 0.06 * pad(ch, 0.002) * w

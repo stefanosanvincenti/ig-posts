@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- STORY ANIMATA lunga (32 s) per il lancio del sito biemmecommunication.com. window.setT(t). Esporta con make_story_anim.py -->
+<html><head><meta charset="utf-8"><style>
+:root{--bg:#05070C;--ink:#fff;--dim:#9AA6BF;--a1:#3DFFB8;--a2:#4C8DFF;--line:#141B2B}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(76,141,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(76,141,255,.08) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(ellipse at 50% 45%,#000 30%,transparent 75%)}
+.g1,.g2{position:absolute;width:1100px;height:1100px;border-radius:50%}
+.g1{left:-400px;top:-200px;background:radial-gradient(circle,rgba(76,141,255,.32),transparent 62%)}
+.g2{right:-450px;bottom:-300px;background:radial-gradient(circle,rgba(61,255,184,.22),transparent 62%)}
+.sc{position:absolute;inset:0;opacity:0}
+.mono{font-family:'DejaVu Sans Mono',monospace}
+.grad{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;color:transparent}
+h1{font-family:'Inter Display','Inter',sans-serif;font-weight:900;letter-spacing:-5px;line-height:.98}
+[data-in]{opacity:0}
+.brand{display:flex;align-items:center;gap:14px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;letter-spacing:-.5px}
+.brand .mk{width:30px;height:30px;transform:rotate(45deg);border-radius:6px;background:linear-gradient(135deg,var(--a1),var(--a2))}
+.top{position:absolute;top:270px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:center;font:bold 26px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.top b{color:var(--a1)}
+/* A terminale */
+.term{position:absolute;left:80px;right:80px;top:560px;border-radius:30px;border:2px solid #1E2740;background:#070A12;overflow:hidden;box-shadow:0 40px 120px rgba(76,141,255,.25)}
+.term .bar{height:54px;background:#0F1420;display:flex;align-items:center;gap:11px;padding:0 24px}
+.term .bar i{width:15px;height:15px;border-radius:50%;background:#2E3850}
+.term .c{padding:34px 36px;font:31px/1.75 'DejaVu Sans Mono',monospace;color:#C9D3E8;min-height:440px}
+.term .c b{color:var(--a1)} .term .c em{font-style:normal;color:var(--a2)}
+.prog{margin-top:18px;height:16px;border-radius:8px;background:#1A2236;overflow:hidden}
+.prog s{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a2),var(--a1));text-decoration:none}
+.live{position:absolute;left:0;right:0;top:1180px;text-align:center}
+.live span{display:inline-flex;align-items:center;gap:20px;padding:22px 46px;border-radius:60px;border:3px solid var(--a1);font:900 54px 'Inter',sans-serif;letter-spacing:8px;color:var(--a1);background:rgba(61,255,184,.07);box-shadow:0 0 60px rgba(61,255,184,.35)}
+.live i{width:24px;height:24px;border-radius:50%;background:var(--a1);box-shadow:0 0 24px var(--a1)}
+/* B lancio */
+.B h1{position:absolute;top:340px;left:76px;right:70px;font-size:150px}
+.B .sub{position:absolute;top:670px;left:80px;right:80px;font-size:38px;line-height:1.35;color:var(--dim)}
+.B .sub b{color:#fff}
+.lap{position:absolute;left:70px;top:860px;width:940px}
+.scr{height:560px;border-radius:24px 24px 0 0;border:11px solid #1B2232;background:#070A12;overflow:hidden;position:relative;box-shadow:0 40px 120px rgba(76,141,255,.4),0 0 0 2px #2A3348}
+.base{height:30px;margin:0 -40px;border-radius:0 0 32px 32px;background:linear-gradient(#2A3348,#141A27)}
+.ubar{height:44px;background:#0F1420;display:flex;align-items:center;gap:9px;padding:0 16px}
+.ubar i{width:12px;height:12px;border-radius:50%;background:#2E3850}
+.url{margin-left:14px;flex:1;height:28px;border-radius:14px;background:#171E2E;font:17px 'DejaVu Sans Mono',monospace;color:#C9D3E8;display:flex;align-items:center;padding-left:14px}
+.url em{font-style:normal;color:var(--a1)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 28px}
+.nav .brand{font-size:20px}.nav .brand .mk{width:16px;height:16px;border-radius:3px}
+.nav span{font-size:14px;color:var(--dim);margin-left:18px}
+.hero{position:absolute;left:28px;top:130px;width:520px}
+.hero .m{font:14px 'DejaVu Sans Mono',monospace;color:var(--a1)}
+.hero h2{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:40px;line-height:1.04;letter-spacing:-1.2px;margin-top:12px}
+.hero h2 em{font-style:normal;color:var(--a1)}
+.btns{display:flex;gap:12px;margin-top:22px}.btns div{padding:11px 18px;border-radius:22px;font-size:15px;font-weight:800}
+.dash{position:absolute;right:24px;top:120px;width:300px;height:380px;border-radius:16px;border:1px solid #1E2740;background:linear-gradient(160deg,#0D1322,#080B14);padding:16px}
+.dash .t{font:13px 'DejaVu Sans Mono',monospace;color:var(--dim);display:flex;justify-content:space-between}.dash .t b{color:var(--a1)}
+.row{margin-top:20px;font:13px 'DejaVu Sans Mono',monospace;color:#C9D3E8}
+.row s{display:block;height:8px;border-radius:4px;margin-top:8px;background:#1A2236;position:relative;text-decoration:none;overflow:hidden}
+.row s u{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:linear-gradient(90deg,var(--a2),var(--a1));text-decoration:none}
+/* C competenze */
+.C h1{position:absolute;top:330px;left:76px;right:70px;font-size:104px;letter-spacing:-4px}
+.list{position:absolute;left:80px;right:80px;top:600px}
+.it{display:flex;align-items:center;gap:26px;height:132px;border-bottom:2px solid var(--line)}
+.it .n{font:bold 24px 'DejaVu Sans Mono',monospace;color:#56627E;width:44px}
+.it .ic{flex:none;width:78px;height:78px;border-radius:22px;background:rgba(61,255,184,.08);border:2px solid rgba(61,255,184,.4);display:flex;align-items:center;justify-content:center}
+.it b{display:block;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:44px;letter-spacing:-1px}
+.it p{font-size:24px;color:var(--dim);margin-top:2px}
+.it.hl b{color:var(--a1)}
+svg.i *{fill:none;stroke:#3DFFB8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+/* D approccio */
+.D h1{position:absolute;top:330px;left:76px;right:70px;font-size:112px;letter-spacing:-4px}
+.D svg.st{position:absolute;left:290px;top:720px}
+.D .lb{position:absolute;left:80px;right:80px;text-align:center}
+.D .lb b{display:block;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:46px;letter-spacing:-1px}
+.D .lb p{font-size:28px;color:var(--dim);margin-top:4px}
+/* E CTA */
+.E h1{position:absolute;top:360px;left:76px;right:70px;font-size:128px;text-align:left}
+.E .sub{position:absolute;top:660px;left:80px;right:80px;font-size:38px;line-height:1.35;color:var(--dim)}
+.E .sub b{color:#fff}
+.lk{position:absolute;left:80px;right:80px;top:880px;border-radius:40px;background:#fff;color:#05070C;padding:44px 44px;box-shadow:0 30px 90px rgba(61,255,184,.35)}
+.lk .k{font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:#5A647A}
+.lk .u{display:flex;align-items:center;gap:20px;margin-top:14px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:50px;letter-spacing:-1.5px;white-space:nowrap}
+.lk .u i{font-style:normal;flex:none;width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--a1),var(--a2));display:flex;align-items:center;justify-content:center;font-size:40px}
+.lk .r{margin-top:22px;font-size:28px;color:#3A4358;font-weight:600;line-height:1.5}
+.E .chk{position:absolute;left:80px;right:80px;top:1270px;display:flex;gap:16px;flex-wrap:wrap}
+.E .chk span{padding:14px 24px;border-radius:30px;border:2px solid #24304A;font-size:28px;font-weight:700;color:#D7E0F2;background:#0B1120}
+.E .chk span:before{content:'✓ ';color:var(--a1)}
+.E .sig{position:absolute;left:80px;right:80px;top:1460px;display:flex;justify-content:space-between;align-items:center;font:26px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.E .sig .brand{font-size:30px;color:#fff;font-family:'Inter Display','Inter',sans-serif}
+</style></head><body>
+<div class="g1" id="g1"></div><div class="g2" id="g2"></div><div class="grid"></div>
+
+<div class="sc A" id="A" data-s="0" data-e="5.2">
+ <div class="top"><span><b>biemme@torino</b>:~$</span><span>SYS.DEPLOY</span></div>
+ <div class="term"><div class="bar"><i></i><i></i><i></i></div>
+  <div class="c"><b>$</b> <span id="typ"></span><br>
+   <div data-in="1.6">▸ build sito ........ <b>ok</b></div>
+   <div data-in="2.0">▸ HTTPS + security .. <b>ok</b></div>
+   <div data-in="2.4">▸ SEO + SEO for AI .. <b>ok</b></div>
+   <div data-in="2.8">▸ pubblicazione <em id="pct">0%</em><div class="prog"><s id="bar"></s></div></div></div></div>
+ <div class="live" data-in="4.0"><span><i></i>ONLINE</span></div>
+</div>
+
+<div class="sc B" id="B" data-s="5.2" data-e="11.4">
+ <div class="top"><span><b>// NEWS</b> · BIEMMECOMMUNICATION</span><span>2026</span></div>
+ <h1 data-in="0.1">Il nuovo sito<br>è <span class="grad">online.</span></h1>
+ <div class="sub" data-in="0.7">Consulenza IT, cybersecurity e <b>SEO for AI</b><br>per aziende che vogliono crescere al sicuro.</div>
+ <div class="lap" data-in="1.2" data-dy="160"><div class="scr">
+  <div class="ubar"><i></i><i></i><i></i><div class="url">🔒&nbsp;<em>https://</em>biemmecommunication.com</div></div>
+  <div class="nav"><div class="brand"><div class="mk"></div>BIEMMECOMMUNICATION</div><div><span>Servizi</span><span>Portfolio</span><span>Chi siamo</span><span>Contatti</span></div></div>
+  <div class="hero"><div class="m">// 00 — DIGITAL EMPOWERMENT</div><h2>Consulenza IT, Cybersecurity e <em>SEO for AI</em> per aziende che vogliono crescere al sicuro.</h2>
+   <div class="btns"><div style="background:var(--a1);color:#04140D">Richiedi un'analisi</div><div style="border:1px solid #3A4560">Esplora i servizi</div></div></div>
+  <div class="dash"><div class="t">noc_dashboard <b>● live</b></div>
+   <div class="row">backup<s><u data-w="92"></u></s></div><div class="row">patch<s><u data-w="78"></u></s></div><div class="row">vulnerabilità<s><u data-w="64"></u></s></div>
+   <div class="row">performance<s><u data-w="88"></u></s></div><div class="row">citazioni AI<s><u data-w="71"></u></s></div></div>
+ </div><div class="base"></div></div>
+</div>
+
+<div class="sc C" id="C" data-s="11.4" data-e="19.6">
+ <div class="top"><span><b>// 01</b> — SERVIZI</span><span>7 / 1</span></div>
+ <h1 data-in="0.1">7 competenze.<br><span class="grad">1 referente.</span></h1>
+ <div class="list">
+  <div class="it" data-in="0.8" data-dx="-60"><span class="n">01</span><div class="ic"><svg class="i" width="40" height="40" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="9" rx="2"/><rect x="4" y="19" width="24" height="9" rx="2"/></svg></div><div><b>IT Management</b><p>server, cloud, backup, rete, fornitori</p></div></div>
+  <div class="it" data-in="1.6" data-dx="-60"><span class="n">02</span><div class="ic"><svg class="i" width="40" height="40" viewBox="0 0 32 32"><path d="M16,3 L27,7 V15 C27,22 22,27 16,29 C10,27 5,22 5,15 V7 Z"/><path d="M11,16 L15,20 L22,12"/></svg></div><div><b>Cybersecurity</b><p>assessment, hardening, email, formazione</p></div></div>
+  <div class="it" data-in="2.4" data-dx="-60"><span class="n">03</span><div class="ic"><svg class="i" width="40" height="40" viewBox="0 0 32 32"><path d="M8,3 H20 L26,9 V29 H8 Z"/><path d="M20,3 V9 H26 M12,16 H22 M12,21 H22"/></svg></div><div><b>NIS2</b><p>perimetro, ACN, gap analysis, piano</p></div></div>
+  <div class="it" data-in="3.2" data-dx="-60"><span class="n">04</span><div class="ic"><svg class="i" width="40" height="40" viewBox="0 0 32 32"><rect x="3" y="5" width="26" height="20" rx="3"/><path d="M3,10 H29 M12,15 L9,18 L12,21 M20,15 L23,18 L20,21"/></svg></div><div><b>Web Development</b><p>siti e web app veloci e sicuri</p></div></div>
+  <div class="it" data-in="4.0" data-dx="-60"><span class="n">05</span><div class="ic"><svg class="i" width="40" height="40" viewBox="0 0 32 32"><path d="M3,5 H7 L10,21 H25 L28,10 H9"/><circle cx="12" cy="26" r="2"/><circle cx="23" cy="26" r="2"/></svg></div><div><b>E-commerce</b><p>integrati con gestionale e logistica</p></div></div>
+  <div class="it" data-in="4.8" data-dx="-60"><span class="n">06</span><div class="ic"><svg class="i" width="40" height="40" viewBox="0 0 32 32"><circle cx="14" cy="14" r="9"/><path d="M21,21 L28,28"/></svg></div><div><b>SEO</b><p>tecnica, contenuti, autorevolezza</p></div></div>
+  <div class="it hl" data-in="5.6" data-dx="-60"><span class="n">07</span><div class="ic"><svg class="i" width="40" height="40" viewBox="0 0 32 32"><path d="M5,6 H27 V21 H15 L9,26 V21 H5 Z"/></svg></div><div><b>SEO for AI · GEO</b><p>farsi citare dalle risposte delle AI</p></div></div>
+ </div>
+</div>
+
+<div class="sc D" id="D" data-s="19.6" data-e="25.4">
+ <div class="top"><span><b>// 02</b> — APPROCCIO</span><span>STACK</span></div>
+ <h1 data-in="0.1">Proteggi.<br>Costruisci.<br><span class="grad">Cresci.</span></h1>
+ <svg class="st" width="500" height="420" viewBox="0 0 500 420">
+  <g data-in="0.9" data-dy="-120"><g transform="translate(0,230)"><path d="M40,80 L250,160 L250,190 L40,110 Z" fill="#1E3E86"/><path d="M460,80 L250,160 L250,190 L460,110 Z" fill="#15306C"/><path d="M40,80 L250,0 L460,80 L250,160 Z" fill="#2A5BD7" stroke="#7FB0FF" stroke-width="2"/><path d="M250,40 L284,53 V78 C284,96 270,108 250,116 C230,108 216,96 216,78 V53 Z" fill="none" stroke="#fff" stroke-width="4"/></g></g>
+  <g data-in="1.6" data-dy="-120"><g transform="translate(0,115)"><path d="M40,80 L250,160 L250,190 L40,110 Z" fill="#126C77"/><path d="M460,80 L250,160 L250,190 L460,110 Z" fill="#0D5560"/><path d="M40,80 L250,0 L460,80 L250,160 Z" fill="#1A9FB0" stroke="#7FF0FF" stroke-width="2"/><path d="M226,62 L208,80 L226,98 M274,62 L292,80 L274,98 M258,56 L242,104" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g></g>
+  <g data-in="2.3" data-dy="-120"><path d="M40,80 L250,160 L250,190 L40,110 Z" fill="#169C6E"/><path d="M460,80 L250,160 L250,190 L460,110 Z" fill="#0F7A55"/><path d="M40,80 L250,0 L460,80 L250,160 Z" fill="#2FE0A2" stroke="#B8FFE6" stroke-width="2"/><path d="M206,104 L236,76 L256,92 L292,58 M272,58 H292 V78" fill="none" stroke="#05070C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+ </svg>
+ <div class="lb" style="top:1180px" data-in="1.0"><b style="color:#7FB0FF">Protect</b><p>rete, server, cloud, backup · NIS2 e GDPR</p></div>
+ <div class="lb" style="top:1310px" data-in="1.7"><b style="color:#5FE3F2">Build</b><p>siti ed e-commerce che lavorano</p></div>
+ <div class="lb" style="top:1440px" data-in="2.4"><b style="color:#3DFFB8">Grow</b><p>visibilità su Google e nelle AI</p></div>
+</div>
+
+<div class="sc E" id="E" data-s="25.4" data-e="99">
+ <div class="top"><span><b>// 03</b> — VISITA IL SITO</span><span>NOW LIVE</span></div>
+ <h1 data-in="0.1">Scoprilo<br><span class="grad">adesso.</span></h1>
+ <div class="sub" data-in="0.6">Servizi, metodo, portfolio e un <b>check-up digitale</b> per partire.</div>
+ <div class="lk" data-in="1.1" data-dy="80"><div class="k">IL NUOVO SITO</div><div class="u"><i>↗</i>biemmecommunication.com</div>
+  <div class="r">Richiedi un'analisi: risposta entro un giorno lavorativo.</div></div>
+ <div class="chk" data-in="1.8"><span>Infrastruttura</span><span>Sicurezza</span><span>Visibilità</span></div>
+ <div class="sig" data-in="2.3"><div class="brand"><div class="mk"></div>BIEMMECOMMUNICATION</div><span>@stefano_sanvincenti_seo</span></div>
+</div>
+
+<script>
+const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3);
+const CMD='deploy biemmecommunication.com';
+window.setT=function(t){
+ document.getElementById('g1').style.transform=`translate(${Math.sin(t*.3)*80}px,${Math.cos(t*.25)*60}px)`;
+ document.getElementById('g2').style.transform=`translate(${Math.cos(t*.27)*80}px,${Math.sin(t*.22)*70}px)`;
+ document.querySelectorAll('.sc').forEach(sc=>{
+  const s=+sc.dataset.s,e=+sc.dataset.e,lt=t-s;
+  let o=Math.min(ease(lt/0.45),ease((e-t)/0.45)); if(t<s||t>e)o=0;
+  sc.style.opacity=o; sc.style.transform=`scale(${1+0.04*ease(1-(e-t)/0.45)})`;
+  sc.querySelectorAll('[data-in]').forEach(el=>{
+   const p=ease((lt-(+el.dataset.in))/0.6);
+   const dx=+(el.dataset.dx||0),dy=el.dataset.dy!==undefined?+el.dataset.dy:40;
+   el.style.opacity=p; el.style.transform=`translate(${dx*(1-p)}px,${dy*(1-p)}px)`;
+  });
+ });
+ const n=Math.max(0,Math.min(CMD.length,Math.floor((t-0.3)*24)));
+ document.getElementById('typ').textContent=CMD.slice(0,n)+(t<1.6&&Math.floor(t*3)%2===0?'▌':'');
+ const pr=Math.max(0,Math.min(1,(t-2.9)/1.0));
+ document.getElementById('bar').style.width=(pr*100)+'%';
+ document.getElementById('pct').textContent=Math.round(pr*100)+'%';
+ const lb=t-5.2-1.6;
+ document.querySelectorAll('.dash u').forEach((u,i)=>u.style.width=(ease((lb-i*0.15)/1.2)*u.dataset.w)+'%');
+};
+window.setT(0);
+</script></body></html>

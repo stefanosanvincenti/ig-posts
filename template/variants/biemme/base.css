@@ -1,0 +1,18 @@
+:root{--bg:#05070C;--ink:#FFFFFF;--dim:#9AA6BF;--a1:#3DFFB8;--a2:#4C8DFF;--a3:#FFB547;--line:#141B2B}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(76,141,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(76,141,255,.07) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%)}
+.g1{position:absolute;left:-250px;top:-200px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(76,141,255,.30),transparent 62%)}
+.g2{position:absolute;right:-300px;bottom:-250px;width:950px;height:950px;border-radius:50%;background:radial-gradient(circle,rgba(61,255,184,.18),transparent 62%)}
+.mono{font-family:'DejaVu Sans Mono',monospace}
+.kick{position:absolute;top:60px;left:66px;font:bold 22px 'DejaVu Sans Mono',monospace;letter-spacing:1px;color:var(--dim)}
+.kick b{color:var(--a1)}
+.on{position:absolute;top:50px;right:66px;display:flex;align-items:center;gap:10px;padding:10px 20px;border-radius:30px;border:2px solid var(--a1);font:900 19px 'Inter',sans-serif;letter-spacing:3px;color:var(--a1);background:rgba(61,255,184,.06)}
+.on i{width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 16px var(--a1)}
+h1{font-family:'Inter Display','Inter',sans-serif;font-weight:900;letter-spacing:-4px;line-height:.98}
+.grad{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;color:transparent}
+.foot{position:absolute;left:66px;right:66px;bottom:48px;display:flex;justify-content:space-between;align-items:center;font:21px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;letter-spacing:-.5px}
+.brand .mk{width:30px;height:30px;transform:rotate(45deg);border-radius:6px;background:linear-gradient(135deg,var(--a1),var(--a2))}
