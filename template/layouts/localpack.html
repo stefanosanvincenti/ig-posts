@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- LAYOUT: localpack — mappa stilizzata con pin e risultati locali, 3 criteri di Google, 3 azioni. Adatto a: SEO locale, Google Business Profile. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#F4EFE6; --ink:#16130F; --dim:#5E574C; --a1:#1E6BFF; --a2:#E4572E; --line:#DCD3C3; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);font-family:'Inter','DejaVu Sans',sans-serif;color:var(--ink);position:relative}
+.kicker{position:absolute;top:60px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a1)}
+h1{position:absolute;top:104px;left:72px;right:72px;font-family:'Caladea','DejaVu Serif',serif;font-weight:bold;font-size:70px;line-height:1.04;letter-spacing:-1.5px}
+h1 u{text-decoration-color:var(--a2);text-decoration-thickness:7px;text-underline-offset:9px}
+.map{position:absolute;left:72px;right:72px;top:330px;height:330px;border-radius:26px;background:#E9E2D2;border:3px solid var(--ink);overflow:hidden;box-shadow:8px 8px 0 var(--ink)}
+.map svg{position:absolute;inset:0}
+.card{position:absolute;background:#fff;border:3px solid var(--ink);border-radius:14px;padding:10px 16px;font-size:23px;font-weight:700;line-height:1.2}
+.card small{display:block;font-weight:600;color:var(--dim);font-size:19px}
+.card.me{background:var(--a2);color:#fff;border-color:var(--ink)}
+.card.me small{color:#fff;opacity:.9}
+.f{position:absolute;top:700px;width:296px;height:236px;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:22px 22px}
+.f b{font-family:'DejaVu Sans Mono',monospace;font-size:20px;color:var(--a1);letter-spacing:2px}
+.f h3{font-size:36px;margin:8px 0 8px;letter-spacing:-.5px}
+.f p{font-size:23px;line-height:1.28;color:var(--dim);font-weight:600}
+.todo{position:absolute;left:72px;right:72px;top:968px;height:272px;background:var(--ink);border-radius:24px;color:#fff;padding:26px 36px}
+.todo h4{font-family:'DejaVu Sans Mono',monospace;font-size:22px;letter-spacing:4px;color:#FFD23F;margin-bottom:12px}
+.todo div{display:flex;align-items:center;gap:20px;font-size:30px;font-weight:700;height:56px}
+.todo i{flex:none;width:34px;height:34px;border-radius:9px;background:var(--a1);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:22px}
+.foot{position:absolute;left:72px;right:72px;bottom:44px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+</style></head><body>
+<div class="kicker">SEO LOCALE · PROFILO DELL'ATTIVITÀ</div>
+<h1>Ti cercano <u>vicino a te</u>.<br>Trovano te o il concorrente?</h1>
+<div class="map">
+  <svg width="936" height="330" viewBox="0 0 936 330">
+    <path d="M-10,230 C200,190 380,260 600,170 S880,120 950,140" stroke="#fff" stroke-width="30" fill="none"/>
+    <path d="M300,-10 C320,100 280,200 330,340" stroke="#fff" stroke-width="22" fill="none"/>
+    <path d="M700,-10 C690,90 740,200 700,340" stroke="#fff" stroke-width="18" fill="none"/>
+    <rect x="40" y="30" width="170" height="110" rx="14" fill="#CFE3C4"/>
+    <rect x="760" y="210" width="130" height="90" rx="14" fill="#C9DCF2"/>
+    <g fill="#1E6BFF"><circle cx="150" cy="250" r="10"/><circle cx="150" cy="250" r="26" fill="none" stroke="#1E6BFF" stroke-width="3" opacity=".5"/></g>
+  </svg>
+  <div class="card" style="left:90px;top:40px">Concorrente A<small>★ 4,8 · 212 recensioni</small></div>
+  <div class="card" style="left:470px;top:28px">Concorrente B<small>★ 4,6 · 87 recensioni</small></div>
+  <div class="card me" style="left:560px;top:222px">La tua attività<small>profilo incompleto · 6 recensioni</small></div>
+  <div class="card" style="left:200px;top:226px;background:transparent;border:none;font-size:20px;color:var(--a1);padding:0">TU SEI QUI</div>
+</div>
+<div class="f" style="left:72px"><b>01 · PERTINENZA</b><h3>Cosa fai</h3><p>Categoria e servizi devono combaciare con la ricerca.</p></div>
+<div class="f" style="left:392px"><b>02 · DISTANZA</b><h3>Dove sei</h3><p>Indirizzo e area di servizio corretti. Non si compra, si dichiara.</p></div>
+<div class="f" style="left:712px"><b>03 · NOTORIETÀ</b><h3>Quanto conti</h3><p>Recensioni e citazioni sul web che confermano il profilo.</p></div>
+<div class="todo"><h4>3 COSE DA FARE QUESTA SETTIMANA</h4>
+  <div><i>✓</i>Completa il profilo: categorie, orari, servizi</div>
+  <div><i>✓</i>Chiedi 5 recensioni a clienti veri</div>
+  <div><i>✓</i>Stessi nome, indirizzo e telefono ovunque</div>
+</div>
+<div class="foot"><span>Fonte: guida di Google Business Profile</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
