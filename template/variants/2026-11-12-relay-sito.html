@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: relay — schema a 3 colonne "chi attacca → account violati usati come ponte → bersagli", con frecce e buste,
+     + box "perché riguarda la tua azienda" con 3 azioni. Per: minacce via email, phishing, account compromessi, spam/abusi. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#0A0A0F; --ink:#FFFFFF; --dim:#A2A2B8; --a1:#FF2E4D; --a2:#3DFFA2; --line:#1F1F2C; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.g1{position:absolute;left:-260px;top:-260px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(255,46,77,.22),transparent 62%)}
+.g2{position:absolute;right:-300px;bottom:-280px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(61,255,162,.12),transparent 62%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.5px,transparent 1.5px);background-size:30px 30px}
+.kick{position:absolute;top:58px;left:62px;font:bold 21px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:var(--dim)}
+.kick b{color:var(--a1)}
+.date{position:absolute;top:48px;right:62px;padding:9px 18px;border-radius:30px;border:2px solid var(--a1);font:900 19px 'Inter',sans-serif;letter-spacing:2px;color:var(--a1)}
+h1{position:absolute;top:104px;left:60px;right:60px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:70px;line-height:1.02;letter-spacing:-2.8px}
+h1 span{color:var(--a1);text-shadow:0 0 34px rgba(255,46,77,.45)}
+.sub{position:absolute;top:290px;left:62px;right:62px;font-size:24px;line-height:1.38;color:var(--dim)}
+.sub b{color:var(--ink)}
+.col{position:absolute;top:452px;font:bold 16px 'DejaVu Sans Mono',monospace;letter-spacing:3px;color:var(--dim);text-align:center}
+svg.ar{position:absolute;left:0;top:430px}
+.who{position:absolute;left:62px;top:520px;width:200px;height:260px;border-radius:26px;border:2px dashed rgba(255,46,77,.6);background:rgba(255,46,77,.06);text-align:center;padding-top:26px}
+.who b{display:block;font-family:'Inter Display','Inter',sans-serif;font-size:27px;font-weight:900;margin-top:12px;line-height:1.1}
+.who i{display:block;font-style:normal;font-size:18px;color:var(--dim);margin-top:8px;line-height:1.3;padding:0 14px}
+.acc{position:absolute;left:390px;width:300px;height:92px;border-radius:20px;background:linear-gradient(160deg,#17171F,#101016);border:2px solid var(--line);padding:16px 18px 0 86px}
+.acc .e{position:absolute;left:18px;top:18px;width:52px;height:52px;border-radius:14px;background:rgba(255,194,61,.12);border:2px solid rgba(255,194,61,.5);display:flex;align-items:center;justify-content:center}
+.acc b{display:block;font-size:23px;white-space:nowrap;font-weight:900;line-height:1.1}
+.acc i{display:block;font-style:normal;font-size:17px;color:#FFC23D;margin-top:5px;font-weight:700}
+.tg{position:absolute;left:800px;width:218px;height:92px;border-radius:20px;background:rgba(255,46,77,.08);border:2px solid rgba(255,46,77,.45);padding:12px 16px 0}
+.tg b{display:block;font-size:22px;font-weight:900;line-height:1.12}
+.tg i{display:block;font-style:normal;font-size:16px;color:var(--dim);margin-top:5px;line-height:1.25}
+.box{position:absolute;left:62px;right:62px;top:880px;height:316px;border-radius:28px;background:linear-gradient(160deg,#121A16,#0B100D);border:2px solid rgba(61,255,162,.45);padding:26px 32px}
+.box .h{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:33px;letter-spacing:-.8px;line-height:1.1}
+.box .h span{color:var(--a2)}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.act{border-radius:18px;background:rgba(61,255,162,.06);border:1.5px solid rgba(61,255,162,.25);padding:16px 16px;min-height:168px}
+.act .n{font:bold 18px 'DejaVu Sans Mono',monospace;color:var(--a2)}
+.act b{display:block;font-size:23px;font-weight:900;line-height:1.12;margin-top:8px}
+.act p{font-size:17px;color:var(--dim);line-height:1.3;margin-top:6px}
+.src{position:absolute;left:62px;right:62px;top:1214px;font-size:17px;color:#74748C}
+.foot{position:absolute;left:62px;right:62px;bottom:46px;display:flex;justify-content:space-between;font:21px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="g1"></div><div class="g2"></div><div class="dots"></div>
+<div class="kick"><b>●</b> SICUREZZA DEI SITI WEB</div>
+<div class="date">NOVEMBRE 2026</div>
+<h1>Il tuo sito può spedire minacce.<br><span>A tua insaputa.</span></h1>
+<div class="sub">I falsi allarmi bomba di questi giorni partono da <b>account veri, violati</b>: uno è di un'università di Taiwan. Un sito web bucato può diventare lo stesso tipo di ponte.</div>
+<div class="col" style="left:62px;width:200px">CHI ATTACCA</div>
+<div class="col" style="left:390px;width:300px">PONTI VIOLATI</div>
+<div class="col" style="left:800px;width:218px">BERSAGLI</div>
+<svg class="ar" width="1080" height="440" viewBox="0 0 1080 440">
+ <defs><marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#FF2E4D"/></marker>
+ <marker id="y" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#FFC23D"/></marker></defs>
+ <g fill="none" stroke="#FFC23D" stroke-width="3" stroke-dasharray="7 7">
+  <path d="M262,220 C320,220 330,116 384,116" marker-end="url(#y)"/>
+  <path d="M262,220 L384,220" marker-end="url(#y)"/>
+  <path d="M262,220 C320,220 330,324 384,324" marker-end="url(#y)"/>
+ </g>
+ <g fill="none" stroke="#FF2E4D" stroke-width="3">
+  <path d="M690,116 C725,116 730,220 745,220"/><path d="M690,220 L745,220"/><path d="M690,324 C725,324 730,220 745,220"/>
+  <path d="M745,220 C770,220 770,116 794,116" marker-end="url(#m)"/><path d="M745,220 L794,220" marker-end="url(#m)"/><path d="M745,220 C770,220 770,324 794,324" marker-end="url(#m)"/>
+ </g>
+ <circle cx="745" cy="220" r="9" fill="#FF2E4D"/>
+</svg>
+<div class="who"><svg width="78" height="78" viewBox="0 0 78 78"><circle cx="39" cy="39" r="36" fill="none" stroke="#FF2E4D" stroke-width="3"/><path d="M18,64 C20,44 58,44 60,64" fill="#FF2E4D" opacity=".25"/><path d="M14,42 C14,18 64,18 64,42 L58,40 C56,26 22,26 20,40 Z" fill="#FF2E4D"/><text x="39" y="49" text-anchor="middle" font-family="Inter" font-weight="900" font-size="26" fill="#fff">?</text></svg>
+ <b>Sconosciuto</b><i>nessun legame ancora confermato</i></div>
+<div class="acc" style="top:500px"><div class="e"><svg width="30" height="24" viewBox="0 0 30 24"><rect x="2" y="2" width="26" height="20" rx="3" fill="none" stroke="#FFC23D" stroke-width="3"/><path d="M3,4 L15,13 L27,4" fill="none" stroke="#FFC23D" stroke-width="3"/></svg></div><b>Account ateneo</b><i>Taiwan · caso reale</i></div>
+<div class="acc" style="top:604px;border-color:#FF2E4D;box-shadow:0 0 30px rgba(255,46,77,.35)"><div class="e"><svg width="30" height="24" viewBox="0 0 30 24"><rect x="2" y="2" width="26" height="20" rx="3" fill="none" stroke="#FFC23D" stroke-width="3"/><path d="M3,4 L15,13 L27,4" fill="none" stroke="#FFC23D" stroke-width="3"/></svg></div><b>Il tuo sito</b><i>bucato, spedisce mail</i></div>
+<div class="acc" style="top:708px"><div class="e"><svg width="30" height="24" viewBox="0 0 30 24"><rect x="2" y="2" width="26" height="20" rx="3" fill="none" stroke="#FFC23D" stroke-width="3"/><path d="M3,4 L15,13 L27,4" fill="none" stroke="#FFC23D" stroke-width="3"/></svg></div><b>Mail aziendale</b><i>password rubata</i></div>
+<div class="tg" style="top:500px"><b>Scuole italiane</b><i>11 nov, aule evacuate</i></div>
+<div class="tg" style="top:604px"><b>Aeroporti</b><i>voli europei, anche Fiumicino e Malpensa</i></div>
+<div class="tg" style="top:708px"><b>Redazioni</b><i>RTÉ, Sky, Nova TV</i></div>
+<div class="box"><div class="h">Negli ultimi mesi ho ripulito tantissimi siti attaccati,<br>di clienti e non. <span>La sicurezza del sito è vitale.</span></div>
+ <div class="acts">
+  <div class="act"><div class="n">01</div><b>Aggiorna tutto</b><p>CMS, plugin e temi. Elimina quelli che non usi.</p></div>
+  <div class="act"><div class="n">02</div><b>Accessi blindati</b><p>MFA e password uniche per admin, hosting e FTP.</p></div>
+  <div class="act"><div class="n">03</div><b>Guarda cosa spedisce</b><p>Log delle mail del server e file modificati di recente.</p></div>
+ </div></div>
+<div class="src">Fonte sui falsi allarmi: Tgcom24, 11-12 novembre 2026 · tutti gli allarmi si sono rivelati falsi</div>
+<div class="foot"><span>Scorri → come succede</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
