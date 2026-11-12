@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- VIDEO 16:9 per email ai clienti: allerta ClickFix (falsa verifica di sicurezza). window.setT(t), durata 48 s. -->
+<html><head><meta charset="utf-8"><style>
+:root{--bg:#0B0D14;--ink:#fff;--dim:#A3ABC0;--r:#FF2E4D;--y:#FFC83D;--g:#3DFFA2;--b:#4C8DFF}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.gl{position:absolute;width:1400px;height:1400px;border-radius:50%;left:-300px;top:-500px;background:radial-gradient(circle,rgba(255,46,77,.20),transparent 62%)}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1.5px,transparent 1.5px);background-size:36px 36px}
+.top{position:absolute;left:90px;right:90px;top:56px;display:flex;justify-content:space-between;font:bold 26px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:var(--dim);z-index:5}
+.top b{color:var(--r)}
+.sc{position:absolute;inset:0;opacity:0}
+[data-in]{opacity:0}
+h1{font-family:'Inter Display','Inter',sans-serif;font-weight:900;letter-spacing:-4px;line-height:1.0}
+.r{color:var(--r)} .y{color:var(--y)} .g{color:var(--g)}
+/* A */
+.A h1{position:absolute;left:90px;top:190px;font-size:126px}
+.A p{position:absolute;left:96px;top:700px;font-size:46px;line-height:1.35;color:var(--dim);max-width:1500px}
+.A p b{color:#fff}
+.tri{position:absolute;right:120px;top:230px}
+/* B browser */
+.br{position:absolute;left:160px;right:160px;top:150px;height:760px;border-radius:30px;background:#F4F6FA;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+.bt{height:70px;background:#E3E8F0;display:flex;align-items:center;gap:14px;padding:0 28px}
+.bt i{width:18px;height:18px;border-radius:50%;background:#C2CAD8}
+.url{margin-left:20px;flex:1;height:42px;border-radius:21px;background:#fff;font:22px 'DejaVu Sans Mono',monospace;color:#5A6478;display:flex;align-items:center;padding:0 20px}
+.cap{position:absolute;left:80px;top:180px;width:520px;height:130px;border-radius:12px;border:3px solid #D0D6E0;background:#fff;display:flex;align-items:center;gap:24px;padding:0 28px;font-size:34px;font-weight:600;color:#1A2233}
+.cb{width:56px;height:56px;border-radius:8px;border:4px solid #9AA6B8;display:flex;align-items:center;justify-content:center}
+.modal{position:absolute;left:680px;top:130px;width:880px;border-radius:24px;background:#fff;border:4px solid var(--r);padding:34px 40px;color:#1A2233;box-shadow:0 30px 70px rgba(229,25,59,.25)}
+.modal h3{font-size:42px;font-weight:900}
+.modal small{display:block;font-size:26px;color:#5A6478;margin-top:6px;font-weight:600}
+.st{display:flex;align-items:center;gap:20px;margin-top:26px;font-size:32px;font-weight:700;color:#5A6478;border-radius:16px;padding:8px 12px}
+.n{flex:none;width:54px;height:54px;border-radius:50%;background:var(--r);color:#fff;font:900 28px/54px 'Inter';text-align:center}
+.k{display:inline-flex;align-items:center;justify-content:center;min-width:100px;height:72px;padding:0 22px;border-radius:14px;background:linear-gradient(#fff,#E9EDF3);border:3px solid #B8C2D2;border-bottom-width:9px;font:800 32px 'Inter';color:#1A2233}
+.warn{position:absolute;left:80px;top:400px;width:520px;font-size:30px;line-height:1.35;color:#1A2233;font-weight:600}
+.warn b{color:#E5193B}
+.cursor{position:absolute;width:40px;height:40px}
+/* C */
+.C h1{position:absolute;left:90px;top:160px;font-size:96px}
+.row{position:absolute;left:90px;right:90px;display:flex;align-items:center;gap:40px;height:170px;border-radius:28px;background:#141826;border:2px solid #232A40;padding:0 40px}
+.row .kk{flex:none;width:330px;font:900 52px 'Inter';color:var(--y)}
+.row .tx{font-size:40px;line-height:1.25}
+.row .tx b{color:#fff} .row .tx span{color:var(--dim)}
+.row.bad{border-color:var(--r);background:#1D1016}
+/* D */
+.D{background:var(--r)}
+.D h1{position:absolute;left:0;right:0;top:250px;text-align:center;font-size:150px;color:#fff;letter-spacing:-5px}
+.D p{position:absolute;left:160px;right:160px;top:640px;text-align:center;font-size:50px;line-height:1.3;font-weight:700;color:#fff}
+/* E */
+.E h1{position:absolute;left:90px;top:170px;font-size:100px}
+.it{position:absolute;left:90px;right:90px;display:flex;align-items:center;gap:36px;font-size:46px;font-weight:700}
+.it i{flex:none;width:90px;height:90px;border-radius:24px;background:rgba(255,200,61,.12);border:3px solid var(--y);display:flex;align-items:center;justify-content:center;font:900 44px 'Inter';font-style:normal;color:var(--y)}
+.it span{color:var(--dim);font-weight:500}
+/* F */
+.F h1{position:absolute;left:90px;top:220px;font-size:110px}
+.card{position:absolute;left:90px;top:560px;width:1200px;border-radius:30px;background:#fff;color:#0B0D14;padding:44px 50px}
+.card b{display:block;font-family:'Inter Display','Inter';font-size:56px;font-weight:900;letter-spacing:-1.5px}
+.card p{font-size:34px;color:#3A4358;margin-top:12px;font-weight:600;line-height:1.4}
+</style></head><body>
+<div class="gl" id="gl"></div><div class="dots"></div>
+<div class="top"><span><b>●</b> ALLERTA SICUREZZA</span><span>12 NOVEMBRE 2026</span></div>
+
+<div class="sc A" id="A" data-s="0" data-e="6.5">
+ <h1 data-in="0.2">Una falsa<br><span class="r">«verifica di sicurezza»</span><br>sta infettando i PC.</h1>
+ <p data-in="1.2">Oggi è stata segnalata su <b>moltissimi dispositivi</b>.<br>Bastano 3 tasti per installare un malware. Ecco come riconoscerla.</p>
+</div>
+
+<div class="sc B" id="B" data-s="6.5" data-e="17.5">
+ <div class="br" data-in="0" data-dy="60">
+  <div class="bt"><i></i><i></i><i></i><div class="url">⚠ https://un-sito-qualsiasi.example/verifica</div></div>
+  <div class="cap"><div class="cb"><svg id="chk" width="38" height="32" viewBox="0 0 26 22" style="opacity:0"><path d="M3,11 L10,18 L23,3" fill="none" stroke="#1F9D55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Non sono un robot</div>
+  <div class="warn" data-in="2.0">Sembra il solito controllo.<br><b>Ma questa finestra non è un CAPTCHA vero.</b></div>
+  <div class="modal" data-in="1.6" data-dy="30"><h3>Verifica di sicurezza</h3><small>Per dimostrare che sei umano completa questi passaggi:</small>
+   <div class="st" id="s1"><span class="n">1</span>Premi <span class="k">⊞ Win</span> + <span class="k">R</span></div>
+   <div class="st" id="s2"><span class="n">2</span>Premi <span class="k">Ctrl</span> + <span class="k">V</span></div>
+   <div class="st" id="s3"><span class="n">3</span>Premi <span class="k">Invio</span></div></div>
+ </div>
+ <svg class="cursor" id="cur" viewBox="0 0 24 24"><path d="M3,2 L3,20 L8,15 L11,22 L14,21 L11,14 L18,14 Z" fill="#fff" stroke="#000" stroke-width="1.5"/></svg>
+</div>
+
+<div class="sc C" id="C" data-s="17.5" data-e="27.5">
+ <h1 data-in="0.1">Cosa fanno <span class="y">davvero</span> quei tasti</h1>
+ <div class="row" style="top:340px" data-in="1.0" data-dx="-80"><div class="kk">⊞ Win + R</div><div class="tx"><b>Apre la finestra «Esegui» di Windows,</b><br><span>quella che lancia programmi e comandi.</span></div></div>
+ <div class="row" style="top:540px" data-in="3.0" data-dx="-80"><div class="kk">Ctrl + V</div><div class="tx"><b>Incolla un comando che la pagina</b><br><span>ha già copiato di nascosto negli appunti.</span></div></div>
+ <div class="row bad" style="top:740px" data-in="5.0" data-dx="-80"><div class="kk" style="color:#FF2E4D">Invio</div><div class="tx"><b>Lo esegue: il malware si installa</b><br><span>e può rubare password, accessi a banca e posta.</span></div></div>
+</div>
+
+<div class="sc D" id="D" data-s="27.5" data-e="34">
+ <h1 data-in="0.1">NON COMPLETATE<br>LA SEQUENZA!</h1>
+ <p data-in="0.9">Nessun CAPTCHA vero vi chiede di premere tasti o di incollare qualcosa.<br>Se succede: chiudete la pagina.</p>
+</div>
+
+<div class="sc E" id="E" data-s="34" data-e="42.5">
+ <h1 data-in="0.1">L'avete già fatto? <span class="y">Subito:</span></h1>
+ <div class="it" style="top:400px" data-in="1.0" data-dx="-80"><i>1</i><div>Staccate il PC da internet <span>(cavo o Wi-Fi)</span></div></div>
+ <div class="it" style="top:560px" data-in="2.6" data-dx="-80"><i>2</i><div>Chiamatemi o fate controllare il PC <span>da un tecnico</span></div></div>
+ <div class="it" style="top:720px" data-in="4.2" data-dx="-80"><i>3</i><div>Da un altro dispositivo cambiate le password <span>e attivate la verifica in due passaggi</span></div></div>
+</div>
+
+<div class="sc F" id="F" data-s="42.5" data-e="99">
+ <h1 data-in="0.1">Nel dubbio,<br><span class="g">chiedete prima di cliccare.</span></h1>
+ <div class="card" data-in="1.0" data-dy="60"><b>Stefano Sanvincenti</b><p>Biemmecommunication S.r.l.<br>info@biemmecommunication.com · biemmecommunication.com</p></div>
+</div>
+
+<script>
+const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3);
+window.setT=function(t){
+ document.getElementById('gl').style.transform=`translate(${Math.sin(t*.25)*120}px,${Math.cos(t*.2)*80}px)`;
+ document.querySelectorAll('.sc').forEach(sc=>{const s=+sc.dataset.s,e=+sc.dataset.e,lt=t-s;
+  let o=(t<s||t>e)?0:Math.min(ease(lt/0.4),ease((e-t)/0.4)); sc.style.opacity=o;
+  sc.querySelectorAll('[data-in]').forEach(el=>{const p=ease((lt-(+el.dataset.in))/0.6);const dx=+(el.dataset.dx||0),dy=el.dataset.dy!==undefined?+el.dataset.dy:40;el.style.opacity=p;el.style.transform=`translate(${dx*(1-p)}px,${dy*(1-p)}px)`;});});
+ const b=t-6.5; // scena B
+ document.getElementById('chk').style.opacity=b>1.1?1:0;
+ const cur=document.getElementById('cur');
+ let x,y; if(b<1.1){const p=ease(b/1.1);x=1300-1000*p;y=800-480*p}else{const p=ease((b-3)/1.5);x=300+800*p;y=320+90*p}
+ cur.style.left=x+'px';cur.style.top=y+'px';cur.style.opacity=(b>0&&b<11)?1:0;
+ ['s1','s2','s3'].forEach((id,i)=>{const el=document.getElementById(id);const on=b>4.5+i*1.8&&b<4.5+(i+1)*1.8+(i==2?3:0);el.style.background=on?'rgba(255,46,77,.12)':'transparent';el.style.color=on?'#E5193B':'#5A6478';});
+};
+window.setT(0);
+</script></body></html>
