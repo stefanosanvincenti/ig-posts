@@ -6,6 +6,7 @@ MOOD:
   tensione  -> cybersecurity/NIS2: archi morbidi in minore, battito leggero, ticchettio discreto
   positivo  -> SEO/GEO/crescita: accordi maggiori luminosi, arpeggio delicato, ritmo morbido
   tech      -> siti web/e-commerce/tecnico: synth caldo, pulsazione regolare, campanelli leggeri
+  energia   -> risultati, marketing, ADV: ritmo pop carico ma a volume basso, 112 bpm
   racconto  -> notizie e spiegazioni (es. disservizi): piano elettrico morbido, basso caldo, shaker leggero
 """
 import subprocess
@@ -100,7 +101,32 @@ def mood_racconto():
     return o
 
 
-MOODS = {"tensione": mood_tensione, "positivo": mood_positivo, "tech": mood_tech, "racconto": mood_racconto}
+def mood_energia():
+    """carico e positivo (risultati, marketing): cassa morbida in 4, hi-hat in levare, accordi pop pluck, 112 bpm"""
+    o = np.zeros_like(t)
+    beat = 60 / 112
+    rng = np.random.default_rng(3)
+    noise = rng.standard_normal(len(t))
+    prog = [(174.61, 220.0, 261.63, 329.63), (220.0, 261.63, 329.63, 392.0), (146.83, 174.61, 220.0, 261.63), (130.81, 164.81, 196.0, 246.94)]
+    nb = int(T / beat) + 1
+    for k in range(nb):
+        b = k * beat
+        fk = 55 * (1 + 1.5 * np.exp(-np.clip(t - b, 0, None) * 30))
+        o += 0.30 * np.sin(2 * np.pi * fk * (t - b)) * burst(b, 0.35, 0.09, 0.003)
+        o += 0.020 * noise * burst(b + beat / 2, 0.06, 0.018, 0.001)
+        if k % 2 == 1:
+            o += 0.035 * noise * burst(b, 0.15, 0.05, 0.002)
+        ch = prog[(k // 8) % 4]
+        for j, f in enumerate(ch):
+            for sb in (b, b + beat * 0.75):
+                o += 0.028 * soft(f, 0.0, 5, 1.3) * burst(sb, 0.3, 0.09, 0.004) if (k % 2 == 0 or sb == b) else 0
+        ar = ch[(k * 2) % 4] * 2
+        o += 0.04 * np.sin(2 * np.pi * ar * (t - b - beat / 2)) * burst(b + beat / 2, 0.25, 0.08, 0.003)
+        o += 0.12 * np.sin(2 * np.pi * ch[0] / 2 * (t - b)) * burst(b, beat * 0.9, 0.3, 0.01)
+    return o
+
+
+MOODS = {"tensione": mood_tensione, "positivo": mood_positivo, "tech": mood_tech, "racconto": mood_racconto, "energia": mood_energia}
 
 
 def main() -> None:

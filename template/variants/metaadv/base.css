@@ -1,0 +1,15 @@
+:root{--bg:#0A0F1F;--ink:#FFFFFF;--dim:#A9B4CC;--a1:#3B82F6;--a2:#A855F7;--ok:#3DFFA2;--y:#FFC83D;--line:#1D2742}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+.g1{position:absolute;left:-300px;top:-300px;width:1000px;height:1000px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.30),transparent 62%)}
+.g2{position:absolute;right:-320px;bottom:-300px;width:1000px;height:1000px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.25),transparent 62%)}
+.kick{position:absolute;top:58px;left:62px;font:bold 21px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:var(--dim)}
+.kick b{color:var(--a1)}
+.pg{position:absolute;top:48px;right:62px;padding:9px 18px;border-radius:30px;border:2px solid var(--a1);color:var(--a1);font:800 19px 'Inter';letter-spacing:2px}
+h1{position:absolute;top:104px;left:60px;right:60px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:70px;line-height:1.03;letter-spacing:-2.6px}
+.gr{background:linear-gradient(90deg,#60A5FA,#C084FC);-webkit-background-clip:text;color:transparent}
+.card{background:linear-gradient(160deg,#121A33,#0D1428);border:2px solid var(--line);border-radius:24px}
+.src{position:absolute;left:62px;right:62px;top:1222px;font-size:17px;color:#7D89A6}
+.foot{position:absolute;left:62px;right:62px;bottom:46px;display:flex;justify-content:space-between;font:21px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
