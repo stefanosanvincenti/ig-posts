@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- LAYOUT WOW: anatomy-product — scheda prodotto "anatomizzata" con 5 informazioni che Google (e le AI) devono poter leggere, callout numerati.
+     Adatto a: e-commerce, schede prodotto SEO, dati strutturati. Dati inventati, nessun marchio reale. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#FFD23F; --ink:#121212; --dim:#3D3A2E; --a1:#121212; --a2:#6B2BFF; --line:rgba(0,0,0,.15); }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative;
+  background-image:radial-gradient(circle,var(--line) 2.5px,transparent 3px);background-size:40px 40px}
+.kicker{position:absolute;top:64px;left:72px;font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:5px;color:var(--a2)}
+h1{position:absolute;top:106px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:80px;line-height:1;letter-spacing:-3.5px}
+h1 span{background:var(--ink);color:var(--bg);padding:0 14px;border-radius:12px}
+.card{position:absolute;left:72px;top:360px;width:520px;height:640px;background:#fff;border:4px solid var(--ink);border-radius:26px;box-shadow:16px 16px 0 var(--ink);transform:rotate(-1.2deg);overflow:hidden}
+.ph{height:230px;background:linear-gradient(135deg,#ece4ff,#cdbcff);position:relative}
+.ph:after{content:"";position:absolute;left:50%;top:50%;width:110px;height:110px;margin:-55px 0 0 -55px;border-radius:24px;background:var(--a2);opacity:.85;transform:rotate(12deg)}
+.in{padding:22px 28px}
+.nm{font-size:32px;font-weight:900;letter-spacing:-1px;line-height:1.1}
+.st{margin-top:12px;font-size:24px;color:#E69A00;font-weight:800;letter-spacing:2px}
+.st small{font-size:20px;color:#555;letter-spacing:0;font-weight:600;margin-left:8px}
+.pr{margin-top:10px;font-size:52px;font-weight:900;letter-spacing:-2px}
+.av{margin-top:10px;display:inline-block;background:#d8f7e3;color:#0b6b35;font-weight:800;font-size:22px;padding:6px 14px;border-radius:999px}
+.btn{margin-top:20px;background:var(--ink);color:#fff;text-align:center;font-weight:900;font-size:26px;padding:16px;border-radius:14px}
+.dot{position:absolute;width:56px;height:56px;border-radius:50%;background:var(--a2);color:#fff;font:900 30px/56px 'Inter',sans-serif;text-align:center;box-shadow:0 0 0 6px var(--bg)}
+.cl{position:absolute;left:680px;width:330px;font-size:23px;line-height:1.25;color:var(--dim)}
+.cl b{display:block;font-size:28px;color:var(--ink);font-weight:900;margin-bottom:3px;letter-spacing:-.5px}
+.ln{position:absolute;height:4px;background:var(--ink);left:588px;width:90px}
+.tip{position:absolute;left:72px;right:72px;top:1050px;font-size:38px;font-weight:800;line-height:1.22;letter-spacing:-1px}
+.tip span{color:var(--a2)}
+.src{position:absolute;left:72px;right:72px;top:1170px;font-size:21px;color:var(--dim);line-height:1.3}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font:22px 'DejaVu Sans Mono',monospace;color:var(--dim)}
+.foot b{color:var(--ink)}
+</style></head><body>
+<div class="kicker">E-COMMERCE · SCHEDA PRODOTTO</div>
+<h1>Google legge<br>la tua scheda<br>prodotto? <span>5 dati</span></h1>
+<div class="card">
+  <div class="ph"></div>
+  <div class="in">
+    <div class="nm">Zaino da città 22L impermeabile</div>
+    <div class="st">★★★★☆<small>4,6 · 128 recensioni</small></div>
+    <div class="pr">89,00 €</div>
+    <div class="av">● Disponibile, spedizione in 24h</div>
+    <div class="btn">Aggiungi al carrello</div>
+  </div>
+</div>
+<div class="dot" style="left:50px;top:556px">2</div>
+<div class="dot" style="left:50px;top:395px">1</div>
+<div class="dot" style="left:555px;top:865px">5</div>
+<div class="dot" style="left:555px;top:780px">4</div>
+<div class="dot" style="left:555px;top:695px">3</div>
+<div class="cl" style="top:372px"><b>1 · Foto reali</b>Diverse, nitide, anche in uso</div>
+<div class="cl" style="top:492px"><b>2 · Nome preciso</b>Modello, misura, materiale</div>
+<div class="cl" style="top:612px"><b>3 · Recensioni vere</b>Quelle dei tuoi clienti</div>
+<div class="cl" style="top:732px"><b>4 · Prezzo in chiaro</b>Uguale nella pagina e nel markup</div>
+<div class="cl" style="top:852px"><b>5 · Disponibilità</b>Aggiornata, mai "forse"</div>
+<div class="tip">Aggiungi i <span>dati strutturati Product</span>: devono dire quello che il cliente <span>vede già</span> in pagina.</div>
+<div class="src">Fonte: Google Search Central, documentazione sui dati strutturati Product. Il markup aiuta a capire la pagina, ma non garantisce la comparsa di rich result.</div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
