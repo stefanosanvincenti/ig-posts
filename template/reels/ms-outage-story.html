@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- STORY ANIMATA (30 s) chiara: disservizio Microsoft 365 del 12-14/11/2026. window.setT(t). Esporta con make_story_anim.py ... racconto -->
+<html><head><meta charset="utf-8"><style>
+:root{--bg:#F3F6FB;--ink:#0B1B2E;--dim:#4A5B70;--a1:#0057FF;--red:#E5193B;--ok:#0FA968;--line:#D8E1EC}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative;background-image:radial-gradient(rgba(11,27,46,.06) 1.6px,transparent 1.6px);background-size:36px 36px}
+.top{position:absolute;top:268px;left:80px;right:80px;display:flex;justify-content:space-between;font:bold 26px 'DejaVu Sans Mono',monospace;letter-spacing:4px;color:var(--a1);z-index:3}
+.top b{color:var(--ink)}
+.sc{position:absolute;inset:0;opacity:0}
+[data-in]{opacity:0}
+h1{font-family:'Inter Display','Inter',sans-serif;font-weight:900;letter-spacing:-4px;line-height:1.0}
+.r{color:var(--red)} .b{color:var(--a1)} .g{color:var(--ok)}
+.card{background:#fff;border:2px solid var(--line);border-radius:30px;box-shadow:0 20px 50px rgba(11,27,46,.08)}
+/* A */
+.A .tm{position:absolute;left:80px;top:350px;font:800 40px 'DejaVu Sans Mono',monospace;color:var(--red)}
+.A h1{position:absolute;left:76px;top:420px;font-size:128px}
+.err{position:absolute;left:80px;right:80px;top:900px;height:500px;overflow:hidden}
+.err .bar{height:64px;background:#0F4BC4;display:flex;align-items:center;padding:0 30px;color:#fff;font:800 28px 'Inter'}
+.err .bd{padding:60px 50px;text-align:center}
+.err .ic{width:120px;height:120px;border-radius:50%;background:#FDE7EB;margin:0 auto;display:flex;align-items:center;justify-content:center}
+.err b{display:block;font-size:44px;font-weight:900;margin-top:30px}
+.err p{font-size:30px;color:var(--dim);margin-top:12px}
+.spin{width:70px;height:70px;margin:30px auto 0}
+/* B */
+.B h1{position:absolute;left:76px;top:350px;font-size:100px}
+.num{position:absolute;left:80px;right:80px;height:230px;padding:30px 40px}
+.num b{display:block;font-family:'Inter Display','Inter';font-size:120px;font-weight:900;letter-spacing:-4px;line-height:1;color:var(--a1)}
+.num p{font-size:32px;color:var(--dim);margin-top:12px}
+/* C */
+.C h1{position:absolute;left:76px;top:350px;font-size:100px}
+.dm{position:absolute;left:80px;right:80px;height:170px;display:flex;align-items:center;gap:32px;padding:0 36px}
+.dm i{flex:none;width:84px;height:84px;border-radius:50%;color:#fff;font:900 38px/84px 'Inter';text-align:center;font-style:normal}
+.dm b{display:block;font-size:40px;font-weight:900;line-height:1.1}
+.dm p{font-size:28px;color:var(--dim);margin-top:4px}
+/* D */
+.D h1{position:absolute;left:76px;top:350px;font-size:104px}
+.rg{position:absolute;left:80px;right:80px;height:150px;padding:28px 36px}
+.rg .l{display:flex;justify-content:space-between;font-size:36px;font-weight:900}
+.rg .l span{color:var(--ok);font-size:30px}
+.rg .p{height:24px;border-radius:12px;background:#E5EBF3;margin-top:22px;overflow:hidden}
+.rg .p u{display:block;height:100%;width:0;background:linear-gradient(90deg,#F0A020,var(--ok));text-decoration:none;border-radius:12px}
+.badge{position:absolute;left:80px;right:80px;top:1340px;border-radius:30px;background:#E6F7EE;border:2px solid #9FDDBC;padding:30px 36px;font-size:36px;font-weight:800;line-height:1.3}
+.badge span{color:var(--ok)}
+/* E */
+.E h1{position:absolute;left:76px;top:350px;font-size:118px}
+.E .p{position:absolute;left:80px;right:80px;top:880px;font-size:40px;line-height:1.4;color:var(--dim)}
+.E .p b{color:var(--ink)}
+.cta{position:absolute;left:80px;top:1440px;padding:28px 50px;border-radius:60px;background:var(--ink);color:#fff;font-weight:900;font-size:42px;white-space:nowrap}
+</style></head><body>
+<div class="top"><span><b>CLOUD</b> · MICROSOFT 365</span><span>NOV 2026</span></div>
+
+<div class="sc A" id="A" data-s="0" data-e="5.6">
+ <div class="tm" data-in="0.1">12 NOV · ORE 17:00</div>
+ <h1 data-in="0.3">Outlook<br>non si apre.<br><span class="r">Ovunque.</span></h1>
+ <div class="card err" data-in="1.2" data-dy="80"><div class="bar">Outlook</div><div class="bd">
+  <div class="ic"><svg width="60" height="60" viewBox="0 0 60 60"><path d="M30,8 L54,50 L6,50 Z" fill="none" stroke="#E5193B" stroke-width="6" stroke-linejoin="round"/><path d="M30,24 V36" stroke="#E5193B" stroke-width="6" stroke-linecap="round"/><circle cx="30" cy="43" r="3.5" fill="#E5193B"/></svg></div>
+  <b>Impossibile connettersi</b><p>Riprova più tardi</p>
+  <svg class="spin" id="spin" viewBox="0 0 70 70"><circle cx="35" cy="35" r="27" fill="none" stroke="#C7D2E0" stroke-width="7" stroke-dasharray="110 70" stroke-linecap="round"/></svg></div></div>
+</div>
+
+<div class="sc B" id="B" data-s="5.6" data-e="11.4">
+ <h1 data-in="0.1">Un blackout<br><span class="b">mondiale.</span></h1>
+ <div class="card num" style="top:690px" data-in="0.6" data-dx="-80"><b id="n1">0</b><p>Paesi e territori con segnalazioni</p></div>
+ <div class="card num" style="top:950px" data-in="1.3" data-dx="-80"><b id="n2">0</b><p>segnalazioni Outlook su Downdetector</p></div>
+ <div class="card num" style="top:1210px" data-in="2.0" data-dx="-80"><b><span id="n3">0</span>+ ore</b><p>prima del ripristino completo</p></div>
+</div>
+
+<div class="sc C" id="C" data-s="11.4" data-e="18.4">
+ <h1 data-in="0.1">Perché?<br><span class="r">Effetto domino.</span></h1>
+ <div class="card dm" style="top:650px" data-in="0.8" data-dy="-60"><i style="background:#F0A020">1</i><div><b>Lavori sulla rete</b><p>potenziamento e poi una modifica</p></div></div>
+ <div class="card dm" style="top:850px" data-in="2.0" data-dy="-60"><i style="background:#EC6A2C">2</i><div><b>Server esclusi</b><p>falliscono i controlli automatici</p></div></div>
+ <div class="card dm" style="top:1050px" data-in="3.2" data-dy="-60"><i style="background:#E5193B">3</i><div><b>Gli altri crollano</b><p>troppo carico sui server rimasti</p></div></div>
+ <div class="card dm" style="top:1250px" data-in="4.4" data-dy="-60"><i style="background:#B5112C">4</i><div><b>Posta ferma</b><p>connessioni sicure bloccate</p></div></div>
+</div>
+
+<div class="sc D" id="D" data-s="18.4" data-e="24.4">
+ <h1 data-in="0.1">Ripartito<br><span class="g">a ondate.</span></h1>
+ <div class="card rg" style="top:680px" data-in="0.4"><div class="l">Asia-Pacifico <span id="t1"></span></div><div class="p"><u id="p1"></u></div></div>
+ <div class="card rg" style="top:880px" data-in="0.6"><div class="l">Europa <span id="t2"></span></div><div class="p"><u id="p2"></u></div></div>
+ <div class="card rg" style="top:1080px" data-in="0.8"><div class="l">Nord America <span id="t3"></span></div><div class="p"><u id="p3"></u></div></div>
+ <div class="badge" data-in="3.4">Nessun attacco: <span>un guasto tecnico.</span> Mail in coda per 48 ore, nessun messaggio perso.</div>
+</div>
+
+<div class="sc E" id="E" data-s="24.4" data-e="99">
+ <h1 data-in="0.1">La lezione?<br><span class="b">Un piano B.</span></h1>
+ <div class="p" data-in="0.8">Se domani la posta si ferma, <b>come avvisi clienti e fornitori?</b> Dove trovi i loro numeri? Chi decide cosa fare?</div>
+ <div class="cta" data-in="1.6">Cosa è successo, nel post ↓</div>
+</div>
+
+<script>
+const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3);
+window.setT=function(t){
+ document.querySelectorAll('.sc').forEach(sc=>{const s=+sc.dataset.s,e=+sc.dataset.e,lt=t-s;
+  let o=(t<s||t>e)?0:Math.min(ease(lt/0.4),ease((e-t)/0.4)); sc.style.opacity=o;
+  sc.querySelectorAll('[data-in]').forEach(el=>{const p=ease((lt-(+el.dataset.in))/0.6);const dx=+(el.dataset.dx||0),dy=el.dataset.dy!==undefined?+el.dataset.dy:40;el.style.opacity=p;el.style.transform=`translate(${dx*(1-p)}px,${dy*(1-p)}px)`;});});
+ document.getElementById('spin').style.transform=`rotate(${t*300}deg)`;
+ const b=t-5.6;
+ document.getElementById('n1').textContent=Math.round(74*ease((b-0.6)/1.6));
+ document.getElementById('n2').textContent=Math.round(43*ease((b-1.3)/1.6))+'mila+';
+ document.getElementById('n3').textContent=Math.round(24*ease((b-2.0)/1.6));
+ const d=t-18.4;
+ [[1,0.8],[2,1.6],[3,2.4]].forEach(([i,st])=>{const p=ease((d-st)/1.2);document.getElementById('p'+i).style.width=(p*100)+'%';document.getElementById('t'+i).textContent=p>.98?'✓ ripristinato':'';});
+};
+window.setT(0);
+</script></body></html>

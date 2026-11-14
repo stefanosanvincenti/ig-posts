@@ -110,7 +110,7 @@ Un post + una story ogni giorno fino al 30 novembre. Mix dei temi (guarda posts/
 ## Story con audio
 Ogni story esce come VIDEO con musica a tema a volume basso: prima crea il JPG della story, poi
 `python3 template/make_story_video.py posts/AAAA-MM-GG-story.jpg posts/AAAA-MM-GG-story.mp4 MOOD`
-MOOD: `positivo` per SEO/GEO, `tech` per siti web ed e-commerce, `tensione` per cybersecurity. Mai sirene o suoni forti.
+MOOD: `positivo` per SEO/GEO, `tech` per siti web ed e-commerce, `tensione` per cybersecurity, `racconto` (piano elettrico morbido) per notizie e spiegazioni di fatti. Mai sirene o suoni forti.
 
 ## Contenuti
 - Solo fatti verificati; per numeri e date cita la fonte nella grafica o nella caption.

@@ -6,6 +6,7 @@ MOOD:
   tensione  -> cybersecurity/NIS2: archi morbidi in minore, battito leggero, ticchettio discreto
   positivo  -> SEO/GEO/crescita: accordi maggiori luminosi, arpeggio delicato, ritmo morbido
   tech      -> siti web/e-commerce/tecnico: synth caldo, pulsazione regolare, campanelli leggeri
+  racconto  -> notizie e spiegazioni (es. disservizi): piano elettrico morbido, basso caldo, shaker leggero
 """
 import subprocess
 import sys
@@ -77,7 +78,29 @@ def mood_tech():
     return o
 
 
-MOODS = {"tensione": mood_tensione, "positivo": mood_positivo, "tech": mood_tech}
+def mood_racconto():
+    """notizie/spiegazioni: piano elettrico morbido (Am-F-C-G), basso caldo, shaker leggero, 80 bpm"""
+    o = np.zeros_like(t)
+    beat = 0.75
+    chords = [(220.0, 261.63, 329.63), (174.61, 220.0, 261.63), (261.63, 329.63, 392.0), (196.0, 246.94, 293.66)]
+    for i in range(int(T / (beat * 4)) + 1):
+        b = i * beat * 4
+        ch = chords[i % 4]
+        for j, f in enumerate(ch):
+            for k, bb in enumerate((b, b + beat * 2)):
+                d = bb + 0.03 * j
+                env = burst(d, beat * 2.2, 0.9, 0.006)
+                mod = np.sin(2 * np.pi * f * 2 * (t - d)) * 0.8 * np.exp(-np.clip(t - d, 0, None) * 3)
+                o += 0.05 * np.sin(2 * np.pi * f * (t - d) + mod) * env
+        o += 0.14 * np.sin(2 * np.pi * ch[0] / 2 * (t - b)) * burst(b, beat * 3.5, 1.2, 0.01)
+    rng = np.random.default_rng(7)
+    noise = rng.standard_normal(len(t))
+    for k, b in enumerate(np.arange(beat / 2, T - 0.3, beat / 2)):
+        o += (0.018 if k % 2 else 0.01) * noise * burst(b, 0.08, 0.025, 0.002)
+    return o
+
+
+MOODS = {"tensione": mood_tensione, "positivo": mood_positivo, "tech": mood_tech, "racconto": mood_racconto}
 
 
 def main() -> None:
