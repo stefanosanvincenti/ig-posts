@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- LAYOUT: linkmap — mappa di un sito: home al centro, pagine collegate e una pagina ORFANA senza link.
+     Adatto a: link interni, struttura del sito, pagine che Google non trova. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1350">
+<style>
+:root{ --bg:#F2F0FF; --ink:#141026; --dim:#5D587A; --a1:#5B2EFF; --a2:#FF7A1A; --line:#DEDAF5; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative}
+body:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 62%,rgba(91,46,255,.12),transparent 55%)}
+.kicker{position:absolute;top:70px;left:72px;font-family:'DejaVu Sans Mono',monospace;font-weight:bold;font-size:24px;letter-spacing:5px;color:var(--a1)}
+h1{position:absolute;top:118px;left:72px;right:72px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:72px;line-height:1.03;letter-spacing:-2.5px}
+h1 span{color:var(--a2)}
+svg{position:absolute;left:0;top:0}
+.home{position:absolute;left:420px;top:700px;width:240px;height:240px;border-radius:50%;background:var(--a1);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:44px;letter-spacing:-1px;box-shadow:0 0 0 16px rgba(91,46,255,.15),0 0 0 36px rgba(91,46,255,.07)}
+.home small{font:bold 20px 'DejaVu Sans Mono',monospace;letter-spacing:2px;opacity:.85;margin-top:6px}
+.n{position:absolute;width:270px;margin:-46px 0 0 -135px;border-radius:20px;background:#fff;border:3px solid var(--a1);padding:14px 16px;text-align:center;box-shadow:0 8px 0 var(--line)}
+.n b{display:block;font-size:28px;font-weight:800;line-height:1.1}
+.n i{display:block;font-style:normal;font-size:20px;color:var(--dim);margin-top:5px}
+.n.orph{border:3px dashed var(--a2);background:#FFF3E8;box-shadow:none}
+.stamp{position:absolute;left:775px;top:1100px;transform:rotate(-4deg);background:var(--a2);color:#fff;font:bold 24px 'DejaVu Sans Mono',monospace;letter-spacing:3px;padding:10px 18px;border-radius:12px}
+.rule{position:absolute;left:72px;right:72px;top:1050px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.rule div{background:#fff;border-radius:22px;padding:20px 24px;font-size:25px;line-height:1.25;font-weight:700;border:3px solid var(--ink)}
+.rule div b{display:block;font:bold 20px 'DejaVu Sans Mono',monospace;letter-spacing:3px;margin-bottom:6px}
+.ok b{color:var(--a1)}.ko b{color:var(--a2)}
+.foot{position:absolute;left:72px;right:72px;bottom:44px;display:flex;justify-content:space-between;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:var(--dim)}
+.foot b{color:var(--a1)}
+</style></head><body>
+<div class="kicker">SEO BASE · LINK INTERNI</div>
+<h1>Una pagina senza link <span>per Google quasi non esiste</span></h1>
+<div id="w" style="position:absolute;left:0;top:-120px;width:1080px;height:1350px"><svg width="1080" height="1350"><g stroke="var(--a1)" stroke-width="4" fill="none" stroke-linecap="round">
+  <path d="M540,820 L270,560"/><path d="M540,820 L810,560"/><path d="M540,820 L200,830"/><path d="M540,820 L880,830"/><path d="M540,820 L540,1080"/></g>
+  <g fill="var(--a1)"><circle cx="270" cy="560" r="8"/><circle cx="810" cy="560" r="8"/><circle cx="200" cy="830" r="8"/><circle cx="880" cy="830" r="8"/><circle cx="540" cy="1080" r="8"/></g>
+</svg>
+<div class="home">HOME<small>tutto parte qui</small></div>
+<div class="n" style="left:270px;top:560px"><b>Servizi</b><i>linkata dal menu</i></div>
+<div class="n" style="left:810px;top:560px"><b>Blog</b><i>linkato dal menu</i></div>
+<div class="n" style="left:205px;top:830px"><b>Chi siamo</b><i>linkata dal menu</i></div>
+<div class="n" style="left:875px;top:830px"><b>Contatti</b><i>linkata dal menu</i></div>
+<div class="n" style="left:540px;top:1080px"><b>Guida ai prezzi</b><i>linkata dai servizi</i></div>
+<div class="n orph" style="left:880px;top:1010px;width:250px;margin-top:0;transform:translateY(-8px)"><b>Pagina orfana</b><i>nessun link che arriva</i></div>
+<div class="stamp">DA SISTEMARE</div></div>
+<div class="rule"><div class="ok"><b>BUONO</b>"Scopri la guida ai prezzi del sito web"</div><div class="ko"><b>DA EVITARE</b>"Clicca qui" su un pulsante senza testo</div></div>
+<div class="foot"><span>Salva per dopo</span><b>@stefano_sanvincenti_seo</b></div>
+</body></html>
