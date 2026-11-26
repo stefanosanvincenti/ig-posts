@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- LAYOUT STORY: story-newpost — collegata al post di oggi: anteprima grande (--img), badge NUOVO POST, titolo, CTA verso il profilo. Cambiare hook e palette ogni giorno. -->
+<!-- LAYOUT STORY: story-newpost — collegata al post di oggi: anteprima grande (--img), badge NUOVO POST, titolo del post, CTA con freccia verso il profilo. Usare ogni giorno. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+:root{ --bg:#EEF4FA; --ink:#0B1B2E; --dim:#4A5B70; --a1:#0057FF; --a2:#00B3A4; --line:#D3DEEA; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative;
+  background-image:radial-gradient(circle,var(--line) 3px,transparent 3.5px);background-size:44px 44px}
+.badge{position:absolute;left:80px;top:270px;background:var(--a1);color:#fff;font:bold 40px 'DejaVu Sans Mono',monospace;letter-spacing:5px;padding:16px 34px;border-radius:60px}
+.hook{position:absolute;top:380px;left:80px;right:80px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:74px;line-height:1.02;letter-spacing:-3px}
+.hook span{color:var(--a1)}
+.frame{position:absolute;left:220px;top:600px;width:640px;transform:rotate(2deg)}
+.frame img{width:100%;display:block;border-radius:20px;box-shadow:0 40px 90px rgba(11,27,46,.35);border:6px solid #fff}
+.cta{position:absolute;left:80px;right:80px;top:1500px;background:var(--ink);color:#fff;border-radius:30px;padding:30px 36px;font-size:40px;font-weight:800;line-height:1.25}
+.cta b{color:#7CF2E2}
+.up{position:absolute;right:110px;top:1440px;font-size:90px;color:var(--a1);font-weight:900}
+</style></head><body>
+<div class="badge">NUOVO POST</div>
+<div class="hook">Hai "nascosto" una pagina a Google? <span>Forse no.</span></div>
+<div class="frame"><img src="{{POST_IMG}}"></div>
+<div class="cta">Lo trovi ora nel profilo 👉 <b>@stefano_sanvincenti_seo</b><br>Tocca il nome in alto ↑ e apri l'ultimo post</div>
+</body></html>

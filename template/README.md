@@ -60,6 +60,7 @@ come layout "lista" ai fini della rotazione.
 | **story-scale.html** ★ | bilancia: danno pesante vs prevenzione leggera | investimento vs costo |
 | **story-statement.html** ★ | frase manifesto con parola barrata e sostituita + 3 ritorni | messaggi di posizionamento |
 | **story-terminal.html** ★ | console a tutto schermo che "digita" la domanda (temi tecnici) |
+**REGOLA COLLEGAMENTO AL POST (obbligatoria ogni giorno)**: la story rimanda in modo inequivocabile al post di OGGI (le API non permettono sticker link né condivisione automatica). Deve avere sempre: (a) anteprima reale del post grande (almeno metà larghezza, `--img`); (b) badge "NUOVO POST" e lo stesso titolo/gancio del post; (c) CTA esplicita ("Lo trovi ora nel profilo 👉 @stefano_sanvincenti_seo", "Tocca il nome in alto e apri l'ultimo post") con freccia verso l'alto; (d) nessun contenuto diverso dal tema del post. Layout pronto: `story-newpost.html`; anche story-peek/story-question vanno bene se rispettano a-d.
 Zona sicura story: niente testo nei primi 250px e negli ultimi 300px.
 
 ## Palette (sostituisci il blocco :root del layout)
