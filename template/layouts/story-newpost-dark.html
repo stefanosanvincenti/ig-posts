@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- LAYOUT STORY: story-newpost-dark — versione scura di story-newpost: badge NUOVO POST, titolo del post, anteprima grande (--img, 700px), CTA con freccia verso il profilo. Tema: cyber/allarme. -->
+<html><head><meta charset="utf-8"><meta name="size" content="1080x1920">
+<style>
+:root{ --bg:#0A0A0F; --ink:#FFFFFF; --dim:#9A9AB0; --a1:#FF2E4D; --a2:#3DFFA2; --line:#1C1C28; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','DejaVu Sans',sans-serif;position:relative;
+  background-image:radial-gradient(circle at 50% 55%,rgba(255,46,77,.22),transparent 55%),linear-gradient(var(--line) 2px,transparent 2px),linear-gradient(90deg,var(--line) 2px,transparent 2px);background-size:auto,60px 60px,60px 60px}
+.badge{position:absolute;left:80px;top:270px;background:var(--a1);color:#fff;font:bold 40px 'DejaVu Sans Mono',monospace;letter-spacing:5px;padding:16px 34px;border-radius:60px}
+.hook{position:absolute;top:380px;left:80px;right:80px;font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:78px;line-height:1.02;letter-spacing:-3px}
+.hook span{color:var(--a2)}
+.frame{position:absolute;left:190px;top:610px;width:700px;transform:rotate(-2deg)}
+.frame img{width:100%;display:block;border-radius:20px;box-shadow:0 40px 90px rgba(0,0,0,.7),0 0 60px rgba(255,46,77,.35);border:6px solid #fff}
+.up{position:absolute;right:90px;top:1500px;font-size:100px;color:var(--a2);font-weight:900;line-height:1}
+.cta{position:absolute;left:80px;right:80px;top:1530px;background:#fff;color:#0A0A0F;border-radius:30px;padding:28px 36px;font-size:38px;font-weight:800;line-height:1.25}
+.cta b{color:var(--a1)}
+</style></head><body>
+<div class="badge">NUOVO POST</div>
+<div class="hook">Black Friday: <span>6 controlli</span> prima di pagare</div>
+<div class="frame"><img src="{{POST_IMG}}"></div>
+<div class="cta">Lo trovi ora nel profilo 👉 <b>@stefano_sanvincenti_seo</b><br>Tocca il nome in alto ↑ e apri l'ultimo post</div>
+</body></html>
